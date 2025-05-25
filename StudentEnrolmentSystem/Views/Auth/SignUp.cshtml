@@ -1,0 +1,123 @@
+@{
+    ViewData["Title"] = "Sign Up";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+    class="fixed inset-0 z-50 grid place-content-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+>
+    <div class="w-full min-w-[28rem] rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Sign Up</h2>
+
+        <div class="mt-1">
+            <p class="text-sm text-pretty text-gray-700">
+                Fill out the details to create an account.
+            </p>
+        </div>
+
+        <div class="flex gap-8 mt-6">
+            <div>
+                <div>
+                    <label>
+                        <span class="text-sm font-medium text-gray-700"> ID number </span>
+
+                        <input
+                                type="text" maxlength="7"
+                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                        />
+
+                        <span class="mt-1 text-sm text-red-700"> Invalid ID number </span>
+                    </label>
+                </div>
+
+                <div class="mt-4">
+                    <label>
+                        <span class="text-sm font-medium text-gray-700"> First name </span>
+
+                        <input
+                                type="text"
+                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                        />
+
+                        <span class="mt-1 text-sm text-red-700"> First name is required </span>
+                    </label>
+                </div>
+
+                <div class="mt-4">
+                    <label>
+                        <span class="text-sm font-medium text-gray-700"> Last name </span>
+
+                        <input
+                                type="text"
+                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                        />
+
+                        <span class="mt-1 text-sm text-red-700"> Last name is required </span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label>
+                        <span class="text-sm font-medium text-gray-700"> Birthdate </span>
+
+                        <input
+                                type="date"
+                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                        />
+
+                        <span class="mt-1 text-sm text-red-700"> Birthdate is required </span>
+                    </label>
+                </div>
+
+                <div class="mt-4">
+                    <label>
+                        <span class="text-sm font-medium text-gray-700"> Email </span>
+
+                        <input
+                                type="email"
+                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                        />
+
+                        <span class="mt-1 text-sm text-red-700"> Invalid ID number </span>
+                    </label>
+                </div>
+
+                <div class="mt-4">
+                    <label>
+                        <span class="text-sm font-medium text-gray-700"> Password </span>
+
+                        <input
+                                type="password"
+                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                        />
+
+                        <span class="mt-1 text-sm text-red-700"> Password is required </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 w-full text-center">
+            <span class="mt-1 text-sm text-red-700"> Wrong password. Please try again. </span>
+        </div>
+
+        <div class="mt-6">
+            <button
+                    type="button"
+                    class="w-full rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Register
+            </button>
+        </div>
+
+        <footer class="mt-4 flex place-content-center gap-2">
+            <span class="text-sm text-gray-700"> Already have an account? </span>
+            <a class="text-sm font-medium text-blue-600 hover:text-blue-700" asp-controller="Auth" asp-action="Student"> Login </a>
+        </footer>
+    </div>
+</div>
