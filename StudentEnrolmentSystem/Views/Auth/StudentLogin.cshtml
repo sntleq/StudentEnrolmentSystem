@@ -1,3 +1,4 @@
+@model StudentEnrolmentSystem.Models.Student
 @{
     ViewData["Title"] = "Student Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -37,7 +38,8 @@
             aria-modal="true"
             aria-labelledby="modalTitle"
         >
-            <div class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+            <form id="studentLoginForm" data-action="@Url.RouteUrl("Student.Login")"
+                  class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
                 <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Student Login</h2>
 
                 <div class="mt-1">
@@ -51,11 +53,11 @@
                         <span class="text-sm font-medium text-gray-700"> ID number </span>
 
                         <input
-                                type="text" maxlength="7"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                            type="text" maxlength="7" asp-for="StudCode"
+                            class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                         />
 
-                        <span class="mt-1 text-sm text-red-700"> Invalid ID number </span>
+                        <span asp-validation-for="StudCode" class="mt-1 text-sm text-red-700"></span>
                     </label>
                 </div>
 
@@ -63,26 +65,25 @@
                     <label>
                         <div class="flex justify-between gap-2">
                             <span class="text-sm font-medium text-gray-700"> Password </span>
-                            <a class="text-sm text-blue-600 hover:text-blue-700" asp-action="ForgotPassword"> Forgot? </a>
                         </div>
 
                         <input
-                                type="password"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                            type="password" asp-for="StudPassword"
+                            class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                         />
 
-                        <span class="mt-1 text-sm text-red-700"> Password is required </span>
+                        <span asp-validation-for="StudPassword" class="mt-1 text-sm text-red-700"></span>
                     </label>
                 </div>
 
                 <div class="mt-4">
-                    <span class="mt-1 text-sm text-red-700"> Wrong password. Please try again. </span>
+                    <span id="loginError" class="mt-1 text-sm text-red-700"></span>
                 </div>
 
                 <div class="mt-6">
                     <button
-                            type="button"
-                            class="w-full rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                        type="submit"
+                        class="w-full rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
                     >
                         Login
                     </button>
@@ -92,9 +93,13 @@
                     <span class="text-sm text-gray-700"> Don't have an account? </span>
                     <a class="text-sm font-medium text-blue-600 hover:text-blue-700" asp-action="SignUp"> Sign up </a>
                 </footer>
-            </div>
+            </form>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/auth/student-login.js"></script>
+}
 
         

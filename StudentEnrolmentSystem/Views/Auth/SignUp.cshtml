@@ -1,6 +1,8 @@
+@model StudentEnrolmentSystem.Models.Student
 @{
     ViewData["Title"] = "Sign Up";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var today = DateTime.Today.ToString("yyyy-MM-dd");
 }
 
 <div
@@ -9,7 +11,8 @@
     aria-modal="true"
     aria-labelledby="modalTitle"
 >
-    <div class="w-full min-w-[28rem] rounded-lg border border-gray-300 px-8 py-12">
+    <form id="signUpForm" data-action="@Url.RouteUrl("SignUp")"
+          class="w-full min-w-[28rem] rounded-lg border border-gray-300 px-8 py-12">
         <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Sign Up</h2>
 
         <div class="mt-1">
@@ -17,98 +20,98 @@
                 Fill out the details to create an account.
             </p>
         </div>
-
-        <div class="flex gap-8 mt-6">
+        
+        <div class="grid grid-cols-2 gap-8 mt-6">
             <div>
-                <div>
-                    <label>
-                        <span class="text-sm font-medium text-gray-700"> ID number </span>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> ID number </span>
 
-                        <input
-                                type="text" maxlength="7"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        />
+                    <input
+                        type="text" maxlength="7" asp-for="StudCode"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
 
-                        <span class="mt-1 text-sm text-red-700"> Invalid ID number </span>
-                    </label>
-                </div>
+                    <span asp-validation-for="StudCode" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+            
+            <div>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Birthdate </span>
 
-                <div class="mt-4">
-                    <label>
-                        <span class="text-sm font-medium text-gray-700"> First name </span>
+                    <input
+                        type="date" max="@today" asp-for="StudDob"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
 
-                        <input
-                                type="text"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        />
+                    <span asp-validation-for="StudDob" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-8 mt-4">
+            <div>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> First name </span>
 
-                        <span class="mt-1 text-sm text-red-700"> First name is required </span>
-                    </label>
-                </div>
+                    <input
+                        type="text" asp-for="StudFirstName"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
 
-                <div class="mt-4">
-                    <label>
-                        <span class="text-sm font-medium text-gray-700"> Last name </span>
-
-                        <input
-                                type="text"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        />
-
-                        <span class="mt-1 text-sm text-red-700"> Last name is required </span>
-                    </label>
-                </div>
+                    <span asp-validation-for="StudFirstName" class="mt-1 text-sm text-red-700"></span>
+                </label>
             </div>
 
             <div>
-                <div>
-                    <label>
-                        <span class="text-sm font-medium text-gray-700"> Birthdate </span>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Last name </span>
 
-                        <input
-                                type="date"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        />
+                    <input
+                        type="text" asp-for="StudLastName"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
 
-                        <span class="mt-1 text-sm text-red-700"> Birthdate is required </span>
-                    </label>
-                </div>
+                    <span asp-validation-for="StudLastName" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+        </div>
 
-                <div class="mt-4">
-                    <label>
-                        <span class="text-sm font-medium text-gray-700"> Email </span>
+        <div class="grid grid-cols-2 gap-8 mt-4">
+            <div>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Email </span>
 
-                        <input
-                                type="email"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        />
+                    <input
+                            type="email" asp-for="StudEmail"
+                            class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
 
-                        <span class="mt-1 text-sm text-red-700"> Invalid ID number </span>
-                    </label>
-                </div>
+                    <span asp-validation-for="StudEmail" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
 
-                <div class="mt-4">
-                    <label>
-                        <span class="text-sm font-medium text-gray-700"> Password </span>
+            <div>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Password </span>
 
-                        <input
-                                type="password"
-                                class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        />
+                    <input
+                            type="password" asp-for="StudPassword"
+                            class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
 
-                        <span class="mt-1 text-sm text-red-700"> Password is required </span>
-                    </label>
-                </div>
+                    <span asp-validation-for="StudPassword" class="mt-1 text-sm text-red-700"></span>
+                </label>
             </div>
         </div>
 
         <div class="mt-4 w-full text-center">
-            <span class="mt-1 text-sm text-red-700"> Wrong password. Please try again. </span>
+            <span id="signUpError" class="mt-1 text-sm text-red-700"></span>
         </div>
 
         <div class="mt-6">
             <button
-                    type="button"
+                    type="submit"
                     class="w-full rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
                 Register
@@ -119,5 +122,9 @@
             <span class="text-sm text-gray-700"> Already have an account? </span>
             <a class="text-sm font-medium text-blue-600 hover:text-blue-700" asp-controller="Auth" asp-action="Student"> Login </a>
         </footer>
-    </div>
+    </form>
 </div>
+
+@section Scripts {
+    <script src="~/js/auth/signup.js"></script>
+}

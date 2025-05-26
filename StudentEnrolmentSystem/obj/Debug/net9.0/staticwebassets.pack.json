@@ -13,8 +13,44 @@
       "PackagePath": "staticwebassets\\fonts\\Inter-VariableFont_opsz,wght.ttf"
     },
     {
-      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\tailwindcss_3.4.js",
-      "PackagePath": "staticwebassets\\js\\tailwindcss_3.4.js"
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js",
+      "PackagePath": "staticwebassets\\js\\auth\\signup.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js",
+      "PackagePath": "staticwebassets\\js\\auth\\student-login.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\toast.js",
+      "PackagePath": "staticwebassets\\js\\toast.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery-3.7.1.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-3.7.1.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\lib\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2@11.js",
+      "PackagePath": "staticwebassets\\lib\\sweetalert2@11.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\tailwindcss_3.4.js",
+      "PackagePath": "staticwebassets\\lib\\tailwindcss_3.4.js"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.StudentEnrolmentSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

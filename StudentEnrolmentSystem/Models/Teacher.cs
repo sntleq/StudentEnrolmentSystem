@@ -8,6 +8,4 @@ public class Teacher
     public required string TchrEmail { get; set; }
     public required string TchrPassword { get; set; }
     public bool TchrIsActive { get; set; }
-
-    public ICollection<Course> Courses { get; set; }
 }

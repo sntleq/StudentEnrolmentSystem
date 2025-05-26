@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "irrJIK02NS88Izg6rd7WwXPpUszKSOkLlYg1qTaTxv0=",
+  "Hash": "CycvUy7Nk2X0ojzP+p+iPZrBrH3hfcpjcWfWF7e8qpE=",
   "Source": "StudentEnrolmentSystem",
   "BasePath": "_content/StudentEnrolmentSystem",
   "Mode": "Default",
@@ -16,6 +16,48 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\00lvjrksx4-s5bbfp1l9h.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/auth/signup#[.{fingerprint=s5bbfp1l9h}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "b3ocam36bp",
+      "Integrity": "9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\803wgckq5h-mqr0eztt0t.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/auth/student-login#[.{fingerprint=mqr0eztt0t}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "91s5e7fj8g",
+      "Integrity": "LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js"
+    },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\9v4a3ugc3u-61n19gt1b8.gz",
       "SourceId": "StudentEnrolmentSystem",
@@ -38,25 +80,67 @@
       "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fyi8wife3f-rcnt32mbx6.gz",
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\bxfhoownkh-u3xf7sllsr.gz",
       "SourceId": "StudentEnrolmentSystem",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/StudentEnrolmentSystem",
-      "RelativePath": "js/tailwindcss_3.4#[.{fingerprint=rcnt32mbx6}]?.js.gz",
+      "RelativePath": "lib/sweetalert2@11#[.{fingerprint=u3xf7sllsr}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\tailwindcss_3.4.js",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2@11.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "hhjtqipc7b",
-      "Integrity": "G4aKKvFzooCqHrtg0nARHqncOE/pwvQYrUxy9gAf58w=",
+      "Fingerprint": "aagl2hde60",
+      "Integrity": "srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\tailwindcss_3.4.js"
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2@11.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\j103gdj94a-ta7tjlnrp9.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/sweetalert2.min#[.{fingerprint=ta7tjlnrp9}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2.min.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "npippsn1xh",
+      "Integrity": "+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\nxoxe4gywg-lzl9nlhx6b.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery.validate#[.{fingerprint=lzl9nlhx6b}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "anlp8nykfw",
+      "Integrity": "KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.js"
     },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\sgs1ih4yjl-3e4dy3szh7.gz",
@@ -78,6 +162,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\u4g4476gs8-drbwsyyfs7.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/toast#[.{fingerprint=drbwsyyfs7}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\toast.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "q0doujbyqr",
+      "Integrity": "6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\toast.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\uprgsor0ad-rcnt32mbx6.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/tailwindcss_3.4#[.{fingerprint=rcnt32mbx6}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\tailwindcss_3.4.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "hhjtqipc7b",
+      "Integrity": "G4aKKvFzooCqHrtg0nARHqncOE/pwvQYrUxy9gAf58w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\tailwindcss_3.4.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vjigt2rrg3-03hjc8e09r.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery.validate.unobtrusive#[.{fingerprint=03hjc8e09r}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.unobtrusive.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "hj6zx16vtq",
+      "Integrity": "I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vw0pmvfkey-ag7o75518u.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery.validate.min#[.{fingerprint=ag7o75518u}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.min.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "hgmochx07c",
+      "Integrity": "T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\z0sy79oll2-0i3buxo5is.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery-3.7.1#[.{fingerprint=0i3buxo5is}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery-3.7.1.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "slhp14mdwv",
+      "Integrity": "YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery-3.7.1.js"
     },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\css\\styles.css",
@@ -143,12 +332,201 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Inter-VariableFont_opsz,wght.ttf"
     },
     {
-      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\tailwindcss_3.4.js",
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js",
       "SourceId": "StudentEnrolmentSystem",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
       "BasePath": "_content/StudentEnrolmentSystem",
-      "RelativePath": "js/tailwindcss_3.4#[.{fingerprint}]?.js",
+      "RelativePath": "js/auth/signup#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s5bbfp1l9h",
+      "Integrity": "QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\auth\\signup.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/auth/student-login#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mqr0eztt0t",
+      "Integrity": "btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\auth\\student-login.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\toast.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/toast#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "drbwsyyfs7",
+      "Integrity": "d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\toast.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery-3.7.1.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery-3.7.1#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0i3buxo5is",
+      "Integrity": "eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-3.7.1.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery.validate#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzl9nlhx6b",
+      "Integrity": "kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery.validate.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.min.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery.validate.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ag7o75518u",
+      "Integrity": "umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.unobtrusive.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "03hjc8e09r",
+      "Integrity": "xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2.min.css",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/sweetalert2.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ta7tjlnrp9",
+      "Integrity": "NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\sweetalert2.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2@11.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/sweetalert2@11#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u3xf7sllsr",
+      "Integrity": "WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\sweetalert2@11.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\tailwindcss_3.4.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "lib/tailwindcss_3.4#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -161,7 +539,7 @@
       "Integrity": "e2bY1Z6ehrBVeng9IK33UAdr9kZ9H62aLlwhEklQiDE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\tailwindcss_3.4.js"
+      "OriginalItemSpec": "wwwroot\\lib\\tailwindcss_3.4.js"
     }
   ],
   "Endpoints": [
@@ -844,8 +1222,2690 @@
       ]
     },
     {
-      "Route": "js/tailwindcss_3.4.js",
-      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fyi8wife3f-rcnt32mbx6.gz",
+      "Route": "js/auth/signup.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\00lvjrksx4-s5bbfp1l9h.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002881844380"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/signup.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "793"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/signup.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\00lvjrksx4-s5bbfp1l9h.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/signup.s5bbfp1l9h.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\00lvjrksx4-s5bbfp1l9h.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002881844380"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s5bbfp1l9h"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth/signup.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/signup.s5bbfp1l9h.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "793"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s5bbfp1l9h"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth/signup.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QNBJprdmEhUV0GnOj9+dcJWsEv16KLjRQC023jthbow="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/signup.s5bbfp1l9h.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\00lvjrksx4-s5bbfp1l9h.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s5bbfp1l9h"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth/signup.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9xb1cDpKRVMEMMi0VMVn71oLzXkCoOpAtzyylYuMabs="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/student-login.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\803wgckq5h-mqr0eztt0t.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002808988764"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "355"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/student-login.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "804"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/student-login.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\803wgckq5h-mqr0eztt0t.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "355"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/student-login.mqr0eztt0t.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\803wgckq5h-mqr0eztt0t.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002808988764"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "355"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mqr0eztt0t"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth/student-login.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/student-login.mqr0eztt0t.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "804"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mqr0eztt0t"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth/student-login.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-btZxAEnh3dlkBoOR+/fpX6W/vd7JEp/Zvw2Ysan88tk="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth/student-login.mqr0eztt0t.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\803wgckq5h-mqr0eztt0t.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "355"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mqr0eztt0t"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth/student-login.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LRfOfMpfwoUij4PYyySjzNuVMk6K68ZoVv5y9BCIndY="
+        }
+      ]
+    },
+    {
+      "Route": "js/toast.drbwsyyfs7.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\u4g4476gs8-drbwsyyfs7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005347593583"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "186"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "drbwsyyfs7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/toast.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw="
+        }
+      ]
+    },
+    {
+      "Route": "js/toast.drbwsyyfs7.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\toast.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "drbwsyyfs7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/toast.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw="
+        }
+      ]
+    },
+    {
+      "Route": "js/toast.drbwsyyfs7.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\u4g4476gs8-drbwsyyfs7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "drbwsyyfs7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/toast.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w="
+        }
+      ]
+    },
+    {
+      "Route": "js/toast.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\u4g4476gs8-drbwsyyfs7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005347593583"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "186"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw="
+        }
+      ]
+    },
+    {
+      "Route": "js/toast.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\toast.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d7gD2NyTJG+nUpcSTQtDunRkF78hhdKOlq+3LJGHdQw="
+        }
+      ]
+    },
+    {
+      "Route": "js/toast.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\u4g4476gs8-drbwsyyfs7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 22:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6pFsozfc2os3x0H0+9S90gUnbR5ZWO8lvBM7HvQPa+w="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-3.7.1.0i3buxo5is.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\z0sy79oll2-0i3buxo5is.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000011843851"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84431"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 17:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0i3buxo5is"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-3.7.1.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-3.7.1.0i3buxo5is.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery-3.7.1.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "285314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 17:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0i3buxo5is"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-3.7.1.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-3.7.1.0i3buxo5is.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\z0sy79oll2-0i3buxo5is.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 17:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0i3buxo5is"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-3.7.1.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-3.7.1.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\z0sy79oll2-0i3buxo5is.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000011843851"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84431"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 17:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-3.7.1.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery-3.7.1.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "285314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 17:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-3.7.1.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\z0sy79oll2-0i3buxo5is.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 17:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YPYGuVoBNkA8pP/JjlyjSON9Q7Ej1gVEUkbHrQT3uJU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\nxoxe4gywg-lzl9nlhx6b.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000071078257"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14068"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\nxoxe4gywg-lzl9nlhx6b.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.lzl9nlhx6b.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\nxoxe4gywg-lzl9nlhx6b.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000071078257"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14068"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzl9nlhx6b"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.lzl9nlhx6b.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzl9nlhx6b"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.lzl9nlhx6b.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\nxoxe4gywg-lzl9nlhx6b.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzl9nlhx6b"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KuJPTvhuArDs4mj2zziNxM+hBWFbOhi0BKQgeR1pHG8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.min.ag7o75518u.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vw0pmvfkey-ag7o75518u.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000123122384"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8121"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ag7o75518u"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.min.ag7o75518u.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ag7o75518u"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.min.ag7o75518u.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vw0pmvfkey-ag7o75518u.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8121"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ag7o75518u"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.min.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vw0pmvfkey-ag7o75518u.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000123122384"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8121"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.min.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vw0pmvfkey-ag7o75518u.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8121"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T/jNUyeLYdKQ3zndN8zs507jIg6GnkENMxuBqc1eXs0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.03hjc8e09r.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vjigt2rrg3-03hjc8e09r.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000213675214"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4679"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03hjc8e09r"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.unobtrusive.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.03hjc8e09r.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03hjc8e09r"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.unobtrusive.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.03hjc8e09r.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vjigt2rrg3-03hjc8e09r.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4679"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03hjc8e09r"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.unobtrusive.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vjigt2rrg3-03hjc8e09r.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000213675214"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4679"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\vjigt2rrg3-03hjc8e09r.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4679"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 18:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I28FOsKinIPvKQJYJhPmeb5aWTZaShTculcMW3WSRdU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2.min.css",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\j103gdj94a-ta7tjlnrp9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000195350654"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5118"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2.min.css",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30379"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2.min.css.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\j103gdj94a-ta7tjlnrp9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2.min.ta7tjlnrp9.css",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\j103gdj94a-ta7tjlnrp9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000195350654"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5118"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ta7tjlnrp9"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/sweetalert2.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2.min.ta7tjlnrp9.css",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30379"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ta7tjlnrp9"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/sweetalert2.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2.min.ta7tjlnrp9.css.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\j103gdj94a-ta7tjlnrp9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ta7tjlnrp9"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/sweetalert2.min.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+4PqFRbKSjkYNzP8acYFYUneCNqQDJ+/wWQCiRQKslo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2@11.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\bxfhoownkh-u3xf7sllsr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000048501310"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20617"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2@11.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2@11.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78835"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2@11.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\bxfhoownkh-u3xf7sllsr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2@11.u3xf7sllsr.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\bxfhoownkh-u3xf7sllsr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000048501310"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20617"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u3xf7sllsr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/sweetalert2@11.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2@11.u3xf7sllsr.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\sweetalert2@11.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78835"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u3xf7sllsr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/sweetalert2@11.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k="
+        }
+      ]
+    },
+    {
+      "Route": "lib/sweetalert2@11.u3xf7sllsr.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\bxfhoownkh-u3xf7sllsr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u3xf7sllsr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/sweetalert2@11.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-srvIR8YgQvky+1rNDyrqVBXjIsOD2merKeGsHI9CsRA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/tailwindcss_3.4.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\uprgsor0ad-rcnt32mbx6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -899,8 +3959,8 @@
       ]
     },
     {
-      "Route": "js/tailwindcss_3.4.js",
-      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\tailwindcss_3.4.js",
+      "Route": "lib/tailwindcss_3.4.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\tailwindcss_3.4.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -936,8 +3996,8 @@
       ]
     },
     {
-      "Route": "js/tailwindcss_3.4.js.gz",
-      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fyi8wife3f-rcnt32mbx6.gz",
+      "Route": "lib/tailwindcss_3.4.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\uprgsor0ad-rcnt32mbx6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -981,8 +4041,8 @@
       ]
     },
     {
-      "Route": "js/tailwindcss_3.4.rcnt32mbx6.js",
-      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fyi8wife3f-rcnt32mbx6.gz",
+      "Route": "lib/tailwindcss_3.4.rcnt32mbx6.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\uprgsor0ad-rcnt32mbx6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1035,7 +4095,7 @@
         },
         {
           "Name": "label",
-          "Value": "js/tailwindcss_3.4.js"
+          "Value": "lib/tailwindcss_3.4.js"
         },
         {
           "Name": "integrity",
@@ -1044,8 +4104,8 @@
       ]
     },
     {
-      "Route": "js/tailwindcss_3.4.rcnt32mbx6.js",
-      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\tailwindcss_3.4.js",
+      "Route": "lib/tailwindcss_3.4.rcnt32mbx6.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\lib\\tailwindcss_3.4.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1080,7 +4140,7 @@
         },
         {
           "Name": "label",
-          "Value": "js/tailwindcss_3.4.js"
+          "Value": "lib/tailwindcss_3.4.js"
         },
         {
           "Name": "integrity",
@@ -1089,8 +4149,8 @@
       ]
     },
     {
-      "Route": "js/tailwindcss_3.4.rcnt32mbx6.js.gz",
-      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fyi8wife3f-rcnt32mbx6.gz",
+      "Route": "lib/tailwindcss_3.4.rcnt32mbx6.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\uprgsor0ad-rcnt32mbx6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1133,7 +4193,7 @@
         },
         {
           "Name": "label",
-          "Value": "js/tailwindcss_3.4.js.gz"
+          "Value": "lib/tailwindcss_3.4.js.gz"
         },
         {
           "Name": "integrity",

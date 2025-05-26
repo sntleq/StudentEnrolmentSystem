@@ -10,10 +10,4 @@ public class Enrolment
     public int AyId { get; set; }
     public int SemId { get; set; }
     public bool EnrlIsCompleted { get; set; }
-
-    public Student Student { get; set; }
-    public Program Program { get; set; }
-    public CourseSchedule CourseSchedule { get; set; }
-    public AcademicYear AcademicYear { get; set; }
-    public Semester Semester { get; set; }
 }

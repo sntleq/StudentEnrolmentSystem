@@ -8,4 +8,5 @@ public class ProgramHead
     public required string HeadEmail { get; set; }
     public required string HeadPassword { get; set; }
     public bool HeadIsActive { get; set; }
+    public int ProgId { get; set; }
 }
