@@ -1,0 +1,112 @@
+@{
+    ViewData["Title"] = "My Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10 pt-0">
+    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white"
+            style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+            <h2 class="text-2xl font-semibold text-gray-900">
+                My Profile
+            </h2>
+        </div>
+
+        <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Schedule"> Schedule </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="History"> History </a>
+                    </li>
+
+                    <li>
+                        <a class="text-black font-medium"> Profile </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a
+                type="button" asp-action="Logout" asp-controller="Auth"
+                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <div class="flex-grow mx-auto w-fit min-w-[28rem] rounded-lg border border-gray-300 px-8 py-10 flex flex-col">
+        <div class="col-start-2 row-start-2 row-end-4">
+            <a href="#" class="block h-full rounded-lg p-6 bg-gray-100 text-black">
+                <strong class="text-xl font-semibold inline-block w-full text-center">@ViewBag.Student.StudFirstName @ViewBag.Student.StudLastName</strong>
+
+                <p class="mt-1 text-xs text-center">
+                    ID @ViewBag.Student.StudCode &middot; @ViewBag.Student.StudEmail
+                </p>
+            </a>
+        </div>
+
+        <div class="flow-root mt-6 mb-auto">
+            <dl class="-my-3 divide-y divide-gray-200 text-sm">
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">Contact No.</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2">@(ViewBag.Student.StudContactNum ?? "Not yet specified")</dd>
+                </div>
+
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">Email</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2">@ViewBag.Student.StudEmail</dd>
+                </div>
+
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">Home Address</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2 text-pretty">@(ViewBag.Student.StudAddress ?? "Not specified yet")</dd>
+                </div>
+
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">Birthdate</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2">@ViewBag.Student.StudDob.ToString("yyyy-MM-dd")</dd>
+                </div>
+                
+                @{
+                    var programs = ViewBag.Programs as List<StudentEnrolmentSystem.Models.Program>;
+                    var prog = programs?.FirstOrDefault(p => ViewBag.Student?.ProgId != null && p.ProgId == ViewBag.Student?.ProgId);
+                }
+
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">Program</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2 text-pretty">@(prog?.ProgTitle ?? "Not yet enrolled")</dd>
+                </div>
+
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">Enrolment Status</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2">@(ViewBag.Student.StudStatus ?? "Not yet enrolled")</dd>
+                </div>
+
+                <div class="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-6">
+                    <dt class="font-medium text-gray-900">First Generation Student?</dt>
+
+                    <dd class="text-gray-700 sm:col-span-2">@(ViewBag.Student.StudIsFirstGen == null ? "Not yet specified" : ViewBag.Student.StudIsFirstGen ? "Yes" : "No")</dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="mt-6">
+            <button
+                    type="button"
+                    class="w-full rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Update
+            </button>
+        </div>
+    </div>
+</div>

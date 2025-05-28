@@ -44,4 +44,12 @@ C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\
 C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\StudentE.96FE7EE1.Up2Date
 C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\00lvjrksx4-s5bbfp1l9h.gz
 C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\803wgckq5h-mqr0eztt0t.gz
-C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\u4g4476gs8-drbwsyyfs7.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\tpz492hh6j-cwczjouvd8.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\go35c0hm9e-srj7fw4925.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\52jmvs997z-fajjr27z2f.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\u4g4476gs8-kz4ywys55s.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\qw51ednh2i-pdwfbq7qb4.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\tyqm8u5dq1-n3nlsihjyk.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\rsgypcmqys-dj1jhynbtd.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\fzh4j3m9ye-oxpqth0b74.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\f3f1ov5ozl-svjrbrshyg.gz

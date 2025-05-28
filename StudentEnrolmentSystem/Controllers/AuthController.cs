@@ -10,6 +10,11 @@ public class AuthController : Controller
     {
         _logger = logger;
     }
+    
+    public IActionResult Index()
+    {
+        return RedirectToAction("Student");
+    }
 
     public IActionResult Student()
     {
@@ -49,5 +54,11 @@ public class AuthController : Controller
     public IActionResult ResetPasswordViaOld()
     {
         return View("~/Views/Auth/ResetPasswordViaOld.cshtml");
+    }
+    
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");   
     }
 }

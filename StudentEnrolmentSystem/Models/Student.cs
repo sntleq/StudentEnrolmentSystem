@@ -8,7 +8,7 @@ public class Student
     
     [Required(ErrorMessage = "Student ID is required")]
     [StringLength(7)]
-    [RegularExpression(@"^\d{7}$", ErrorMessage = "Invalid student ID")]
+    [RegularExpression(@"^\d+$", ErrorMessage = "Invalid student ID")]
     public required string StudCode { get; set; }
     
     [Required(ErrorMessage = "First name is required")]
@@ -19,7 +19,7 @@ public class Student
     
     [StringLength(11)]
     [RegularExpression(@"^\d{11}$", ErrorMessage = "Invalid contact number")]
-    public required string StudContactNum { get; set; }
+    public string? StudContactNum { get; set; }
     
     [Required(ErrorMessage = "Email is required")]
     [EmailAddress(ErrorMessage = "Invalid email address")]
@@ -32,8 +32,8 @@ public class Student
     [DataType(DataType.Date)]
     public DateTime StudDob { get; set; }
     
-    public required string StudAddress { get; set; }
-    public bool StudIsFirstGen { get; set; }
-    public int ProgId { get; set; }
-    public required string StudStatus { get; set; }
+    public string? StudAddress { get; set; }
+    public bool? StudIsFirstGen { get; set; }
+    public int? ProgId { get; set; }
+    public string? StudStatus { get; set; }
 }

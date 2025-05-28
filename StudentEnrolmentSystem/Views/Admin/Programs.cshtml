@@ -1,0 +1,91 @@
+@{
+    ViewData["Title"] = "Manage Programs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10 pt-0">
+    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white"
+            style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+            <h2 class="text-2xl font-semibold text-gray-900">
+                Manage Programs
+            </h2>
+        </div>
+
+        <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Courses"> Courses </a>
+                    </li>
+
+                    <li>
+                        <a class="text-black font-medium" href="#"> Programs </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a
+                type="button" asp-action="Logout" asp-controller="Auth"
+                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Logout
+            </a>
+        </div>
+    </header>
+
+    
+    @{
+        var programs = ViewBag.Programs as List<StudentEnrolmentSystem.Models.Program>;
+    }
+    @if (programs!.Any())
+    {
+        <div class="flex-grow w-full space-y-4">
+            @foreach (var program in programs!)
+            {
+                <div
+                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
+                    <h2 class="text-lg font-medium">@program.ProgTitle</h2>
+                    
+                    <a
+                        type="button" asp-action="EditProgram" asp-route-progId="@program.ProgId"
+                        class="ml-auto block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                        Edit
+                    </a>
+                    
+                    <a
+                        type="button" asp-action="DeleteProgram" asp-route-progId="@program.ProgId"
+                        class="block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
+                        Delete
+                    </a>
+                </div>
+            }
+
+            <a
+                type="button" asp-action="AddProgram"
+                class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                &plus; Add program
+            </a>
+        </div>
+    }
+
+    else
+    {
+        <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
+            <p class="text-sm text-pretty text-gray-700">
+                No program found in the database.
+            </p>
+
+            <a
+                type="button" asp-action="AddProgram"
+                class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Add program
+            </a>
+        </div>
+    }
+</div>

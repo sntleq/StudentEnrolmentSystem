@@ -1,0 +1,127 @@
+@model StudentEnrolmentSystem.Models.Course
+@{
+    ViewData["Title"] = "Edit Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2">
+    <form id="editCourseForm" data-action="@Url.RouteUrl("Courses.Update")"
+        class="m-auto w-fit min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12 my-10">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Edit Course</h2>
+
+        <div class="mt-1">
+            <p class="text-sm text-pretty text-gray-700">
+                Enter details of course offering to update.
+            </p>
+        </div>
+        
+        <input type="hidden" asp-for="CrsId" value="@Model.CrsId" />
+        
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Course Code </span>
+
+                <input
+                    type="text" asp-for="CrsCode" value="@Model.CrsCode"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="CrsCode" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Course Title </span>
+
+                <input
+                    type="text" asp-for="CrsTitle" value="@Model.CrsTitle"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="CrsTitle" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Category </span>
+
+                <select
+                        asp-for="CatgId"
+                        class="mt-0.5 w-full rounded border-gray-300 sm:text-sm"
+                        asp-items="@(new SelectList(ViewBag.Categories, "CatgId", "CatgName"))"
+                >
+                    <option value="" selected hidden>Please select</option>
+                </select>
+
+                <span asp-validation-for="CatgId" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8 mt-4">
+            <div>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Lecture Hours </span>
+
+                    <input
+                            type="text" asp-for="CrsHrsLec" value="@Model.CrsHrsLec"
+                            class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
+
+                    <span asp-validation-for="CrsHrsLec" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Lab Hours </span>
+
+                    <input
+                            type="text" asp-for="CrsHrsLab" value="@Model.CrsHrsLab"
+                            class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
+
+                    <span asp-validation-for="CrsHrsLab" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Course Units </span>
+
+                <input
+                    type="text" asp-for="CrsUnits" value="@Model.CrsUnits"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="CrsUnits" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                    type="button" asp-action="Courses"
+                    class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                    type="submit"
+                    class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin/edit-course.js"></script>
+}

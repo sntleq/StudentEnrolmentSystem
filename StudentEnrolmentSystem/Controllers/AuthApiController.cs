@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Npgsql;
-using StudentEnrolmentSystem.Models;
 using StudentEnrolmentSystem.Models.Dto;
 
 namespace StudentEnrolmentSystem.Controllers;
@@ -49,11 +48,68 @@ public class AuthApiController : ControllerBase
 
             var studentId = reader.GetInt32(reader.GetOrdinal("stud_id"));
             var firstName = reader.GetString(reader.GetOrdinal("stud_first_name"));
-
+            
+            HttpContext.Session.SetInt32("StudId", studentId);
+            HttpContext.Session.SetString("StudFirstName", firstName);
+            
             return Ok(new
             {
                 success = true,
                 data = new { Id = studentId, FirstName = firstName }
+            });
+        }
+        catch (NpgsqlException ex)
+        {
+            // log if you have a logger, then:
+            return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
+        }
+        catch
+        {
+            return StatusCode(500, new { success = false, message = "Unexpected error" });
+        }
+    }
+    
+    [HttpPost("Admin/Login", Name = "Admin.Login")]
+    public async Task<IActionResult> AdminLogin([FromForm] AdminLoginDto form)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        
+        try
+        {
+            await using var conn = new NpgsqlConnection(_connectionString);
+            await conn.OpenAsync();
+            
+            await using var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                SELECT adm_id, adm_password
+                FROM admin";
+
+            await using var reader = await cmd.ExecuteReaderAsync();
+            var hasher = new PasswordHasher<AdminLoginDto>();
+            int? adminMatchId = null;
+            
+            while (await reader.ReadAsync())
+            {
+                var id    = reader.GetInt32(reader.GetOrdinal("adm_id"));
+                var hash  = reader.GetString(reader.GetOrdinal("adm_password")).Trim();
+
+                if (hasher.VerifyHashedPassword(form, hash, form.AdmPassword.Trim()) != PasswordVerificationResult.Failed)
+                {
+                    adminMatchId = id;
+                    break;
+                }
+            }
+            
+            if (adminMatchId == null)
+                return Unauthorized(new { success = false, message = "Invalid credentials." });
+            
+            HttpContext.Session.SetInt32("AdmId", adminMatchId.Value);
+            
+            return Ok(new
+            {
+                success = true,
+                data = new { Id = adminMatchId.Value }
             });
         }
         catch (NpgsqlException ex)

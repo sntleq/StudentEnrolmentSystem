@@ -1,0 +1,97 @@
+@{
+    ViewData["Title"] = "My Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10 pt-0">
+    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white"
+            style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+            <h2 class="text-2xl font-semibold text-gray-900">
+                Good day, @ViewBag.StudFirstName!
+            </h2>
+        </div>
+
+        <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                    <li>
+                        <a class="text-black font-medium"> Schedule </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="History"> History </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Profile"> Profile </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a
+                type="button" asp-action="Logout" asp-controller="Auth"
+                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Logout
+            </a>
+        </div>
+    </header>
+    
+    @{ var activeEnrolments = ViewBag.ActiveEnrolments as List<StudentEnrolmentSystem.Models.Enrolment>; }
+    @if (activeEnrolments!.Any())
+    {
+        <div class="flex-grow rounded-lg border border-gray-300 p-6 pt-4 grid grid-cols-6 grid-rows-[auto,repeat(5,1fr),auto,repeat(5,1fr)] gap-x-2 gap-y-1">
+            <div class="text-xs text-gray-700 col-span-1 text-center mb-3"> Monday     </div>
+            <div class="text-xs text-gray-700 col-span-1 text-center mb-3"> Tuesday    </div>
+            <div class="text-xs text-gray-700 col-span-1 text-center mb-3"> Wednesday  </div>
+            <div class="text-xs text-gray-700 col-span-1 text-center mb-3"> Thursday   </div>
+            <div class="text-xs text-gray-700 col-span-1 text-center mb-3"> Friday     </div>
+            <div class="text-xs text-gray-700 col-span-1 text-center mb-3"> Saturday   </div>
+        
+            <div class="row-start-8 row-end-10">
+                <a href="#" class="block h-full rounded-lg p-4 bg-blue-600">
+                    <p class="text-sm leading-tight font-medium text-white">Data Structures and Algorithms (Lec)</p>
+
+                    <p class="mt-1 text-xs text-gray-100">
+                        IT203 &middot; 1:00 PM - 2:00 PM
+                    </p>
+                </a>
+            </div>
+            <div class="col-start-2 row-start-2 row-end-4">
+                <a href="#" class="block h-full rounded-lg p-4 bg-blue-600">
+                    <p class="text-sm leading-tight font-medium text-white">Information Management</p>
+
+                    <p class="mt-1 text-xs text-gray-100">
+                        IT203 &middot; 1:00 PM - 2:00 PM
+                    </p>
+                </a>
+            </div>
+            <div class="col-start-2 row-start-8 row-end-11">
+                <a href="#" class="block h-full rounded-lg p-4 bg-blue-600">
+                    <p class="text-sm leading-tight font-medium text-white">Readings in Philippine History</p>
+
+                    <p class="mt-1 text-xs text-gray-100">
+                        IT203 &middot; 1:00 PM - 2:00 PM
+                    </p>
+                </a>
+            </div>
+        </div>
+    }
+    
+    else
+    {
+        <div class="flex-grow rounded-lg border border-gray-300 p-6 flex flex-col justify-center items-center">
+            <p class="text-sm text-pretty text-gray-700">
+                You haven't enrolled yet this year.
+            </p>
+
+            <button
+                type="button"
+                class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Enroll now
+            </button>
+        </div>
+    }
+</div>

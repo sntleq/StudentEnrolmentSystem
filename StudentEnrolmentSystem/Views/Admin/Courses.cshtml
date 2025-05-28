@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "Manage Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10 pt-0">
+    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white"
+            style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+            <h2 class="text-2xl font-semibold text-gray-900">
+                Manage Courses
+            </h2>
+        </div>
+
+        <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                    <li>
+                        <a class="text-black font-medium"> Courses </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Programs"> Programs </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a
+                type="button" asp-action="Logout" asp-controller="Auth"
+                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Logout
+            </a>
+        </div>
+    </header>
+    
+    @{
+        var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
+        var categories = ViewBag.Categories as List<StudentEnrolmentSystem.Models.CourseCategory>;
+    }
+    @if (courses!.Any())
+    {
+        <div class="flex-grow w-full space-y-4">
+            <div class="overflow-x-auto rounded-lg border border-gray-300">
+                <table class="min-w-full divide-y-2 divide-gray-200">
+                    <thead class="ltr:text-left rtl:text-right">
+                    <tr class="*:font-medium *:text-gray-900 *:text-left">
+                        <th class="px-4 py-3 whitespace-nowrap">Course Code</th>
+                        <th class="px-4 py-3 whitespace-nowrap">Descriptive Title</th>
+                        <th class="px-4 py-3 whitespace-nowrap">Category</th>
+                        <th class="px-4 py-3 whitespace-nowrap">Units</th>
+                        <th class="px-4 py-3 whitespace-nowrap">Lecture Hours</th>
+                        <th class="px-4 py-3 whitespace-nowrap">Lab Hours</th>
+                        <th class="px-4 py-3 whitespace-nowrap">Total Hours</th>
+                        <th class="px-4 py-3 whitespace-nowrap"></th>
+                    </tr>
+                    </thead>
+
+                    <tbody class="divide-y divide-gray-200">
+                    @foreach (var course in courses!)
+                    {
+                        var category = categories?.FirstOrDefault(c => c.CatgId == @course.CatgId);
+
+                        <tr class="*:text-gray-900 text-sm">
+                            <td class="px-4 py-2 whitespace-nowrap">@course.CrsCode</td>
+                            <td class="px-4 py-2 whitespace-nowrap">@course.CrsTitle</td>
+                            <td class="px-4 py-2 whitespace-nowrap">@category!.CatgCode</td>
+                            <td class="px-4 py-2 whitespace-nowrap">@course.CrsUnits</td>
+                            <td class="px-4 py-2 whitespace-nowrap">@course.CrsHrsLec</td>
+                            <td class="px-4 py-2 whitespace-nowrap">@course.CrsHrsLab</td>
+                            <td class="px-4 py-2 whitespace-nowrap">@(course.CrsHrsLec + course.CrsHrsLab)</td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <div class="flex gap-3 w-fit ml-auto">
+                                    <a
+                                        type="button" asp-action="EditCourse" asp-route-crsId="@course.CrsId"
+                                        class="ml-auto w-fit block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                                        Edit
+                                    </a>
+                                    
+                                    <a
+                                        type="button" asp-action="DeleteCourse" asp-route-crsId="@course.CrsId"
+                                        class="ml-auto w-fit block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
+                                        Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+
+            <a
+                type="button" asp-action="AddCourse"
+                class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                &plus; Add course
+            </a>
+        </div>
+    }
+
+    else
+    {
+        <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
+            <p class="text-sm text-pretty text-gray-700">
+                No course found in the database.
+            </p>
+
+            <a
+                type="button" asp-action="AddCourse"
+                class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Add course
+            </a>
+        </div>
+    }
+</div>

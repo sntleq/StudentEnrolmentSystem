@@ -1,0 +1,56 @@
+@model StudentEnrolmentSystem.Models.Program
+@{
+    ViewData["Title"] = "Edit Program";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+    class="fixed inset-0 z-50 grid place-content-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+>
+    <form id="editProgramForm" data-action="@Url.RouteUrl("Programs.Update")"
+        class="m-auto w-fit min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12 my-10">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Edit Program</h2>
+
+        <input type="hidden" asp-for="ProgId" value="@Model.ProgId" />
+        
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Program Title </span>
+
+                <input
+                    type="text" asp-for="ProgTitle" value="@Model.ProgTitle"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="ProgTitle" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                    type="button" asp-action="Programs"
+                    class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                    type="submit"
+                    class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin/edit-program.js"></script>
+}
