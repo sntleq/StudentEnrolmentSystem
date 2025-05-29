@@ -20,32 +20,12 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/AddCourse.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ291cnNlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/AddProgram.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUHJvZ3JhbS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/Courses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ291cnNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/DeleteCourse.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQ291cnNlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/DeleteProgram.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlUHJvZ3JhbS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/EditCourse.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENvdXJzZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/EditProgram.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFByb2dyYW0uY3NodG1s
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/Curricula.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VycmljdWxhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/Programs.cshtml]
@@ -82,6 +62,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Auth/TeacherLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxUZWFjaGVyTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Course/AddCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEFkZENvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Course/DeleteCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERlbGV0ZUNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Course/EditCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXRDb3Vyc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/AddProgram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxBZGRQcm9ncmFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/DeleteProgram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxEZWxldGVQcm9ncmFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/EditProgram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxFZGl0UHJvZ3JhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Shared/_Layout.cshtml]

@@ -24,6 +24,10 @@
                     </li>
 
                     <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Curricula"> Curricula </a>
+                    </li>
+                    
+                    <li>
                         <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
                     </li>
                 </ul>
@@ -76,13 +80,13 @@
                             <td class="px-4 py-2 whitespace-nowrap">
                                 <div class="flex gap-3 w-fit ml-auto">
                                     <a
-                                        type="button" asp-action="EditCourse" asp-route-crsId="@course.CrsId"
+                                        type="button" asp-action="Update" asp-controller="Course" asp-route-crsId="@course.CrsId"
                                         class="ml-auto w-fit block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                                         Edit
                                     </a>
                                     
                                     <a
-                                        type="button" asp-action="DeleteCourse" asp-route-crsId="@course.CrsId"
+                                        type="button" asp-action="Delete" asp-controller="Course" asp-route-crsId="@course.CrsId"
                                         class="ml-auto w-fit block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
                                         Delete
                                     </a>
@@ -95,7 +99,7 @@
             </div>
 
             <a
-                type="button" asp-action="AddCourse"
+                type="button" asp-action="Add" asp-controller="Course"
                 class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                 &plus; Add course
             </a>
@@ -110,7 +114,7 @@
             </p>
 
             <a
-                type="button" asp-action="AddCourse"
+                type="button" asp-action="Add" asp-controller="Course"
                 class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
                 Add course

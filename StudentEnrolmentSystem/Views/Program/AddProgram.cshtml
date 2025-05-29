@@ -28,12 +28,25 @@
         </div>
         
         <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Program Code </span>
+
+                <input
+                    type="text" asp-for="ProgCode"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="ProgCode" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
             <span id="formError" class="mt-1 text-sm text-red-700"></span>
         </div>
 
         <footer class="mt-6 flex justify-between gap-2">
             <a
-                type="button" asp-action="Programs"
+                type="button" asp-action="Programs" asp-controller="Admin"
                 class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
             >
                 Cancel

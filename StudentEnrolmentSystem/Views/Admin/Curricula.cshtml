@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Manage Programs";
+    ViewData["Title"] = "Manage Curricula";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,7 +8,7 @@
             style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
         <div class="flex-1 md:flex md:items-center md:gap-12">
             <h2 class="text-2xl font-semibold text-gray-900">
-                Manage Programs
+                Manage Curricula
             </h2>
         </div>
 
@@ -20,11 +20,11 @@
                     </li>
 
                     <li>
-                        <a class="text-black font-medium"> Programs </a>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Programs"> Programs </a>
                     </li>
                     
                     <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Curricula"> Curricula </a>
+                        <a class="text-black font-medium"> Curricula </a>
                     </li>
 
                     <li>
@@ -52,19 +52,17 @@
             @foreach (var program in programs!)
             {
                 <div
-                    class="flex items-baseline justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
+                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
                     <h2 class="text-lg font-medium">@program.ProgTitle</h2>
                     
-                    <p class="text-base text-gray-500 mt-0.5">(@program.ProgCode)</p>
-                    
                     <a
-                        type="button" asp-action="Update" asp-controller="Program" asp-route-progId="@program.ProgId"
+                        type="button" asp-action="EditProgram" asp-route-progId="@program.ProgId"
                         class="ml-auto block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                         Edit
                     </a>
                     
                     <a
-                        type="button" asp-action="Delete" asp-controller="Program" asp-route-progId="@program.ProgId"
+                        type="button" asp-action="DeleteProgram" asp-route-progId="@program.ProgId"
                         class="block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
                         Delete
                     </a>
@@ -72,7 +70,7 @@
             }
 
             <a
-                type="button" asp-action="Add" asp-controller="Program"
+                type="button" asp-action="AddProgram"
                 class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                 &plus; Add program
             </a>
@@ -87,7 +85,7 @@
             </p>
 
             <a
-                type="button" asp-action="Add" asp-controller="Program"
+                type="button" asp-action="AddProgram"
                 class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
                 Add program

@@ -6,17 +6,10 @@ using StudentEnrolmentSystem.Models.Dto;
 namespace StudentEnrolmentSystem.Controllers;
 
 [ApiController]
-public class AuthApiController : ControllerBase
+public class AuthApiController(IConfiguration config, ILogger<AuthApiController> logger) : ControllerBase
 {
-    private readonly string _connectionString;
-    private readonly ILogger<AuthApiController> _logger;
-    
-    public AuthApiController(IConfiguration config, ILogger<AuthApiController> logger)
-    {
-        _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
-        _logger = logger;
-    }
-    
+    private readonly string _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
+
     [HttpPost("Student/Login", Name = "Student.Login")]
     public async Task<IActionResult> StudentLogin([FromForm] StudentLoginDto form)
     {
@@ -134,7 +127,6 @@ public class AuthApiController : ControllerBase
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
 
-            // Check for existing student by stud_code or stud_email
             await using (var checkCmd = conn.CreateCommand())
             {
                 checkCmd.CommandText = @"
@@ -148,11 +140,9 @@ public class AuthApiController : ControllerBase
                     return Conflict(new { success = false, message = "An account with this ID number or email already exists." });
             }
 
-            // Hash the password
             var hasher = new PasswordHasher<SignUpDto>();
             var hashedPassword = hasher.HashPassword(form, form.StudPassword.Trim());
 
-            // Insert new student
             await using var insertCmd = conn.CreateCommand();
             insertCmd.CommandText = @"
                 INSERT INTO student (
@@ -180,14 +170,13 @@ public class AuthApiController : ControllerBase
         }
         catch (NpgsqlException ex)
         {
-            _logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error during sign-up.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error during sign-up.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }
-
 }

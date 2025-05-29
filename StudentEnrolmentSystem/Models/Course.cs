@@ -13,11 +13,14 @@ public class Course
     public required string CrsTitle { get; set; }
     
     [Required(ErrorMessage = "Number of units is required.")]
+    [RegularExpression(@"^\d+$", ErrorMessage = "Invalid number of units.")]
     public int CrsUnits { get; set; }
     
     [Required(ErrorMessage = "This is required.")]
+    [RegularExpression(@"^\d+$", ErrorMessage = "Invalid number of hours.")]
     public int CrsHrsLec { get; set; }
     
+    [RegularExpression(@"^\d+$", ErrorMessage = "Invalid number of hours.")]
     [Required(ErrorMessage = "This is required.")]
     public int CrsHrsLab { get; set; }
     

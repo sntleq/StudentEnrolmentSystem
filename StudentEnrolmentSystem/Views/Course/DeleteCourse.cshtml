@@ -28,11 +28,11 @@
             
             <input type="hidden" asp-for="Id" value="@Model.Id"/>
             
-            <button
-                type="button" asp-action="Courses"
+            <a
+                type="button" asp-action="Courses" asp-controller="Admin"
                 class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">
                 Go back
-            </button>
+            </a>
 
             <button
                 type="submit"
