@@ -11,92 +11,68 @@ public class CurriculumApiController(IConfiguration config, ILogger<CurriculumAp
     private readonly string _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
 
     [NonAction]
-    public async Task<List<Models.Program>> GetPrograms()
+    public async Task<List<Curriculum>> GetCurricula()
     {
-        var list = new List<Models.Program>();
+        var list = new List<Curriculum>();
     
         await using var conn = new NpgsqlConnection(_connectionString);
         await conn.OpenAsync();
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT *
-        FROM program";
+            SELECT *
+            FROM curriculum";
     
         await using var reader = await cmd.ExecuteReaderAsync();
     
         while (await reader.ReadAsync())
         {
-            var program = new Models.Program
+            var curr = new Curriculum
             {
+                CurId = reader.GetInt32(reader.GetOrdinal("cur_id")),
                 ProgId = reader.GetInt32(reader.GetOrdinal("prog_id")),
-                ProgTitle = reader.GetString(reader.GetOrdinal("prog_title")),
-                ProgCode = reader.GetString(reader.GetOrdinal("prog_code")),
+                AyId = reader.GetInt32(reader.GetOrdinal("ay_id")),
+                CurIsApproved = reader.GetBoolean(reader.GetOrdinal("cur_is_approved")),
             };
         
-            list.Add(program);
+            list.Add(curr);
         }
     
         return list;
     }
-
-    [HttpPost("Programs/Add", Name = "Programs.Add")]
-    public async Task<IActionResult> AddProgram([FromForm] Models.Program form)
+    
+    [NonAction]
+    public async Task<List<CurriculumCourse>> GetCurriculumCourses()
     {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        try
+        var list = new List<CurriculumCourse>();
+    
+        await using var conn = new NpgsqlConnection(_connectionString);
+        await conn.OpenAsync();
+    
+        await using var cmd = conn.CreateCommand();
+        cmd.CommandText = @"
+            SELECT *
+            FROM curriculum_course";
+    
+        await using var reader = await cmd.ExecuteReaderAsync();
+    
+        while (await reader.ReadAsync())
         {
-            await using var conn = new NpgsqlConnection(_connectionString);
-            await conn.OpenAsync();
-            
-            await using var insertCmd = conn.CreateCommand();
-            insertCmd.CommandText = @"
-                INSERT INTO program (
-                    prog_title, prog_code
-                ) VALUES (
-                    @title, @code
-                ) RETURNING prog_id";
-
-            insertCmd.Parameters.AddWithValue("title", form.ProgTitle.Trim());
-            insertCmd.Parameters.AddWithValue("code", form.ProgCode.Trim());
-
-            var newId = (int)(await insertCmd.ExecuteScalarAsync())!;
-
-            await using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                INSERT INTO curriculum (
-                    prog_id, ay_id
-                ) VALUES (
-                    @progId, @ayId
-                ) RETURNING cur_id";
-
-            cmd.Parameters.AddWithValue("progId", newId);
-            cmd.Parameters.AddWithValue("ayId", HttpContext.Session.GetInt32("AyId") ?? 2);
-
-            await cmd.ExecuteScalarAsync();
-            
-            return Ok(new
+            var course = new CurriculumCourse
             {
-                success = true,
-                data = new { Id = newId }
-            });
+                CurCrsId = reader.GetInt32(reader.GetOrdinal("cur_crs_id")),
+                CurId = reader.GetInt32(reader.GetOrdinal("cur_id")),
+                CrsId = reader.GetInt32(reader.GetOrdinal("crs_id")),
+            };
+        
+            list.Add(course);
         }
-        catch (NpgsqlException ex)
-        {
-            logger.LogError(ex, "Database error during sign-up.");
-            return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Unexpected error during sign-up.");
-            return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
-        }
+    
+        return list;
     }
     
-    [HttpPost("Programs/Update", Name = "Programs.Update")]
-    public async Task<IActionResult> UpdateProgram([FromForm] Models.Program form)
+    [HttpPost("Curricula/Update", Name = "Curricula.Update")]
+    public async Task<IActionResult> UpdateCurriculum([FromForm] CurriculumUpdateDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -115,7 +91,7 @@ public class CurriculumApiController(IConfiguration config, ILogger<CurriculumAp
                 WHERE prog_id = @progId";
 
             cmd.Parameters.AddWithValue("id", form.ProgId);
-            cmd.Parameters.AddWithValue("title", form.ProgTitle.Trim());
+            cmd.Parameters.AddWithValue("title", form.AyId);
             cmd.Parameters.AddWithValue("progId", form.ProgId);
 
             var rowsAffected = await cmd.ExecuteNonQueryAsync();
@@ -132,54 +108,12 @@ public class CurriculumApiController(IConfiguration config, ILogger<CurriculumAp
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
-            return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
-        }
-    }
-    
-    [HttpPost("Programs/Delete", Name = "Programs.Delete")]
-    public async Task<IActionResult> DeleteProgram([FromForm] DeleteDto form)
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        try
-        {
-            await using var conn = new NpgsqlConnection(_connectionString);
-            await conn.OpenAsync();
-            
-            await using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                DELETE FROM program
-                WHERE prog_id = @progId";
-
-            cmd.Parameters.AddWithValue("progId", form.Id);
-
-            var rowsAffected = await cmd.ExecuteNonQueryAsync();
-            if (rowsAffected == 0)
-            {
-                return NotFound(new { success = false, message = "Program not found" });
-            }
-            
-            return Ok(new
-            {
-                success = true,
-                data = new { Id = form.Id }
-            });
-        }
-        catch (NpgsqlException ex)
-        {
-            logger.LogError(ex, "Database error during sign-up.");
-            return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }

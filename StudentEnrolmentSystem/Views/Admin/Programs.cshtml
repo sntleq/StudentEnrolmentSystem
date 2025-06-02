@@ -26,6 +26,10 @@
                     <li>
                         <a class="text-gray-500 transition hover:text-blue-500" asp-action="Curricula"> Curricula </a>
                     </li>
+                    
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Faculty"> Faculty </a>
+                    </li>
 
                     <li>
                         <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
@@ -35,7 +39,7 @@
 
             <a
                 type="button" asp-action="Logout" asp-controller="Auth"
-                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+                class="text-gray-500 transition hover:text-blue-500 text-sm"
             >
                 Logout
             </a>
@@ -45,17 +49,35 @@
     
     @{
         var programs = ViewBag.Programs as List<StudentEnrolmentSystem.Models.Program>;
+        var heads = ViewBag.ProgramHeads as List<StudentEnrolmentSystem.Models.ProgramHead>;
     }
     @if (programs!.Any())
     {
         <div class="flex-grow w-full space-y-4">
             @foreach (var program in programs!)
             {
+                var head = heads?.FirstOrDefault(ph => ph.ProgId == program.ProgId);
+                
                 <div
-                    class="flex items-baseline justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
-                    <h2 class="text-lg font-medium">@program.ProgTitle</h2>
+                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline gap-3">
+                            <h2 class="text-lg font-medium">@program.ProgTitle</h2>
                     
-                    <p class="text-base text-gray-500 mt-0.5">(@program.ProgCode)</p>
+                            <p class="text-base text-gray-500 mt-0.5">(@program.ProgCode)</p>
+                        </div>
+                        
+                        <div class="flex items-baseline gap-3">
+                            <p class="text-sm text-gray-500 mt-0.5">Headed by: @(head != null ? head.HeadFirstName + " " + head.HeadLastName : "None")</p>
+                    
+                            <a
+                                type="button" asp-action="AssignHead" asp-controller="Program" asp-route-progId="@program.ProgId"
+                                class="text-blue-600 transition hover:text-blue-700 text-sm"
+                            >
+                                @(head != null ? "Change" : "Add")
+                            </a>
+                        </div>
+                    </div>
                     
                     <a
                         type="button" asp-action="Update" asp-controller="Program" asp-route-progId="@program.ProgId"
@@ -83,7 +105,7 @@
     {
         <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
             <p class="text-sm text-pretty text-gray-700">
-                No program found in the database.
+                No programs found in the database.
             </p>
 
             <a

@@ -4,7 +4,7 @@
 }
 
 <div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10 pt-0">
-    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white"
+    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white z-100"
             style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
         <div class="flex-1 md:flex md:items-center md:gap-12">
             <h2 class="text-2xl font-semibold text-gray-900">
@@ -28,6 +28,10 @@
                     </li>
                     
                     <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Faculty"> Faculty </a>
+                    </li>
+                    
+                    <li>
                         <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
                     </li>
                 </ul>
@@ -35,7 +39,7 @@
 
             <a
                 type="button" asp-action="Logout" asp-controller="Auth"
-                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+                class="text-gray-500 transition hover:text-blue-500 text-sm"
             >
                 Logout
             </a>
@@ -49,7 +53,60 @@
     @if (courses!.Any())
     {
         <div class="flex-grow w-full space-y-4">
-            <div class="overflow-x-auto rounded-lg border border-gray-300">
+            <div class="flex justify-between items-center gap-2">
+                <details class="group relative rounded border border-gray-300 shadow-sm z-0">
+                    <summary
+                        class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
+                    >
+                        <span id="prereqCount" class="text-sm font-medium"> Category </span>
+
+                        <span class="transition-transform group-open:-rotate-180">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.5"
+                                stroke="currentColor"
+                                class="size-3.5"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </summary>
+
+                    <div class="divide-y divide-gray-300 rounded border border-gray-300 bg-white group-open:absolute group-open:start-0 group-open:top-11 shadow-sm">
+                        <fieldset class="p-3">
+                            <legend class="sr-only">Checkboxes</legend>
+
+                            <div class="flex flex-col items-start gap-3">
+                                @foreach (var category in ViewBag.Categories)
+                                {
+                                    <label class="inline-flex items-center gap-3">
+                                        <input
+                                            type="checkbox"
+                                            class="size-5 rounded border-gray-300 shadow-sm catg-filter"
+                                            value="@category.CatgId"
+                                            checked
+                                        />
+
+                                        <span class="text-sm font-medium text-gray-700 whitespace-nowrap">
+                                            @category.CatgName (@category.CatgCode)
+                                        </span>
+                                    </label>
+                                }
+                            </div>
+                        </fieldset>
+                    </div>
+                </details>
+                
+                <a
+                    type="button" asp-action="Add" asp-controller="Course"
+                    class="ml-auto block rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                    &plus; Add course
+                </a>
+            </div>
+            
+            <div class="overflow-x-auto rounded-lg border border-gray-300 courses-container">
                 <table class="min-w-full divide-y-2 divide-gray-200">
                     <thead class="ltr:text-left rtl:text-right">
                     <tr class="*:font-medium *:text-gray-900 *:text-left">
@@ -67,9 +124,9 @@
                     <tbody class="divide-y divide-gray-200">
                     @foreach (var course in courses!)
                     {
-                        var category = categories?.FirstOrDefault(c => c.CatgId == @course.CatgId);
+                        var category = categories?.FirstOrDefault(c => c.CatgId == course.CatgId);
 
-                        <tr class="*:text-gray-900 text-sm">
+                        <tr class="*:text-gray-900 text-sm" data-catg-id="@course.CatgId">
                             <td class="px-4 py-2 whitespace-nowrap">@course.CrsCode</td>
                             <td class="px-4 py-2 whitespace-nowrap">@course.CrsTitle</td>
                             <td class="px-4 py-2 whitespace-nowrap">@category!.CatgCode</td>
@@ -84,7 +141,7 @@
                                         class="ml-auto w-fit block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                                         Edit
                                     </a>
-                                    
+
                                     <a
                                         type="button" asp-action="Delete" asp-controller="Course" asp-route-crsId="@course.CrsId"
                                         class="ml-auto w-fit block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
@@ -97,12 +154,12 @@
                     </tbody>
                 </table>
             </div>
-
-            <a
-                type="button" asp-action="Add" asp-controller="Course"
-                class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                &plus; Add course
-            </a>
+            
+            <div class="p-6 flex flex-col justify-center items-center no-results-msg">
+                <p class="text-sm text-pretty text-gray-700">
+                    No courses found for the selected category.
+                </p>
+            </div>
         </div>
     }
 
@@ -110,15 +167,19 @@
     {
         <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
             <p class="text-sm text-pretty text-gray-700">
-                No course found in the database.
+                No courses found in the database.
             </p>
 
             <a
                 type="button" asp-action="Add" asp-controller="Course"
                 class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
-                Add course
+                &plus; Add course
             </a>
         </div>
     }
 </div>
+
+@section Scripts {
+    <script src="~/js/admin/course-filter.js"></script>
+}

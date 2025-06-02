@@ -116,6 +116,113 @@ public class AuthApiController(IConfiguration config, ILogger<AuthApiController>
         }
     }
     
+    [HttpPost("ProgramHead/Login", Name = "ProgramHead.Login")]
+    public async Task<IActionResult> ProgramHeadLogin([FromForm] FacultyLoginDto form)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        
+        try
+        {
+            await using var conn = new NpgsqlConnection(_connectionString);
+            await conn.OpenAsync();
+
+            await using var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                SELECT *
+                FROM program_head
+                WHERE head_email = @email";
+            cmd.Parameters.AddWithValue("email", form.Email.Trim());
+
+            await using var reader = await cmd.ExecuteReaderAsync();
+            if (!reader.HasRows)
+                return Unauthorized(new { success = false, message = "Invalid credentials." });
+
+            await reader.ReadAsync();
+            var hashed = reader.GetString(reader.GetOrdinal("head_password")).Trim();
+            
+            var hasher = new PasswordHasher<FacultyLoginDto>();
+            if (hasher.VerifyHashedPassword(form, hashed, form.Password.Trim()) == PasswordVerificationResult.Failed)
+                return Unauthorized(new { success = false, message = "Wrong password. Try again." });
+
+            if (reader.GetBoolean(reader.GetOrdinal("head_is_active")) == false)
+                return Unauthorized(new { success = false, message = "Your account is inactive. Contact the administrator." });
+            
+            var headId = reader.GetInt32(reader.GetOrdinal("head_id"));
+            var progId = reader["prog_id"] as int?;
+            
+            HttpContext.Session.SetInt32("HeadId", headId);
+            if (progId != null)
+                HttpContext.Session.SetInt32("ProgId", (int) progId);
+            
+            return Ok(new
+            {
+                success = true,
+                data = new { Id = headId, ProgId = progId }
+            });
+        }
+        catch (NpgsqlException ex)
+        {
+            return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
+        }
+        catch
+        {
+            return StatusCode(500, new { success = false, message = "Unexpected error" });
+        }
+    }
+    
+    [HttpPost("Teacher/Login", Name = "Teacher.Login")]
+    public async Task<IActionResult> TeacherLogin([FromForm] FacultyLoginDto form)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        
+        try
+        {
+            await using var conn = new NpgsqlConnection(_connectionString);
+            await conn.OpenAsync();
+
+            await using var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                SELECT *
+                FROM teacher
+                WHERE tchr_email = @email";
+            cmd.Parameters.AddWithValue("email", form.Email.Trim());
+
+            await using var reader = await cmd.ExecuteReaderAsync();
+            if (!reader.HasRows)
+                return Unauthorized(new { success = false, message = "Invalid credentials." });
+
+            await reader.ReadAsync();
+            var hashed = reader.GetString(reader.GetOrdinal("tchr_password")).Trim();
+            
+            var hasher = new PasswordHasher<FacultyLoginDto>();
+            if (hasher.VerifyHashedPassword(form, hashed, form.Password.Trim()) == PasswordVerificationResult.Failed)
+                return Unauthorized(new { success = false, message = "Wrong password. Try again." });
+
+            if (reader.GetBoolean(reader.GetOrdinal("tchr_is_active")) == false)
+                return Unauthorized(new { success = false, message = "Your account is inactive. Contact the administrator." });
+            
+            var tchrId = reader.GetInt32(reader.GetOrdinal("tchr_id"));
+            
+            HttpContext.Session.SetInt32("TchrId", tchrId);
+            
+            return Ok(new
+            {
+                success = true,
+                data = new { Id = tchrId }
+            });
+        }
+        catch (NpgsqlException ex)
+        {
+            return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
+        }
+        catch
+        {
+            return StatusCode(500, new { success = false, message = "Unexpected error" });
+        }
+    }
+    
     [HttpPost("SignUp", Name = "SignUp")]
     public async Task<IActionResult> SignUp([FromForm] SignUpDto form)
     {
@@ -126,9 +233,12 @@ public class AuthApiController(IConfiguration config, ILogger<AuthApiController>
         {
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
+            
+            await using var tx = await conn.BeginTransactionAsync();
 
             await using (var checkCmd = conn.CreateCommand())
             {
+                checkCmd.Transaction = tx;
                 checkCmd.CommandText = @"
                     SELECT 1 FROM student 
                     WHERE stud_code = @code OR stud_email = @email";
@@ -144,6 +254,7 @@ public class AuthApiController(IConfiguration config, ILogger<AuthApiController>
             var hashedPassword = hasher.HashPassword(form, form.StudPassword.Trim());
 
             await using var insertCmd = conn.CreateCommand();
+            insertCmd.Transaction = tx;
             insertCmd.CommandText = @"
                 INSERT INTO student (
                     stud_code, stud_first_name, stud_last_name,
@@ -162,6 +273,8 @@ public class AuthApiController(IConfiguration config, ILogger<AuthApiController>
 
             var newId = (int)(await insertCmd.ExecuteScalarAsync())!;
 
+            await tx.CommitAsync();
+            
             return Ok(new
             {
                 success = true,
@@ -170,12 +283,12 @@ public class AuthApiController(IConfiguration config, ILogger<AuthApiController>
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }

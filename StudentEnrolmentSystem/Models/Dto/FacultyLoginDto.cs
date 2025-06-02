@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StudentEnrolmentSystem.Models.Dto;
 
-public class StaffLoginDto
+public class FacultyLoginDto
 {
     [Required(ErrorMessage = "Email is required")]
     [EmailAddress(ErrorMessage = "Invalid email address")]

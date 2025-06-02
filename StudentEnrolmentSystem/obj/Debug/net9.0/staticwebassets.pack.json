@@ -17,12 +17,24 @@
       "PackagePath": "staticwebassets\\js\\admin\\add-course.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\add-faculty.js",
+      "PackagePath": "staticwebassets\\js\\admin\\add-faculty.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\add-program.js",
       "PackagePath": "staticwebassets\\js\\admin\\add-program.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\course-filter.js",
+      "PackagePath": "staticwebassets\\js\\admin\\course-filter.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\delete-course.js",
       "PackagePath": "staticwebassets\\js\\admin\\delete-course.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\delete-faculty.js",
+      "PackagePath": "staticwebassets\\js\\admin\\delete-faculty.js"
     },
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\delete-program.js",
@@ -33,12 +45,24 @@
       "PackagePath": "staticwebassets\\js\\admin\\edit-course.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\edit-faculty.js",
+      "PackagePath": "staticwebassets\\js\\admin\\edit-faculty.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\edit-program.js",
       "PackagePath": "staticwebassets\\js\\admin\\edit-program.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\faculty-filter.js",
+      "PackagePath": "staticwebassets\\js\\admin\\faculty-filter.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\admin-login.js",
       "PackagePath": "staticwebassets\\js\\auth\\admin-login.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\program-head-login.js",
+      "PackagePath": "staticwebassets\\js\\auth\\program-head-login.js"
     },
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\signup.js",
@@ -47,6 +71,10 @@
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\student-login.js",
       "PackagePath": "staticwebassets\\js\\auth\\student-login.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\teacher-login.js",
+      "PackagePath": "staticwebassets\\js\\auth\\teacher-login.js"
     },
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\time-machine.js",

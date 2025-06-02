@@ -20,8 +20,8 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT *
-        FROM program";
+            SELECT *
+            FROM program";
     
         await using var reader = await cmd.ExecuteReaderAsync();
     
@@ -40,6 +40,40 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
         return list;
     }
 
+    [NonAction]
+    public async Task<List<ProgramHead>> GetProgramHeads()
+    {
+        var list = new List<ProgramHead>();
+    
+        await using var conn = new NpgsqlConnection(_connectionString);
+        await conn.OpenAsync();
+    
+        await using var cmd = conn.CreateCommand();
+        cmd.CommandText = @"
+            SELECT *
+            FROM program_head";
+    
+        await using var reader = await cmd.ExecuteReaderAsync();
+    
+        while (await reader.ReadAsync())
+        {
+            var head = new ProgramHead
+            {
+                HeadId = reader.GetInt32(reader.GetOrdinal("head_id")),
+                HeadFirstName = reader.GetString(reader.GetOrdinal("head_first_name")),
+                HeadLastName = reader.GetString(reader.GetOrdinal("head_last_name")),
+                HeadEmail = reader.GetString(reader.GetOrdinal("head_email")),
+                HeadPassword = reader.GetString(reader.GetOrdinal("head_password")),
+                HeadIsActive = reader.GetBoolean(reader.GetOrdinal("head_is_active")),
+                ProgId = reader["prog_id"] as int?
+            };
+        
+            list.Add(head);
+        }
+    
+        return list;
+    }
+    
     [HttpPost("Programs/Add", Name = "Programs.Add")]
     public async Task<IActionResult> AddProgram([FromForm] Models.Program form)
     {
@@ -51,7 +85,10 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
+            await using var tx = await conn.BeginTransactionAsync();
+            
             await using var insertCmd = conn.CreateCommand();
+            insertCmd.Transaction = tx;
             insertCmd.CommandText = @"
                 INSERT INTO program (
                     prog_title, prog_code
@@ -65,6 +102,7 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
             var newId = (int)(await insertCmd.ExecuteScalarAsync())!;
 
             await using var cmd = conn.CreateCommand();
+            cmd.Transaction = tx;
             cmd.CommandText = @"
                 INSERT INTO curriculum (
                     prog_id, ay_id
@@ -76,6 +114,7 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
             cmd.Parameters.AddWithValue("ayId", HttpContext.Session.GetInt32("AyId") ?? 2);
 
             await cmd.ExecuteScalarAsync();
+            await tx.CommitAsync();
             
             return Ok(new
             {
@@ -85,12 +124,12 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }
@@ -132,12 +171,12 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }
@@ -169,17 +208,17 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
             return Ok(new
             {
                 success = true,
-                data = new { Id = form.Id }
+                data = new { form.Id }
             });
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }

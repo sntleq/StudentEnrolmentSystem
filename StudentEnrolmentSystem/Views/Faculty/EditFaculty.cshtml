@@ -1,0 +1,100 @@
+@model StudentEnrolmentSystem.Models.Dto.FacultyUpdateDto
+@{
+    ViewData["Title"] = "Edit Faculty Member";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10">
+    <form id="editFacultyForm" data-action="@Url.RouteUrl("Faculty.Update")"
+          class="m-auto w-fit min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Edit Faculty Member</h2>
+        
+        <div class="mt-1">
+            <p class="text-sm text-pretty text-gray-700">
+                Enter updated details of faculty member.
+            </p>
+        </div>
+        
+        <input type="hidden" asp-for="OldType" value="@Model.OldType" />
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+        
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Account Type </span>
+
+                <select
+                    asp-for="Type"
+                    asp-items="@(ViewData["TypeSelectList"] as SelectList)"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                >
+                    <option value="" selected hidden>Please select</option>
+                </select>
+
+                <span asp-validation-for="Type" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> First name </span>
+
+                <input
+                    type="text" asp-for="FirstName" value="@Model.FirstName"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+
+                <span asp-validation-for="FirstName" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Last name </span>
+
+                <input
+                    type="text" asp-for="LastName" value="@Model.LastName"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+
+                <span asp-validation-for="LastName" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Email </span>
+
+                <input
+                    type="email" asp-for="Email" value="@Model.Email"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+
+                <span asp-validation-for="Email" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                type="button" asp-action="Faculty" asp-controller="Admin"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin/edit-faculty.js"></script>
+}

@@ -8,5 +8,7 @@ public class Enrolment
     public int SchedId { get; set; }
     public int AyId { get; set; }
     public int SemId { get; set; }
+    
+    public bool EnrlIsApproved { get; set; }
     public bool EnrlIsCompleted { get; set; }
 }

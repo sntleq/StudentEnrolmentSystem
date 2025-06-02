@@ -1,18 +1,10 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Npgsql;
-using StudentEnrolmentSystem.Models;
-using StudentEnrolmentSystem.Models.Dto;
-
 namespace StudentEnrolmentSystem.Controllers;
 
 public class StudentController(
-    IConfiguration config, ILogger<AdminController> logger,
     StudentApiController studentApi, ProgramApiController programApi
     ) : Controller
 {
-    private readonly string _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
-
     public IActionResult Index()
     {
         return RedirectToAction("Schedule");
@@ -24,9 +16,9 @@ public class StudentController(
         ViewBag.StudFirstName = HttpContext.Session.GetString("StudFirstName");
         
         ViewBag.ActiveEnrolments = studentApi.GetActiveEnrolments(
-            (int)ViewBag.StudId, 
-            (int)HttpContext.Session.GetInt32("AyId")!, 
-            (int)HttpContext.Session.GetInt32("SemId")!
+            ViewBag.StudId, 
+            HttpContext.Session.GetInt32("AyId") ?? 2, 
+            HttpContext.Session.GetInt32("SemId") ?? 1
         ).Result;
         
         return View("~/Views/Student/Schedule.cshtml");

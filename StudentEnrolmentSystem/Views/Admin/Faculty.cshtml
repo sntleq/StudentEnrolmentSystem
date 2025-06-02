@@ -1,0 +1,210 @@
+@{
+    ViewData["Title"] = "Manage Faculty";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10 pt-0">
+    <header class="sticky top-0 w-full flex self-start items-center justify-between py-6 bg-white"
+            style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+            <h2 class="text-2xl font-semibold text-gray-900">
+                Manage Faculty
+            </h2>
+        </div>
+
+        <div class="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Courses"> Courses </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Programs"> Programs </a>
+                    </li>
+                    
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Curricula"> Curricula </a>
+                    </li>
+                    
+                    <li>
+                        <a class="text-black font-medium"> Faculty </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a
+                type="button" asp-action="Logout" asp-controller="Auth"
+                class="text-gray-500 transition hover:text-blue-500 text-sm"
+            >
+                Logout
+            </a>
+        </div>
+    </header>
+
+    
+    @{
+        var heads = ViewBag.ProgramHeads as List<StudentEnrolmentSystem.Models.ProgramHead>;
+        var teachers = ViewBag.Teachers as List<StudentEnrolmentSystem.Models.Teacher>;
+        var programs = ViewBag.Programs as List<StudentEnrolmentSystem.Models.Program>;
+    }
+    @if (heads!.Any() || teachers!.Any())
+    {
+        <div class="flex-grow w-full space-y-4">
+            <div class="flex justify-between items-center gap-2">
+                <details class="group relative rounded border border-gray-300 shadow-sm z-0">
+                    <summary
+                        class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
+                    >
+                        <span id="prereqCount" class="text-sm font-medium"> Type </span>
+
+                        <span class="transition-transform group-open:-rotate-180">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.5"
+                                stroke="currentColor"
+                                class="size-3.5"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </summary>
+
+                    <div class="divide-y divide-gray-300 rounded border border-gray-300 bg-white group-open:absolute group-open:start-0 group-open:top-11 shadow-sm">
+                        <fieldset class="p-3">
+                            <legend class="sr-only">Checkboxes</legend>
+
+                            <div class="flex flex-col items-start gap-3">
+                                <label class="inline-flex items-center gap-3">
+                                    <input
+                                        type="checkbox"
+                                        class="size-5 rounded border-gray-300 shadow-sm type-filter"
+                                        value="1"
+                                        checked
+                                    />
+
+                                    <span class="text-sm font-medium text-gray-700 whitespace-nowrap">
+                                        Program Head
+                                    </span>
+                                </label>
+                                
+                                <label class="inline-flex items-center gap-3">
+                                    <input
+                                        type="checkbox"
+                                        class="size-5 rounded border-gray-300 shadow-sm type-filter"
+                                        value="2"
+                                        checked
+                                    />
+
+                                    <span class="text-sm font-medium text-gray-700 whitespace-nowrap">
+                                        Teacher
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </details>
+                
+                <a
+                    type="button" asp-action="Add" asp-controller="Faculty"
+                    class="ml-auto block rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                    &plus; Add member
+                </a>
+            </div>
+            
+            @foreach (var head in heads!)
+            {
+                <div data-type-id="1"
+                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900 faculty">
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline gap-3">
+                            <h2 class="text-lg font-medium">@head.HeadFirstName @head.HeadLastName</h2>
+
+                            @if (head.ProgId != null)
+                            {
+                                var program = programs!.FirstOrDefault(p => p.ProgId == head.ProgId);
+                                <p class="text-base text-gray-500 mt-0.5">(@program!.ProgCode)</p>
+                            }
+                        </div>
+
+                        <div class="flex items-baseline gap-3">
+                            <p class="text-sm text-gray-500 mt-0.5">Program Head &middot; @head.HeadEmail</p>
+                        </div>
+                    </div>
+
+                    <a
+                        type="button" asp-action="Update" asp-controller="Faculty" asp-route-id="@head.HeadId" asp-route-typeId="1"
+                        class="ml-auto block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                        Edit
+                    </a>
+
+                    <a
+                        type="button" asp-action="Delete" asp-controller="Faculty" asp-route-id="@head.HeadId" asp-route-typeId="1"
+                        class="block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
+                        Delete
+                    </a>
+                </div>
+            }
+
+            @foreach (var teacher in teachers!)
+            {
+                <div data-type-id="2"
+                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900 faculty">
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline gap-3">
+                            <h2 class="text-lg font-medium">@teacher.TchrFirstName @teacher.TchrLastName</h2>
+                        </div>
+
+                        <div class="flex items-baseline gap-3">
+                            <p class="text-sm text-gray-500 mt-0.5">Teacher &middot; @teacher.TchrEmail</p>
+                        </div>
+                    </div>
+
+                    <a
+                        type="button" asp-action="Update" asp-controller="Faculty" asp-route-id="@teacher.TchrId" asp-route-typeId="2"
+                        class="ml-auto block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                        Edit
+                    </a>
+
+                    <a
+                        type="button" asp-action="Delete" asp-controller="Faculty" asp-route-id="@teacher.TchrId" asp-route-typeId="2"
+                        class="block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
+                        Delete
+                    </a>
+                </div>
+            }
+
+            <div class="p-6 flex flex-col justify-center items-center no-results-msg">
+                <p class="text-sm text-pretty text-gray-700">
+                    No faculty members found for the selected category.
+                </p>
+            </div>
+        </div>
+    }
+
+    else
+    {
+        <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
+            <p class="text-sm text-pretty text-gray-700">
+                No faculty members found in the database.
+            </p>
+
+            <a
+                type="button" asp-action="Add" asp-controller="Faculty"
+                class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                &plus; Add member
+            </a>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="~/js/admin/faculty-filter.js"></script>
+}

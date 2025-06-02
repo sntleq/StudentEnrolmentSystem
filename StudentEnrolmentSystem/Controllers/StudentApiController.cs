@@ -17,9 +17,9 @@ public class StudentApiController(IConfiguration config, ILogger<StudentApiContr
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT *
-        FROM student
-        WHERE stud_id = @studentId";
+            SELECT *
+            FROM student
+            WHERE stud_id = @studentId";
     
         cmd.Parameters.AddWithValue("studentId", studentId);
     
@@ -41,6 +41,7 @@ public class StudentApiController(IConfiguration config, ILogger<StudentApiContr
                 StudIsFirstGen = reader["stud_is_first_gen"] as bool?,
                 ProgId = reader["prog_id"] as int?,
                 StudStatus = reader["stud_status"] as string,
+                LvlId = reader["lvl_id"] as int?
             };
         }
         
@@ -57,11 +58,11 @@ public class StudentApiController(IConfiguration config, ILogger<StudentApiContr
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT enrl_id, stud_id, prog_id, sched_id, ay_id, sem_id, enrl_is_completed
-        FROM enrolment
-        WHERE stud_id = @studentId
-          AND ay_id = @ayId
-          AND sem_id = @semId";
+            SELECT enrl_id, stud_id, prog_id, sched_id, ay_id, sem_id, enrl_is_completed
+            FROM enrolment
+            WHERE stud_id = @studentId
+              AND ay_id = @ayId
+              AND sem_id = @semId";
     
         cmd.Parameters.AddWithValue("studentId", studentId);
         cmd.Parameters.AddWithValue("ayId", ayId);
@@ -98,9 +99,9 @@ public class StudentApiController(IConfiguration config, ILogger<StudentApiContr
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT enrl_id, stud_id, prog_id, sched_id, ay_id, sem_id, enrl_is_completed
-        FROM enrolment
-        WHERE stud_id = @studentId";
+            SELECT enrl_id, stud_id, prog_id, sched_id, ay_id, sem_id, enrl_is_completed
+            FROM enrolment
+            WHERE stud_id = @studentId";
     
         cmd.Parameters.AddWithValue("studentId", studentId);
     
@@ -120,6 +121,34 @@ public class StudentApiController(IConfiguration config, ILogger<StudentApiContr
             };
         
             list.Add(enrolment);
+        }
+    
+        return list;
+    }
+    
+    public async Task<List<YearLevel>> GetYearLevels()
+    {
+        var list = new List<YearLevel>();
+    
+        await using var conn = new NpgsqlConnection(_connectionString);
+        await conn.OpenAsync();
+    
+        await using var cmd = conn.CreateCommand();
+        cmd.CommandText = @"
+            SELECT *
+            FROM year_level";
+    
+        await using var reader = await cmd.ExecuteReaderAsync();
+    
+        while (await reader.ReadAsync())
+        {
+            var lvl = new YearLevel
+            {
+                LvlId = reader.GetInt32(reader.GetOrdinal("lvl_id")),
+                LvlName = reader.GetString(reader.GetOrdinal("lvl_name")).Trim(),
+            };
+        
+            list.Add(lvl);
         }
     
         return list;

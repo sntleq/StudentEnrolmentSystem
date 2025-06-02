@@ -36,4 +36,5 @@ public class Student
     public bool? StudIsFirstGen { get; set; }
     public int? ProgId { get; set; }
     public string? StudStatus { get; set; }
+    public int? LvlId { get; set; }
 }

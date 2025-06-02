@@ -1,0 +1,78 @@
+@model StudentEnrolmentSystem.Models.Dto.ProgramHeadAssignDto
+@{
+    ViewData["Title"] = "Assign Program Head";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+        class="fixed inset-0 z-50 grid place-content-center p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+>
+    <form id="timeMachineForm" data-action="@Url.RouteUrl("Time.Set")"
+        class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Assign Program Head</h2>
+        
+        <div class="mt-1">
+            <p class="text-sm text-pretty text-gray-700">
+                Choose a program head for the selected program. This will turn other heads for this program inactive.
+            </p>
+        </div>
+
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Program </span>
+
+                <input
+                    type="text" value="@ViewBag.Program.ProgCode" disabled
+                    class="mt-1 w-full rounded border-gray-300 bg-gray-100 sm:text-sm"
+                />
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <div class="flex justify-between gap-2">
+                    <span class="text-sm font-medium text-gray-700"> Program Head </span>
+                    <a class="text-sm text-blue-600 hover:text-blue-700" asp-action="Add" asp-controller="Faculty"> Add </a>
+                </div>
+
+                <select
+                    asp-for="HeadId"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                >
+                    <option value="" selected hidden>Please select</option>
+                    @foreach (var head in ViewBag.ProgramHeads)
+                    {
+                        <option value="@head.HeadId">@head.HeadFirstName @head.HeadLastName</option>
+                    }
+                </select>
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+        
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                type="button" asp-action="Programs" asp-controller="Admin"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/time-machine.js"></script>
+}

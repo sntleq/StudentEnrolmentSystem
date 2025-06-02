@@ -6,9 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 
+builder.Services.AddScoped<TimeMachineController>();
 builder.Services.AddScoped<StudentApiController>();
 builder.Services.AddScoped<CourseApiController>();
 builder.Services.AddScoped<ProgramApiController>();
+builder.Services.AddScoped<CurriculumApiController>();
+builder.Services.AddScoped<FacultyApiController>();
 
 var app = builder.Build();
 

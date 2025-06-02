@@ -1,17 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
-using Npgsql;
-using StudentEnrolmentSystem.Models;
 using StudentEnrolmentSystem.Models.Dto;
 
 namespace StudentEnrolmentSystem.Controllers;
 
 public class ProgramController(
-    IConfiguration config, ILogger<ProgramController> logger,
     ProgramApiController programApi 
 ) : Controller
 {
-    private readonly string _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
-
     public IActionResult Index()
     {
         return RedirectToAction("Programs", "Admin");
@@ -27,6 +22,20 @@ public class ProgramController(
     {
         var program = programApi.GetPrograms().Result.FirstOrDefault(x => x.ProgId == progId);
         return View("~/Views/Program/EditProgram.cshtml", program);
+    }
+    
+    public IActionResult AssignHead(int progId)
+    {
+        ViewBag.Program = programApi.GetPrograms().Result.FirstOrDefault(x => x.ProgId == progId);
+        ViewBag.ProgramHeads = programApi.GetProgramHeads().Result;
+        return View("~/Views/Program/AssignProgramHead.cshtml");
+    }
+    
+    public IActionResult AddHead(int progId)
+    {
+        ViewBag.Program = programApi.GetPrograms().Result.FirstOrDefault(x => x.ProgId == progId);
+        ViewBag.ProgramHeads = programApi.GetProgramHeads().Result;
+        return View("~/Views/Program/AddProgramHead.cshtml");
     }
     
     public IActionResult Delete(int progId)

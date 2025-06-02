@@ -1,4 +1,16 @@
 $().ready(function () {
+    const $checkboxes = $('input[name="CrsPreqIds"]');
+    const $countSpan = $('#prereqCount');
+    
+    function updatePrereqCount() {
+        const selectedCount = $checkboxes.filter(':checked').length;
+        $countSpan.text(
+            selectedCount + ' course' + (selectedCount !== 1 ? 's' : '') + ' selected'
+        );
+    }
+    $checkboxes.on('change', updatePrereqCount);
+    updatePrereqCount();
+    
     const $form = $('#addCourseForm');
     const action = $form.data('action');
 

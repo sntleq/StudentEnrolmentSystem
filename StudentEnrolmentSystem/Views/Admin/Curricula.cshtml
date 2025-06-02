@@ -26,6 +26,10 @@
                     <li>
                         <a class="text-black font-medium"> Curricula </a>
                     </li>
+                    
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Faculty"> Faculty </a>
+                    </li>
 
                     <li>
                         <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
@@ -35,7 +39,7 @@
 
             <a
                 type="button" asp-action="Logout" asp-controller="Auth"
-                class="w-full rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+                class="text-gray-500 transition hover:text-blue-500 text-sm"
             >
                 Logout
             </a>
@@ -44,36 +48,109 @@
 
     
     @{
+        var curricula = ViewBag.Curricula as List<StudentEnrolmentSystem.Models.Curriculum>;
+        var curCourses = ViewBag.CurriculumCourses as List<StudentEnrolmentSystem.Models.CurriculumCourse>;
+        var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
+        var categories = ViewBag.Categories as List<StudentEnrolmentSystem.Models.CourseCategory>;
         var programs = ViewBag.Programs as List<StudentEnrolmentSystem.Models.Program>;
+        var years = ViewBag.AcademicYears as List<StudentEnrolmentSystem.Models.AcademicYear>;
     }
-    @if (programs!.Any())
+    @if (curricula!.Any())
     {
         <div class="flex-grow w-full space-y-4">
-            @foreach (var program in programs!)
+            @foreach (var cur in curricula!)
             {
-                <div
-                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
-                    <h2 class="text-lg font-medium">@program.ProgTitle</h2>
-                    
-                    <a
-                        type="button" asp-action="EditProgram" asp-route-progId="@program.ProgId"
-                        class="ml-auto block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                        Edit
-                    </a>
-                    
-                    <a
-                        type="button" asp-action="DeleteProgram" asp-route-progId="@program.ProgId"
-                        class="block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
-                        Delete
-                    </a>
-                </div>
-            }
+                
+                var prog = programs?.FirstOrDefault(p => p.ProgId == cur.ProgId);
+                var ay = years?.FirstOrDefault(x => x.AyId == cur.AyId);
+                
+                var curCrsRecords = curCourses?.Where(c => c.CurId == cur.CurId).ToList();
+                var coursesInCur = courses?.Where(c => curCrsRecords!.Any(cr => cr.CrsId == c.CrsId)).ToList();
+                
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
+                        <h2 class="text-lg font-medium">@prog!.ProgCode @ay!.AyStartYr-@ay.AyEndYr</h2>
+                        
+                        @if (cur.CurIsApproved)
+                        {
+                            <span class="rounded-full bg-blue-100 px-2.5 py-0.5 text-sm whitespace-nowrap text-blue-700">
+                                Approved
+                            </span>
+                        }
 
-            <a
-                type="button" asp-action="AddProgram"
-                class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                &plus; Add program
-            </a>
+                        else
+                        {
+                            <span class="rounded-full border border-gray-500 px-2.5 py-0.5 text-sm whitespace-nowrap text-gray-500">
+                                Pending
+                            </span>
+                        }
+                        
+                        <svg
+                            class="ml-auto size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    
+                    @if (coursesInCur!.Any())
+                    {
+                        <div class="mt-4 @(cur.CurIsApproved ? "rounded-lg mb-8" : "rounded-t-lg") p-6 border border-gray-300">
+                            <table class="min-w-full divide-y-2 divide-gray-200">
+                                <thead class="ltr:text-left rtl:text-right">
+                                <tr class="*:font-medium *:text-gray-900 *:text-left">
+                                    <th class="px-4 py-3 whitespace-nowrap">Course Code</th>
+                                    <th class="px-4 py-3 whitespace-nowrap">Descriptive Title</th>
+                                    <th class="px-4 py-3 whitespace-nowrap">Category</th>
+                                    <th class="px-4 py-3 whitespace-nowrap">Units</th>
+                                    <th class="px-4 py-3 whitespace-nowrap">Lecture Hours</th>
+                                    <th class="px-4 py-3 whitespace-nowrap">Lab Hours</th>
+                                    <th class="px-4 py-3 whitespace-nowrap">Total Hours</th>
+                                </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-gray-200">
+                                @foreach (var course in coursesInCur!)
+                                {
+                                    var category = categories?.FirstOrDefault(c => c.CatgId == course.CatgId);
+                                    <tr>
+                                        <td class="px-4 py-3">@course.CrsCode</td>
+                                        <td class="px-4 py-3">@course.CrsTitle</td>
+                                        <td class="px-4 py-3">@category?.CatgName</td>
+                                        <td class="px-4 py-3">@course.CrsUnits</td>
+                                        <td class="px-4 py-3">@course.CrsHrsLec</td>
+                                        <td class="px-4 py-3">@course.CrsHrsLab</td>
+                                        <td class="px-4 py-3">@(course.CrsHrsLec + course.CrsHrsLab)</td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        @if (!cur.CurIsApproved)
+                        {
+                            <a
+                                type="button" asp-action="Update" asp-controller="Curriculum" asp-route-progId="@cur.CurId"
+                                class="mb-8 w-full text-center block rounded-b-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                                Approve
+                            </a>
+                        }
+                    }
+                    
+                    @if (!coursesInCur!.Any())
+                    {
+                        <div class="mt-4 mb-8 rounded-lg p-6 flex flex-col justify-center items-center border border-gray-300">
+                            <p class="text-sm text-pretty text-gray-700">
+                                No courses assigned.
+                            </p>
+                        </div>
+                    }
+                </details>
+            }
         </div>
     }
 
@@ -81,11 +158,11 @@
     {
         <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
             <p class="text-sm text-pretty text-gray-700">
-                No program found in the database.
+                No curricula found in the database. Add a program first to create a curriculum.
             </p>
 
             <a
-                type="button" asp-action="AddProgram"
+                type="button" asp-action="Add" asp-controller="Program"
                 class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
                 Add program

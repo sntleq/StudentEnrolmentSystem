@@ -1,4 +1,4 @@
-@model StudentEnrolmentSystem.Models.Course
+@model StudentEnrolmentSystem.Models.Dto.CourseCreateDto
 @{
     ViewData["Title"] = "Edit Course";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +11,7 @@
 
         <div class="mt-1">
             <p class="text-sm text-pretty text-gray-700">
-                Enter details of course offering to update.
+                Enter updated details of course offering.
             </p>
         </div>
         
@@ -49,7 +49,7 @@
 
                 <select
                         asp-for="CatgId"
-                        class="mt-0.5 w-full rounded border-gray-300 sm:text-sm"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                         asp-items="@(new SelectList(ViewBag.Categories, "CatgId", "CatgName"))"
                 >
                     <option value="" selected hidden>Please select</option>
@@ -99,6 +99,77 @@
                 <span asp-validation-for="CrsUnits" class="mt-1 text-sm text-red-700"></span>
             </label>
         </div>
+        
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Prerequisites </span>
+
+                <details class="mt-1 group relative overflow-hidden rounded border border-gray-300 shadow-sm">
+                    <summary
+                        class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
+                    >
+                        <span id="prereqCount" class="text-sm font-medium"> 0 course selected </span>
+
+                        <span class="transition-transform group-open:-rotate-180">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.5"
+                                stroke="currentColor"
+                                class="size-3.5"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </summary>
+
+                    <div class="divide-y divide-gray-300 border-t border-gray-300 bg-white">
+                        <fieldset class="p-3">
+                            <legend class="sr-only">Checkboxes</legend>
+                            @{
+                                var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
+                            }
+                            
+                            <div class="flex flex-col items-start gap-3">
+                                @foreach (var course in courses!.Where(c => c.CrsId != Model.CrsId))
+                                {
+                                    <label class="inline-flex items-center gap-3">
+                                        <input
+                                            type="checkbox" name="CrsPreqIds"
+                                            class="size-5 rounded border-gray-300 shadow-sm"
+                                            value="@course.CrsId"
+                                            @(Model.CrsPreqIds.Contains(course.CrsId) ? "checked" : "")
+                                        />
+
+                                        <span class="text-sm font-medium text-gray-700">
+                                            @course.CrsTitle
+                                        </span>
+                                    </label>
+                                }
+                            </div>
+                        </fieldset>
+                    </div>
+                </details>
+                
+                <span class="my-1 block flex items-center">
+                    <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
+
+                    <span class="shrink-0 px-4 text-sm text-gray-900"> or </span>
+
+                    <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
+                </span>
+                
+                <select
+                    asp-for="LvlId"
+                    asp-items="@(new SelectList(ViewBag.YearLevels, "LvlId", "LvlName"))"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                >
+                    <option value="" selected hidden>Select year level</option>
+                </select>
+            </label>
+        </div>
+
         
         <div class="mt-4">
             <span id="formError" class="mt-1 text-sm text-red-700"></span>

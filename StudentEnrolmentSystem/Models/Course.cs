@@ -26,4 +26,6 @@ public class Course
     
     [Required(ErrorMessage = "Course category is required.")]
     public int CatgId { get; set; }
+    
+    public int? LvlId { get; set; }
 }

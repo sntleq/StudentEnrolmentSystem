@@ -1,17 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
-using Npgsql;
-using StudentEnrolmentSystem.Models;
 using StudentEnrolmentSystem.Models.Dto;
 
 namespace StudentEnrolmentSystem.Controllers;
 
 public class CourseController(
-    IConfiguration config, ILogger<AdminController> logger,
-    CourseApiController courseApi
+    CourseApiController courseApi, StudentApiController studentApi
     ) : Controller
 {
-    private readonly string _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
-
     public IActionResult Index()
     {
         return RedirectToAction("Courses", "Admin");
@@ -20,14 +15,31 @@ public class CourseController(
     public IActionResult Add()
     {
         ViewBag.Categories = courseApi.GetCategories().Result;
+        ViewBag.YearLevels = studentApi.GetYearLevels().Result;
+        ViewBag.Courses = courseApi.GetCourses().Result;
         return View("~/Views/Course/AddCourse.cshtml");
     }
     
     public IActionResult Update(int crsId)
     {
         var course = courseApi.GetCourses().Result.FirstOrDefault(x => x.CrsId == crsId);
+        var dto = new CourseCreateDto
+        {
+            CrsId     = course!.CrsId,
+            CrsCode   = course.CrsCode,
+            CrsTitle  = course.CrsTitle,
+            CrsUnits  = course.CrsUnits,
+            CrsHrsLec = course.CrsHrsLec,
+            CrsHrsLab = course.CrsHrsLab,
+            CatgId    = course.CatgId,
+            LvlId     = course.LvlId,
+            CrsPreqIds = courseApi.GetPrerequisites(course.CrsId).Result
+        };
+        
         ViewBag.Categories = courseApi.GetCategories().Result;
-        return View("~/Views/Course/EditCourse.cshtml", course);
+        ViewBag.YearLevels = studentApi.GetYearLevels().Result;
+        ViewBag.Courses = courseApi.GetCourses().Result;
+        return View("~/Views/Course/EditCourse.cshtml", dto);
     }
     
     public IActionResult Delete(int crsId)

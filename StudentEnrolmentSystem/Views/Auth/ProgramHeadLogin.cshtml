@@ -1,3 +1,4 @@
+@model StudentEnrolmentSystem.Models.Dto.FacultyLoginDto
 @{
     ViewData["Title"] = "Program Head Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -37,7 +38,8 @@
             aria-modal="true"
             aria-labelledby="modalTitle"
         >
-            <div class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+            <form id="programHeadLoginForm" data-action="@Url.RouteUrl("ProgramHead.Login")"
+                  class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
                 <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Program Head Login</h2>
 
                 <div class="mt-1">
@@ -51,11 +53,11 @@
                         <span class="text-sm font-medium text-gray-700"> Email </span>
 
                         <input
-                            type="email"
+                            type="email" asp-for="Email"
                             class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                         />
 
-                        <span class="mt-1 text-sm text-red-700"> Invalid email address </span>
+                        <span asp-validation-for="Email" class="mt-1 text-sm text-red-700"></span>
                     </label>
                 </div>
 
@@ -67,27 +69,31 @@
                         </div>
 
                         <input
-                            type="password"
+                            type="password" asp-for="Password"
                             class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                         />
 
-                        <span class="mt-1 text-sm text-red-700"> Password is required </span>
+                        <span asp-validation-for="Password" class="mt-1 text-sm text-red-700"></span>
                     </label>
                 </div>
 
                 <div class="mt-4">
-                    <span class="mt-1 text-sm text-red-700"> Wrong password. Please try again. </span>
+                    <span id="loginError" class="mt-1 text-sm text-red-700"></span>
                 </div>
 
                 <div class="mt-6">
                     <button
-                        type="button"
+                        type="submit"
                         class="w-full rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
                     >
                         Login
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/auth/program-head-login.js"></script>
+}

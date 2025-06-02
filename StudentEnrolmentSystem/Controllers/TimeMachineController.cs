@@ -5,17 +5,10 @@ using StudentEnrolmentSystem.Models.Dto;
 
 namespace StudentEnrolmentSystem.Controllers;
 
-public class TimeMachineController : Controller
+public class TimeMachineController(IConfiguration config, ILogger<TimeMachineController> logger) : Controller
 {
-    private readonly string _connectionString;
-    private readonly ILogger<TimeMachineController> _logger;
-    
-    public TimeMachineController(IConfiguration config, ILogger<TimeMachineController> logger)
-    {
-        _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
-        _logger = logger;
-    }
-    
+    private readonly string _connectionString = config.GetConnectionString("DefaultConnection") ?? string.Empty;
+
     public IActionResult Index()
     {
         ViewBag.AcademicYears = GetAcademicYears().Result;
@@ -48,8 +41,8 @@ public class TimeMachineController : Controller
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT *
-        FROM academic_year";
+            SELECT *
+            FROM academic_year";
     
         await using var reader = await cmd.ExecuteReaderAsync();
     
@@ -77,8 +70,8 @@ public class TimeMachineController : Controller
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT *
-        FROM semester";
+            SELECT *
+            FROM semester";
     
         await using var reader = await cmd.ExecuteReaderAsync();
     

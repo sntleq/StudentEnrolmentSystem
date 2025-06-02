@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VycmljdWxhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/Faculty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmFjdWx0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/Programs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZ3JhbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -76,8 +80,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXRDb3Vyc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Faculty/AddFaculty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxBZGRGYWN1bHR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Faculty/DeleteFaculty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxEZWxldGVGYWN1bHR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Faculty/EditFaculty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxFZGl0RmFjdWx0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/ProgramHead/Curricula.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUhlYWRcQ3VycmljdWxhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/AddProgram.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxBZGRQcm9ncmFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/AssignProgramHead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxBc3NpZ25Qcm9ncmFtSGVhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/DeleteProgram.cshtml]

@@ -1,16 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-
 namespace StudentEnrolmentSystem.Controllers;
 
 public class AuthController : Controller
 {
-    private readonly ILogger<AuthController> _logger;
-
-    public AuthController(ILogger<AuthController> logger)
-    {
-        _logger = logger;
-    }
-    
     public IActionResult Index()
     {
         return RedirectToAction("Student");
@@ -58,7 +50,9 @@ public class AuthController : Controller
     
     public IActionResult Logout()
     {
-        HttpContext.Session.Clear();
+        HttpContext.Session.SetInt32("StudId", 0);
+        HttpContext.Session.SetString("StudFirstName", string.Empty);
+        HttpContext.Session.SetInt32("AdmId", 0);
         return RedirectToAction("Index");   
     }
 }

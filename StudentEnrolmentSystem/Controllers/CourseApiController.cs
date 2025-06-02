@@ -20,8 +20,9 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
     
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
-        SELECT *
-        FROM course";
+            SELECT *
+            FROM course
+            ORDER BY catg_id, crs_id";
     
         await using var reader = await cmd.ExecuteReaderAsync();
     
@@ -36,6 +37,7 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
                 CrsHrsLec = reader.GetInt32(reader.GetOrdinal("crs_hrs_lec")),
                 CrsHrsLab = reader.GetInt32(reader.GetOrdinal("crs_hrs_lab")),
                 CatgId = reader.GetInt32(reader.GetOrdinal("catg_id")),
+                LvlId = reader["lvl_id"] as int?
             };
         
             list.Add(course);
@@ -74,8 +76,36 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
         return list;
     }
 
+    [NonAction]
+    public async Task<List<int>> GetPrerequisites(int crsId)
+    {
+        var list = new List<int>();
+    
+        await using var conn = new NpgsqlConnection(_connectionString);
+        await conn.OpenAsync();
+    
+        await using var cmd = conn.CreateCommand();
+        cmd.CommandText = @"
+            SELECT crs_preq_id
+            FROM course_dependency
+            WHERE crs_id = @crsId
+            ORDER BY crs_preq_id";
+    
+        cmd.Parameters.AddWithValue("crsId", crsId);
+        
+        await using var reader = await cmd.ExecuteReaderAsync();
+        
+        while (await reader.ReadAsync())
+        {
+            list.Add(reader.GetInt32(reader.GetOrdinal("crs_preq_id")));
+        }
+    
+        return list;
+    }
+
+    
     [HttpPost("Courses/Add", Name = "Courses.Add")]
-    public async Task<IActionResult> AddCourse([FromForm] Course form)
+    public async Task<IActionResult> AddCourse([FromForm] CourseCreateDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -85,14 +115,17 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
+            await using var tx = await conn.BeginTransactionAsync();
+            
             await using var insertCmd = conn.CreateCommand();
+            insertCmd.Transaction = tx;
             insertCmd.CommandText = @"
                 INSERT INTO course (
                     crs_code, crs_title, crs_units,
-                    crs_hrs_lec, crs_hrs_lab, catg_id
+                    crs_hrs_lec, crs_hrs_lab, catg_id, lvl_id
                 ) VALUES (
                     @code, @title, @units,
-                    @hrsLec, @hrsLab, @catgId
+                    @hrsLec, @hrsLab, @catgId, @lvlId
                 ) RETURNING crs_id";
 
             insertCmd.Parameters.AddWithValue("code", form.CrsCode.Trim());
@@ -101,9 +134,36 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             insertCmd.Parameters.AddWithValue("hrsLec", form.CrsHrsLec);
             insertCmd.Parameters.AddWithValue("hrsLab", form.CrsHrsLab);
             insertCmd.Parameters.AddWithValue("catgId", form.CatgId);
+            
+            if (form.LvlId.HasValue)
+                insertCmd.Parameters.AddWithValue("lvlId", form.LvlId);
+            else
+                insertCmd.Parameters.AddWithValue("lvlId", DBNull.Value);
 
             var newId = (int)(await insertCmd.ExecuteScalarAsync())!;
 
+            if (form.CrsPreqIds.Count > 0)
+            {
+                await using var cmd = conn.CreateCommand();
+                cmd.Transaction = tx;
+                cmd.CommandText = @"
+                    INSERT INTO course_dependency (
+                        crs_id, crs_preq_id
+                    ) VALUES (
+                        @crsId, @crsPreqId
+                    )";
+
+                cmd.Parameters.AddWithValue("crsId", newId);
+                cmd.Parameters.Add("crsPreqId", NpgsqlTypes.NpgsqlDbType.Integer);
+                foreach (var preqId in form.CrsPreqIds)
+                {
+                    cmd.Parameters["crsPreqId"].Value = preqId;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+            
+            await tx.CommitAsync();
+            
             return Ok(new
             {
                 success = true,
@@ -112,18 +172,18 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }
     
     [HttpPost("Courses/Update", Name = "Courses.Update")]
-    public async Task<IActionResult> UpdateCourse([FromForm] Course form)
+    public async Task<IActionResult> UpdateCourse([FromForm] CourseCreateDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -133,7 +193,10 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
+            await using var tx = await conn.BeginTransactionAsync();
+            
             await using var cmd = conn.CreateCommand();
+            cmd.Transaction = tx;
             cmd.CommandText = @"
                 UPDATE course
                 SET 
@@ -142,7 +205,8 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
                     crs_units = @units,
                     crs_hrs_lec = @hrsLec,
                     crs_hrs_lab = @hrsLab,
-                    catg_id = @catgId
+                    catg_id = @catgId,
+                    lvl_id = @lvlId
                 WHERE crs_id = @crsId";
 
             cmd.Parameters.AddWithValue("code", form.CrsCode.Trim());
@@ -151,6 +215,10 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             cmd.Parameters.AddWithValue("hrsLec", form.CrsHrsLec);
             cmd.Parameters.AddWithValue("hrsLab", form.CrsHrsLab);
             cmd.Parameters.AddWithValue("catgId", form.CatgId);
+            if (form.LvlId.HasValue)
+                cmd.Parameters.AddWithValue("lvlId", form.LvlId);
+            else
+                cmd.Parameters.AddWithValue("lvlId", DBNull.Value);
             cmd.Parameters.AddWithValue("crsId", form.CrsId);
 
             var rowsAffected = await cmd.ExecuteNonQueryAsync();
@@ -158,6 +226,37 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             {
                 return NotFound(new { success = false, message = "Course not found" });
             }
+            
+            await using var cleanCmd = conn.CreateCommand();
+            cleanCmd.Transaction = tx;
+            cleanCmd.CommandText = @"
+                    DELETE FROM course_dependency
+                    WHERE crs_id = @crsId";
+
+            cleanCmd.Parameters.AddWithValue("crsId", form.CrsId);
+            await cleanCmd.ExecuteNonQueryAsync();
+            
+            if (form.CrsPreqIds.Count > 0)
+            {
+                await using var preqCmd = conn.CreateCommand();
+                preqCmd.Transaction = tx;
+                preqCmd.CommandText = @"
+                    INSERT INTO course_dependency (
+                        crs_id, crs_preq_id
+                    ) VALUES (
+                        @crsId, @crsPreqId
+                    )";
+
+                preqCmd.Parameters.AddWithValue("crsId", form.CrsId);
+                preqCmd.Parameters.Add("crsPreqId", NpgsqlTypes.NpgsqlDbType.Integer);
+                foreach (var preqId in form.CrsPreqIds)
+                {
+                    preqCmd.Parameters["crsPreqId"].Value = preqId;
+                    await preqCmd.ExecuteNonQueryAsync();
+                }
+            }
+            
+            await tx.CommitAsync();
             
             return Ok(new
             {
@@ -167,12 +266,12 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }
@@ -204,17 +303,17 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             return Ok(new
             {
                 success = true,
-                data = new { Id = form.Id }
+                data = new { form.Id }
             });
         }
         catch (NpgsqlException ex)
         {
-            logger.LogError(ex, "Database error during sign-up.");
+            logger.LogError(ex, "Database error.");
             return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unexpected error during sign-up.");
+            logger.LogError(ex, "Unexpected error.");
             return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
         }
     }

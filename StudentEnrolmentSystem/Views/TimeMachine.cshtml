@@ -12,9 +12,8 @@
 >
     <form id="timeMachineForm" data-action="@Url.RouteUrl("Time.Set")"
         class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
-        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Time Machine</h2>
 
-        <div class="mt-1">
+        <div>
             <p class="text-sm text-pretty text-gray-700">
                 For demonstration purposes, enter the academic year and semester right "now"
             </p>
@@ -22,11 +21,11 @@
 
         <div class="mt-6">
             <label>
-                <span class="text-sm font-medium text-gray-700"> Academic Year </span>
+                <span class="text-sm font-medium text-gray-700"> Academic year </span>
 
                 <select
                         asp-for="AyId"
-                        class="mt-0.5 w-full rounded border-gray-300 sm:text-sm"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                 >
                     <option value="" selected hidden>Please select</option>
                     @foreach (var ay in ViewBag.AcademicYears)
@@ -45,7 +44,7 @@
 
                 <select
                         asp-for="SemId"
-                        class="mt-0.5 w-full rounded border-gray-300 sm:text-sm"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                 >
                     <option value="" selected hidden>Please select</option>
                     @foreach (var sem in ViewBag.Semesters)
