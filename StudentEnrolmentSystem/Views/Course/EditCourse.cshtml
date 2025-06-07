@@ -47,10 +47,15 @@
             <label>
                 <span class="text-sm font-medium text-gray-700"> Category </span>
 
+                @{
+                    var categories = ViewBag.Categories as List<StudentEnrolmentSystem.Models.CourseCategory>;
+                    if (Model.ProgId != null)
+                        categories = categories!.Where(c => !new[] { 1, 2, 7, 8 }.Contains(c.CatgId)).ToList();
+                }
                 <select
-                        asp-for="CatgId"
+                        asp-for="CatgId" id="categorySelect"
                         class="mt-1 w-full rounded border-gray-300 sm:text-sm"
-                        asp-items="@(new SelectList(ViewBag.Categories, "CatgId", "CatgName"))"
+                        asp-items="@(new SelectList(categories, "CatgId", "CatgName"))"
                 >
                     <option value="" selected hidden>Please select</option>
                 </select>
@@ -104,7 +109,7 @@
             <label>
                 <span class="text-sm font-medium text-gray-700"> Prerequisites </span>
 
-                <details class="mt-1 group relative overflow-hidden rounded border border-gray-300 shadow-sm">
+                <details class="mt-1 group relative overflow-hidden rounded border border-gray-300">
                     <summary
                         class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
                     >
@@ -127,22 +132,24 @@
                     <div class="divide-y divide-gray-300 border-t border-gray-300 bg-white">
                         <fieldset class="p-3">
                             <legend class="sr-only">Checkboxes</legend>
+                            
                             @{
                                 var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
+                                if (Model.ProgId != null)
+                                    courses = courses!.Where(c => c.ProgId != null && c.ProgId == Model.ProgId).ToList();
                             }
-                            
                             <div class="flex flex-col items-start gap-3">
                                 @foreach (var course in courses!.Where(c => c.CrsId != Model.CrsId))
                                 {
-                                    <label class="inline-flex items-center gap-3">
+                                    <label class="inline-flex items-center gap-3 prereq-item" data-catg-id="@course.CatgId">
                                         <input
                                             type="checkbox" name="CrsPreqIds"
-                                            class="size-5 rounded border-gray-300 shadow-sm"
+                                            class="size-5 rounded border-gray-300"
                                             value="@course.CrsId"
                                             @(Model.CrsPreqIds.Contains(course.CrsId) ? "checked" : "")
                                         />
 
-                                        <span class="text-sm font-medium text-gray-700">
+                                        <span class="text-sm font-medium text-pretty text-gray-700">
                                             @course.CrsTitle
                                         </span>
                                     </label>
@@ -169,7 +176,6 @@
                 </select>
             </label>
         </div>
-
         
         <div class="mt-4">
             <span id="formError" class="mt-1 text-sm text-red-700"></span>
@@ -177,7 +183,7 @@
 
         <footer class="mt-6 flex justify-between gap-2">
             <a
-                    type="button" asp-action="Courses" asp-controller="Admin"
+                    type="button" href="javascript:history.back()"
                     class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
             >
                 Cancel
@@ -194,5 +200,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/admin/edit-course.js"></script>
+    <script src="~/js/course/edit-course.js"></script>
 }

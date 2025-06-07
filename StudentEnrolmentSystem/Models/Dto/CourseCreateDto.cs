@@ -29,4 +29,6 @@ public class CourseCreateDto
 
     public required List<int> CrsPreqIds { get; set; } = new();
     public int? LvlId { get; set; }
+    
+    public int? ProgId { get; set; }
 }

@@ -1,5 +1,5 @@
 $().ready(function () {
-    const $form = $('#addProgramForm');
+    const $form = $('#deleteProgramForm');
     const action = $form.data('action');
 
     $form.on('submit', function(e) {
@@ -11,9 +11,9 @@ $().ready(function () {
                 if (res.success) {
                     Toast.fire({
                         icon: "success",
-                        title: "Program added successfully",
+                        title: "Program deleted successfully",
                         didClose: () => {
-                            window.location.href = '/Admin/Programs';
+                            window.location.href = document.referrer;
                         }
                     });
                 }

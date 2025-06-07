@@ -355,7 +355,7 @@ public class FacultyApiController(IConfiguration config, ILogger<FacultyApiContr
     }
     
     [HttpPost("Faculty/Delete", Name = "Faculty.Delete")]
-    public async Task<IActionResult> DeleteFaculty([FromForm] DeleteDto form)
+    public async Task<IActionResult> DeleteFaculty([FromForm] IdDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);

@@ -4,7 +4,7 @@ using StudentEnrolmentSystem.Models.Dto;
 namespace StudentEnrolmentSystem.Controllers;
 
 public class CourseController(
-    CourseApiController courseApi, StudentApiController studentApi
+    CourseApiController courseApi, StudentApiController studentApi, ProgramApiController programApi
     ) : Controller
 {
     public IActionResult Index()
@@ -12,11 +12,13 @@ public class CourseController(
         return RedirectToAction("Courses", "Admin");
     }
 
-    public IActionResult Add()
+    public IActionResult Add(int? progId)
     {
         ViewBag.Categories = courseApi.GetCategories().Result;
         ViewBag.YearLevels = studentApi.GetYearLevels().Result;
         ViewBag.Courses = courseApi.GetCourses().Result;
+        ViewBag.Programs = programApi.GetPrograms().Result;
+        ViewBag.ProgId = progId;
         return View("~/Views/Course/AddCourse.cshtml");
     }
     
@@ -33,7 +35,8 @@ public class CourseController(
             CrsHrsLab = course.CrsHrsLab,
             CatgId    = course.CatgId,
             LvlId     = course.LvlId,
-            CrsPreqIds = courseApi.GetPrerequisites(course.CrsId).Result
+            CrsPreqIds = courseApi.GetPrerequisites(course.CrsId).Result,
+            ProgId = course.ProgId,
         };
         
         ViewBag.Categories = courseApi.GetCategories().Result;
@@ -44,7 +47,7 @@ public class CourseController(
     
     public IActionResult Delete(int crsId)
     {
-        var dto = new DeleteDto { Id = crsId };
+        var dto = new IdDto { Id = crsId };
         return View("~/Views/Course/DeleteCourse.cshtml", dto);
     }
 }

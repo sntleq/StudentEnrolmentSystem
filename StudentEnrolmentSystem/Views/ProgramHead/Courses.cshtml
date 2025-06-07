@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Manage Rooms";
+    ViewData["Title"] = "Manage Courses";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,7 +8,7 @@
             style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
         <div class="flex-1 md:flex md:items-center md:gap-12">
             <h2 class="text-2xl font-semibold text-gray-900">
-                Manage Courses
+                Manage Program-Specific Courses
             </h2>
         </div>
 
@@ -20,19 +20,11 @@
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Programs"> Programs </a>
-                    </li>
-
-                    <li>
                         <a class="text-gray-500 transition hover:text-blue-500" asp-action="Curricula"> Curricula </a>
                     </li>
                     
                     <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Faculty"> Faculty </a>
-                    </li>
-                    
-                    <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Rooms"> Rooms </a>
+                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Students </a>
                     </li>
                 </ul>
             </nav>
@@ -48,10 +40,11 @@
     
     @{
         var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
-        courses = courses!.Where(c => c.CrsIsActive).ToList();
+        var programCourses = courses!.Where(c => c.CrsIsActive).Where(c => c.ProgId != null && c.ProgId == ViewBag.ProgId).ToList();
         var categories = ViewBag.Categories as List<StudentEnrolmentSystem.Models.CourseCategory>;
+        var programCategories = categories!.Where(c => !new[] { 1, 2, 7, 8 }.Contains(c.CatgId)).ToList();
     }
-    @if (courses.Any())
+    @if (programCourses.Any())
     {
         <div class="flex-grow w-full space-y-4">
             <div class="flex justify-between items-center gap-2">
@@ -80,7 +73,7 @@
                             <legend class="sr-only">Checkboxes</legend>
 
                             <div class="flex flex-col items-start gap-3">
-                                @foreach (var category in ViewBag.Categories)
+                                @foreach (var category in programCategories)
                                 {
                                     <label class="inline-flex items-center gap-3">
                                         <input
@@ -101,7 +94,7 @@
                 </details>
                 
                 <a
-                    type="button" asp-action="Add" asp-controller="Course"
+                    type="button" asp-action="Add" asp-controller="Course" asp-route-progId="@ViewBag.ProgId"
                     class="ml-auto block rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                     &plus; Add course
                 </a>
@@ -176,7 +169,7 @@
             
             <div class="p-6 flex flex-col justify-center items-center no-results-msg">
                 <p class="text-sm text-pretty text-gray-700">
-                    No courses found for the selected category.
+                    No program-specific courses found for the selected category.
                 </p>
             </div>
         </div>
@@ -186,11 +179,11 @@
     {
         <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
             <p class="text-sm text-pretty text-gray-700">
-                No courses found in the database.
+                No program-specific courses found in the database.
             </p>
 
             <a
-                type="button" asp-action="Add" asp-controller="Course"
+                type="button" asp-action="Add" asp-controller="Course" asp-route-progId="@ViewBag.ProgId"
                 class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
                 &plus; Add course

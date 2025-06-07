@@ -10,13 +10,13 @@
         aria-modal="true"
         aria-labelledby="modalTitle"
 >
-    <form id="timeMachineForm" data-action="@Url.RouteUrl("Time.Set")"
+    <form id="assignProgramHeadForm" data-action="@Url.RouteUrl("Programs.AssignHead")"
         class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
         <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Assign Program Head</h2>
         
         <div class="mt-1">
             <p class="text-sm text-pretty text-gray-700">
-                Choose a program head for the selected program. This will turn other heads for this program inactive.
+                Choose a program head for the selected program. This will turn other faculty heads for this program inactive.
             </p>
         </div>
 
@@ -28,6 +28,8 @@
                     type="text" value="@ViewBag.Program.ProgCode" disabled
                     class="mt-1 w-full rounded border-gray-300 bg-gray-100 sm:text-sm"
                 />
+                
+                <input type="hidden" asp-for="ProgId" value="@ViewBag.Program.ProgId" />
             </label>
         </div>
 
@@ -35,9 +37,9 @@
             <label>
                 <div class="flex justify-between gap-2">
                     <span class="text-sm font-medium text-gray-700"> Program Head </span>
-                    <a class="text-sm text-blue-600 hover:text-blue-700" asp-action="Add" asp-controller="Faculty"> Add </a>
+                    <a class="text-sm text-blue-600 hover:text-blue-700" asp-action="Add" asp-controller="Faculty" asp-route-typeId="1"> Add </a>
                 </div>
-
+                
                 <select
                     asp-for="HeadId"
                     class="mt-1 w-full rounded border-gray-300 sm:text-sm"
@@ -45,9 +47,13 @@
                     <option value="" selected hidden>Please select</option>
                     @foreach (var head in ViewBag.ProgramHeads)
                     {
-                        <option value="@head.HeadId">@head.HeadFirstName @head.HeadLastName</option>
+                        <option value="@head.HeadId" selected="@(ViewBag.HeadId == head.HeadId ? "selected" : null)">
+                            @head.HeadFirstName @head.HeadLastName
+                        </option>
                     }
                 </select>
+                
+                <span asp-validation-for="HeadId" class="mt-1 text-sm text-red-700"></span>
             </label>
         </div>
 
@@ -57,7 +63,7 @@
         
         <footer class="mt-6 flex justify-between gap-2">
             <a
-                type="button" asp-action="Programs" asp-controller="Admin"
+                type="button" href="javascript:history.back()"
                 class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
             >
                 Cancel
@@ -74,5 +80,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/time-machine.js"></script>
+    <script src="~/js/program/assign-program-head.js"></script>
 }

@@ -6,5 +6,11 @@ public class Curriculum
     public int ProgId { get; set; }
     public int AyId { get; set; }
     
-    public bool CurIsApproved { get; set; }
+    public int? CurGeeUnits { get; set; }
+    
+    public int? CurPelecUnits { get; set; }
+    
+    public required string CurStatus { get; set; }
+    
+    public string? CurRejectReason { get; set; }
 }

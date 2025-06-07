@@ -32,7 +32,7 @@
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Rooms"> Rooms </a>
                     </li>
                 </ul>
             </nav>
@@ -56,7 +56,7 @@
     {
         <div class="flex-grow w-full space-y-4">
             <div class="flex justify-between items-center gap-2">
-                <details class="group relative rounded border border-gray-300 shadow-sm z-0">
+                <details class="group relative rounded border border-gray-300 z-0">
                     <summary
                         class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
                     >
@@ -76,7 +76,7 @@
                         </span>
                     </summary>
 
-                    <div class="divide-y divide-gray-300 rounded border border-gray-300 bg-white group-open:absolute group-open:start-0 group-open:top-11 shadow-sm">
+                    <div class="divide-y divide-gray-300 rounded border border-gray-300 bg-white group-open:absolute group-open:start-0 group-open:top-11">
                         <fieldset class="p-3">
                             <legend class="sr-only">Checkboxes</legend>
 
@@ -84,7 +84,7 @@
                                 <label class="inline-flex items-center gap-3">
                                     <input
                                         type="checkbox"
-                                        class="size-5 rounded border-gray-300 shadow-sm type-filter"
+                                        class="size-5 rounded border-gray-300 type-filter"
                                         value="1"
                                         checked
                                     />
@@ -97,7 +97,7 @@
                                 <label class="inline-flex items-center gap-3">
                                     <input
                                         type="checkbox"
-                                        class="size-5 rounded border-gray-300 shadow-sm type-filter"
+                                        class="size-5 rounded border-gray-300 type-filter"
                                         value="2"
                                         checked
                                     />

@@ -12,6 +12,7 @@ builder.Services.AddScoped<CourseApiController>();
 builder.Services.AddScoped<ProgramApiController>();
 builder.Services.AddScoped<CurriculumApiController>();
 builder.Services.AddScoped<FacultyApiController>();
+builder.Services.AddScoped<RoomApiController>();
 
 var app = builder.Build();
 

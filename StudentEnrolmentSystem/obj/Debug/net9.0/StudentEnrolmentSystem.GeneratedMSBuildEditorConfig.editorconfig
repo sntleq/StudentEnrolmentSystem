@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZ3JhbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Admin/Rooms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9vbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Auth/AdminLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBZG1pbkxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -80,6 +84,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXRDb3Vyc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Curriculum/ApproveCurriculum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxBcHByb3ZlQ3VycmljdWx1bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Curriculum/EditCurriculum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxFZGl0Q3VycmljdWx1bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Curriculum/RejectCurriculum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxSZWplY3RDdXJyaWN1bHVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Faculty/AddFaculty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxBZGRGYWN1bHR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +106,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Faculty/EditFaculty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxFZGl0RmFjdWx0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/ProgramHead/Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUhlYWRcQ291cnNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/ProgramHead/Curricula.cshtml]

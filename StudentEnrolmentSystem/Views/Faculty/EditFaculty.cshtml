@@ -24,7 +24,7 @@
 
                 <select
                     asp-for="Type"
-                    asp-items="@(ViewData["TypeSelectList"] as SelectList)"
+                    asp-items="@ViewBag.TypeSelectList"
                     class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                 >
                     <option value="" selected hidden>Please select</option>
@@ -79,7 +79,7 @@
 
         <footer class="mt-6 flex justify-between gap-2">
             <a
-                type="button" asp-action="Faculty" asp-controller="Admin"
+                type="button" href="javascript:history.back()"
                 class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
             >
                 Cancel
@@ -96,5 +96,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/admin/edit-faculty.js"></script>
+    <script src="~/js/faculty/edit-faculty.js"></script>
 }

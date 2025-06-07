@@ -1,5 +1,5 @@
 $().ready(function () {
-    const $form = $('#deleteProgramForm');
+    const $form = $('#approveCurriculumForm');
     const action = $form.data('action');
 
     $form.on('submit', function(e) {
@@ -11,9 +11,9 @@ $().ready(function () {
                 if (res.success) {
                     Toast.fire({
                         icon: "success",
-                        title: "Program deleted successfully",
+                        title: "Curriculum approved successfully",
                         didClose: () => {
-                            window.location.href = '/Admin/Programs';
+                            window.location.href = document.referrer;
                         }
                     });
                 }

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using StudentEnrolmentSystem.Models;
 using StudentEnrolmentSystem.Models.Dto;
 
 namespace StudentEnrolmentSystem.Controllers;
@@ -28,19 +29,15 @@ public class ProgramController(
     {
         ViewBag.Program = programApi.GetPrograms().Result.FirstOrDefault(x => x.ProgId == progId);
         ViewBag.ProgramHeads = programApi.GetProgramHeads().Result;
+
+        var heads = ViewBag.ProgramHeads as List<ProgramHead>;
+        ViewBag.HeadId = heads!.Where(x => x.ProgId == progId).Select(x => x.HeadId).FirstOrDefault();
         return View("~/Views/Program/AssignProgramHead.cshtml");
-    }
-    
-    public IActionResult AddHead(int progId)
-    {
-        ViewBag.Program = programApi.GetPrograms().Result.FirstOrDefault(x => x.ProgId == progId);
-        ViewBag.ProgramHeads = programApi.GetProgramHeads().Result;
-        return View("~/Views/Program/AddProgramHead.cshtml");
     }
     
     public IActionResult Delete(int progId)
     {
-        var dto = new DeleteDto { Id = progId };
+        var dto = new IdDto { Id = progId };
         return View("~/Views/Program/DeleteProgram.cshtml", dto);
     }
 }

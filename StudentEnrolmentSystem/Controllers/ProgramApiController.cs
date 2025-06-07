@@ -149,12 +149,12 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
             cmd.CommandText = @"
                 UPDATE program
                 SET 
-                    prog_id = @id,
-                    prog_title = @title
+                    prog_title = @progTitle,
+                    prog_code = @progCode
                 WHERE prog_id = @progId";
 
-            cmd.Parameters.AddWithValue("id", form.ProgId);
-            cmd.Parameters.AddWithValue("title", form.ProgTitle.Trim());
+            cmd.Parameters.AddWithValue("progTitle", form.ProgTitle.Trim());
+            cmd.Parameters.AddWithValue("progCode", form.ProgCode.Trim());
             cmd.Parameters.AddWithValue("progId", form.ProgId);
 
             var rowsAffected = await cmd.ExecuteNonQueryAsync();
@@ -181,8 +181,70 @@ public class ProgramApiController(IConfiguration config, ILogger<ProgramApiContr
         }
     }
     
+    [HttpPost("Programs/AssignHead", Name = "Programs.AssignHead")]
+    public async Task<IActionResult> AssignProgramHead([FromForm] ProgramHeadAssignDto form)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        try
+        {
+            await using var conn = new NpgsqlConnection(_connectionString);
+            await conn.OpenAsync();
+            
+            await using var tx = await conn.BeginTransactionAsync();
+            
+            await using var offCmd = conn.CreateCommand();
+            offCmd.Transaction = tx;
+            offCmd.CommandText = @"
+                UPDATE program_head
+                SET 
+                    head_is_active = false
+                WHERE prog_id = @progId";
+            offCmd.Parameters.AddWithValue("progId", form.ProgId);
+
+            await offCmd.ExecuteNonQueryAsync();
+            
+            await using var cmd = conn.CreateCommand();
+            cmd.Transaction = tx;
+            cmd.CommandText = @"
+                UPDATE program_head
+                SET 
+                    prog_id = @progId,
+                    head_is_active = true
+                WHERE head_id = @headId";
+            
+            cmd.Parameters.AddWithValue("headId", form.HeadId);
+            cmd.Parameters.AddWithValue("progId", form.ProgId);
+
+            var rowsAffected = await cmd.ExecuteNonQueryAsync();
+            if (rowsAffected == 0)
+            {
+                return NotFound(new { success = false, message = "Program head not found" });
+            }
+            
+            await tx.CommitAsync();
+            
+            return Ok(new
+            {
+                success = true,
+                data = new { Id = form.ProgId }
+            });
+        }
+        catch (NpgsqlException ex)
+        {
+            logger.LogError(ex, "Database error.");
+            return StatusCode(500, new { success = false, message = "Database error", error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Unexpected error.");
+            return StatusCode(500, new { success = false, message = "Unexpected error", error = ex.Message });
+        }
+    }
+    
     [HttpPost("Programs/Delete", Name = "Programs.Delete")]
-    public async Task<IActionResult> DeleteProgram([FromForm] DeleteDto form)
+    public async Task<IActionResult> DeleteProgram([FromForm] IdDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);

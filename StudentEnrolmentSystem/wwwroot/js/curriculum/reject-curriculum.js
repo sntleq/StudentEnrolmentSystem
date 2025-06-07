@@ -1,5 +1,5 @@
 $().ready(function () {
-    const $form = $('#addFacultyForm');
+    const $form = $('#rejectCurriculumForm');
     const action = $form.data('action');
 
     $form.on('submit', function(e) {
@@ -11,9 +11,9 @@ $().ready(function () {
                 if (res.success) {
                     Toast.fire({
                         icon: "success",
-                        title: "Faculty added successfully",
+                        title: "Curriculum rejected successfully",
                         didClose: () => {
-                            window.location.href = '/Admin/Faculty';
+                            window.location.href = document.referrer;
                         }
                     });
                 }

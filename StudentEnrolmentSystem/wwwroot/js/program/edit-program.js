@@ -1,17 +1,5 @@
 $().ready(function () {
-    const $checkboxes = $('input[name="CrsPreqIds"]');
-    const $countSpan = $('#prereqCount');
-
-    function updatePrereqCount() {
-        const selectedCount = $checkboxes.filter(':checked').length;
-        $countSpan.text(
-            selectedCount + ' course' + (selectedCount !== 1 ? 's' : '') + ' selected'
-        );
-    }
-    $checkboxes.on('change', updatePrereqCount);
-    updatePrereqCount();
-    
-    const $form = $('#editCourseForm');
+    const $form = $('#editProgramForm');
     const action = $form.data('action');
 
     $form.on('submit', function(e) {
@@ -23,9 +11,9 @@ $().ready(function () {
                 if (res.success) {
                     Toast.fire({
                         icon: "success",
-                        title: "Course updated successfully",
+                        title: "Program updated successfully",
                         didClose: () => {
-                            window.location.href = '/Admin/Courses';
+                            window.location.href = document.referrer;
                         }
                     });
                 }

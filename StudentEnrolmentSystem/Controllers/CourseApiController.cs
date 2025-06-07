@@ -37,7 +37,9 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
                 CrsHrsLec = reader.GetInt32(reader.GetOrdinal("crs_hrs_lec")),
                 CrsHrsLab = reader.GetInt32(reader.GetOrdinal("crs_hrs_lab")),
                 CatgId = reader.GetInt32(reader.GetOrdinal("catg_id")),
-                LvlId = reader["lvl_id"] as int?
+                LvlId = reader["lvl_id"] as int?,
+                CrsIsActive = reader.GetBoolean(reader.GetOrdinal("crs_is_active")),
+                ProgId = reader["prog_id"] as int?
             };
         
             list.Add(course);
@@ -76,6 +78,37 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
         return list;
     }
 
+    [NonAction]
+    public async Task<List<CourseDependency>> GetDependencies()
+    {
+        var list = new List<CourseDependency>();
+    
+        await using var conn = new NpgsqlConnection(_connectionString);
+        await conn.OpenAsync();
+    
+        await using var cmd = conn.CreateCommand();
+        cmd.CommandText = @"
+            SELECT *
+            FROM course_dependency
+            ORDER BY crs_preq_id";
+        
+        await using var reader = await cmd.ExecuteReaderAsync();
+        
+        while (await reader.ReadAsync())
+        {
+            var dependency = new CourseDependency
+            {
+                DepId = reader.GetInt32(reader.GetOrdinal("dep_id")),
+                CrsId = reader.GetInt32(reader.GetOrdinal("crs_id")),
+                CrsPreqId = reader.GetInt32(reader.GetOrdinal("crs_preq_id"))
+            };
+        
+            list.Add(dependency);
+        }
+    
+        return list;
+    }
+    
     [NonAction]
     public async Task<List<int>> GetPrerequisites(int crsId)
     {
@@ -121,16 +154,20 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             insertCmd.Transaction = tx;
             insertCmd.CommandText = @"
                 INSERT INTO course (
-                    crs_code, crs_title, crs_units,
+                    crs_code, crs_title, crs_units, prog_id,
                     crs_hrs_lec, crs_hrs_lab, catg_id, lvl_id
                 ) VALUES (
-                    @code, @title, @units,
+                    @code, @title, @units, @progId,
                     @hrsLec, @hrsLab, @catgId, @lvlId
                 ) RETURNING crs_id";
 
             insertCmd.Parameters.AddWithValue("code", form.CrsCode.Trim());
             insertCmd.Parameters.AddWithValue("title", form.CrsTitle.Trim());
             insertCmd.Parameters.AddWithValue("units", form.CrsUnits);
+            if (form.ProgId.HasValue)
+                insertCmd.Parameters.AddWithValue("progId", form.ProgId);
+            else
+                insertCmd.Parameters.AddWithValue("progId", DBNull.Value);
             insertCmd.Parameters.AddWithValue("hrsLec", form.CrsHrsLec);
             insertCmd.Parameters.AddWithValue("hrsLab", form.CrsHrsLab);
             insertCmd.Parameters.AddWithValue("catgId", form.CatgId);
@@ -277,7 +314,7 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
     }
     
     [HttpPost("Courses/Delete", Name = "Courses.Delete")]
-    public async Task<IActionResult> DeleteCourse([FromForm] DeleteDto form)
+    public async Task<IActionResult> DeleteCourse([FromForm] IdDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -287,18 +324,46 @@ public class CourseApiController(IConfiguration config, ILogger<CourseApiControl
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
-            await using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                DELETE FROM course
-                WHERE crs_id = @crsId";
-
-            cmd.Parameters.AddWithValue("crsId", form.Id);
-
-            var rowsAffected = await cmd.ExecuteNonQueryAsync();
-            if (rowsAffected == 0)
+            await using var tx = await conn.BeginTransactionAsync();
+            
+            await using (var checkCmd = conn.CreateCommand())
             {
-                return NotFound(new { success = false, message = "Course not found" });
+                checkCmd.Transaction = tx;
+                checkCmd.CommandText = @"
+                    SELECT 1 FROM curriculum_course
+                    WHERE crs_id = @crsId";
+                
+                checkCmd.Parameters.AddWithValue("crsId", form.Id);
+
+                var exists = await checkCmd.ExecuteScalarAsync();
+                
+                await using var cmd = conn.CreateCommand();
+                cmd.Transaction = tx;
+                
+                if (exists is not null)
+                {
+                    cmd.CommandText = @"
+                        UPDATE course
+                        SET 
+                            crs_is_active = false
+                        WHERE crs_id = @crsId";
+                }
+                else
+                {
+                    cmd.CommandText = @"
+                        DELETE FROM course
+                        WHERE crs_id = @crsId";
+                }
+                cmd.Parameters.AddWithValue("crsId", form.Id);
+
+                var rowsAffected = await cmd.ExecuteNonQueryAsync();
+                if (rowsAffected == 0)
+                {
+                    return NotFound(new { success = false, message = "Course not found" });
+                }
             }
+            
+            await tx.CommitAsync();
             
             return Ok(new
             {

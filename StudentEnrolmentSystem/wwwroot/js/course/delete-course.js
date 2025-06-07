@@ -1,5 +1,5 @@
 $().ready(function () {
-    const $form = $('#deleteFacultyForm');
+    const $form = $('#deleteCourseForm');
     const action = $form.data('action');
 
     $form.on('submit', function(e) {
@@ -11,9 +11,9 @@ $().ready(function () {
                 if (res.success) {
                     Toast.fire({
                         icon: "success",
-                        title: "Faculty deleted successfully",
+                        title: "Course deleted successfully",
                         didClose: () => {
-                            window.location.href = '/Admin/Faculty';
+                            window.location.href = document.referrer;
                         }
                     });
                 }

@@ -3,7 +3,8 @@ namespace StudentEnrolmentSystem.Controllers;
 
 public class AdminController(
     CourseApiController courseApi, ProgramApiController programApi, CurriculumApiController curriculumApi,
-    FacultyApiController facultyApi, TimeMachineController timeMachineApi
+    FacultyApiController facultyApi, TimeMachineController timeMachineApi, StudentApiController studentApi,
+    RoomApiController roomApi
     ) : Controller
 {
 
@@ -16,6 +17,8 @@ public class AdminController(
     {
         ViewBag.Courses = courseApi.GetCourses().Result;
         ViewBag.Categories = courseApi.GetCategories().Result;
+        ViewBag.Dependencies = courseApi.GetDependencies().Result;
+        ViewBag.YearLevels = studentApi.GetYearLevels().Result;
         return View("~/Views/Admin/Courses.cshtml");
     }
 
@@ -34,6 +37,9 @@ public class AdminController(
         ViewBag.Categories = courseApi.GetCategories().Result;
         ViewBag.Programs = programApi.GetPrograms().Result;
         ViewBag.AcademicYears = timeMachineApi.GetAcademicYears().Result;
+        ViewBag.Dependencies = courseApi.GetDependencies().Result;
+        ViewBag.YearLevels = studentApi.GetYearLevels().Result;
+        ViewBag.AyId = HttpContext.Session.GetInt32("AyId");
         return View("~/Views/Admin/Curricula.cshtml");
     }
 
@@ -43,5 +49,11 @@ public class AdminController(
         ViewBag.Teachers = facultyApi.GetTeachers().Result;
         ViewBag.Programs = programApi.GetPrograms().Result;
         return View("~/Views/Admin/Faculty.cshtml");
+    }
+    
+    public IActionResult Rooms()
+    {
+        ViewBag.Rooms = roomApi.GetRooms().Result;
+        return View("~/Views/Admin/Rooms.cshtml");
     }
 }

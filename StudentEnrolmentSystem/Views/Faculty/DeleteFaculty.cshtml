@@ -1,4 +1,4 @@
-@model StudentEnrolmentSystem.Models.Dto.DeleteDto
+@model StudentEnrolmentSystem.Models.Dto.IdDto
 @{
     ViewData["Title"] = "Delete Course";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -30,9 +30,9 @@
             <input type="hidden" asp-for="TypeId" value="@Model.TypeId"/>
             
             <a
-                type="button" asp-action="Faculty" asp-controller="Admin"
+                type="button" href="javascript:history.back()"
                 class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">
-                Go back
+                Cancel
             </a>
 
             <button
@@ -45,5 +45,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/admin/delete-faculty.js"></script>
+    <script src="~/js/faculty/delete-faculty.js"></script>
 }

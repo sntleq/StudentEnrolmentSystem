@@ -45,18 +45,40 @@
             <label>
                 <span class="text-sm font-medium text-gray-700"> Category </span>
 
+                @{
+                    var categories = ViewBag.Categories as List<StudentEnrolmentSystem.Models.CourseCategory>;
+                    if (ViewBag.ProgId != null)
+                        categories = categories!.Where(c => !new[] { 1, 2, 7, 8 }.Contains(c.CatgId)).ToList();
+                }
                 <select
-                        asp-for="CatgId"
-                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    asp-for="CatgId" id="categorySelect"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
                 >
                     <option value="" selected hidden>Please select</option>
-                    @foreach (var category in ViewBag.Categories)
+                    @foreach (var category in categories)
                     {
                         <option value="@category.CatgId">@category.CatgName (@category.CatgCode)</option>
                     }
                 </select>
 
                 <span asp-validation-for="CatgId" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div id="programSelect" class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Program </span>
+
+                <select
+                    asp-for="ProgId"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                >
+                    <option value="" selected hidden>Please select</option>
+                    @foreach (var program in ViewBag.Programs)
+                    {
+                        <option value="@program.ProgId">@program.ProgTitle (@program.ProgCode)</option>
+                    }
+                </select>
             </label>
         </div>
 
@@ -105,7 +127,7 @@
             <label>
                 <span class="text-sm font-medium text-gray-700"> Prerequisites </span>
 
-                <details class="mt-1 group relative overflow-hidden rounded border border-gray-300 shadow-sm">
+                <details class="mt-1 group relative overflow-hidden rounded border border-gray-300">
                     <summary
                         class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
                     >
@@ -129,13 +151,18 @@
                         <fieldset class="p-3">
                             <legend class="sr-only">Checkboxes</legend>
 
+                            @{
+                                var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
+                                if (ViewBag.ProgId != null)
+                                    courses = courses!.Where(c => c.ProgId != null && c.ProgId == ViewBag.ProgId).ToList();
+                            }
                             <div class="flex flex-col items-start gap-3">
-                                @foreach (var course in ViewBag.Courses)
+                                @foreach (var course in courses!)
                                 {
-                                    <label class="inline-flex items-center gap-3">
+                                    <label class="inline-flex items-center gap-3 prereq-item" data-catg-id="@course.CatgId">
                                         <input
                                             type="checkbox" name="CrsPreqIds"
-                                            class="size-5 rounded border-gray-300 shadow-sm"
+                                            class="size-5 rounded border-gray-300"
                                             value="@course.CrsId"
                                         />
 
@@ -176,7 +203,7 @@
 
         <footer class="mt-6 flex justify-between gap-2">
             <a
-                    type="button" asp-action="Courses" asp-controller="Admin"
+                    type="button" href="javascript:history.back()"
                     class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
             >
                 Cancel
@@ -193,5 +220,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/admin/add-course.js"></script>
+    <script src="~/js/course/add-course.js"></script>
 }

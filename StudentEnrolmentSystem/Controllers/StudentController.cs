@@ -36,9 +36,8 @@ public class StudentController(
         ViewBag.Programs = programApi.GetPrograms().Result;
         
         if (ViewBag.Student == null)
-        {
             return RedirectToAction("Student", "Auth");
-        }
+        
         return View("~/Views/Student/Profile.cshtml");
     }
 }

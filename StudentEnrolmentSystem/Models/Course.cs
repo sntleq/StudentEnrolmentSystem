@@ -28,4 +28,8 @@ public class Course
     public int CatgId { get; set; }
     
     public int? LvlId { get; set; }
+    
+    public bool CrsIsActive { get; set; }
+    
+    public int? ProgId { get; set; }
 }

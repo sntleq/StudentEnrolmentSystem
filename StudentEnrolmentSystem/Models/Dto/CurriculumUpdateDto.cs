@@ -4,12 +4,15 @@ namespace StudentEnrolmentSystem.Models.Dto;
 
 public class CurriculumUpdateDto
 {
-    [Required(ErrorMessage = "Curriculum ID is required")]
     public int CurId { get; set; }
+    
+    public required List<int> CrsIds { get; set; } = new();
 
-    [Required(ErrorMessage = "Program ID is required")]
-    public int ProgId { get; set; }
-
-    [Required(ErrorMessage = "Academic Year ID is required")]
-    public int AyId { get; set; }
+    [Required(ErrorMessage = "GEE requirement is required")]
+    [RegularExpression(@"^\d+$", ErrorMessage = "Invalid number of units.")]
+    public int? CurGeeUnits { get; set; }
+    
+    [Required(ErrorMessage = "PELEC requirement is required")]
+    [RegularExpression(@"^\d+$", ErrorMessage = "Invalid number of units.")]
+    public int? CurPelecUnits { get; set; }
 }

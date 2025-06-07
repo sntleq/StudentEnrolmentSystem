@@ -11,6 +11,29 @@
     <script src="~/js/toast.js"></script>
     <link rel="stylesheet" href="~/lib/sweetalert2.min.css">
     <link rel="stylesheet" href="~/css/styles.css">
+    <script>
+        // This flag ensures we only reload once per “back” navigation.
+        let hasReloaded = false;
+    
+        window.addEventListener('pageshow', function(event) {
+          // event.persisted === true means the page was restored from the browser's cache (bfcache)
+          // OR when using certain browsers that set persisted on reload.
+          if (event.persisted && !hasReloaded) {
+            hasReloaded = true;
+            // Force a full reload from the server
+            window.location.reload();
+          }
+        });
+    
+        // Some browsers (older Safari, etc.) don’t always set event.persisted.
+        // As a fallback, listen for popstate (when going “back”) and reload immediately:
+        window.addEventListener('popstate', function(event) {
+            if (!hasReloaded) {
+            hasReloaded = true;
+            window.location.reload();
+            }
+        });
+    </script>
 </head>
 <body>
     @RenderBody()

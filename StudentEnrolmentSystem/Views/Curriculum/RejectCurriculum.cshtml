@@ -1,0 +1,60 @@
+@model StudentEnrolmentSystem.Models.Dto.RejectDto
+@{
+    ViewData["Title"] = "Reject Curriculum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+    class="fixed inset-0 z-50 grid place-content-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+>
+    <form id="rejectCurriculumForm" data-action="@Url.RouteUrl("Curricula.Reject")"
+        class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Reject Curriculum</h2>
+
+        <div class="mt-4">
+            <p class="text-sm text-pretty text-gray-700">
+                Are you sure you want to reject this curriculum? <br> This allows the program head to submit another proposal.
+            </p>
+        </div>
+
+        <input type="hidden" asp-for="Id" value="@Model.Id"/>
+            
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Reason </span>
+
+                <input
+                    type="text" asp-for="Reason"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="Reason" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+        
+        <div class="mt-6 flex justify-between gap-2">
+            <a
+                type="button" asp-action="Index"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                Confirm
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/curriculum/reject-curriculum.js"></script>
+}
