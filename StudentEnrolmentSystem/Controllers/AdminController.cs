@@ -4,7 +4,7 @@ namespace StudentEnrolmentSystem.Controllers;
 public class AdminController(
     CourseApiController courseApi, ProgramApiController programApi, CurriculumApiController curriculumApi,
     FacultyApiController facultyApi, TimeMachineController timeMachineApi, StudentApiController studentApi,
-    RoomApiController roomApi
+    RoomApiController roomApi, ScheduleApiController scheduleApi
     ) : Controller
 {
 
@@ -31,6 +31,9 @@ public class AdminController(
 
     public IActionResult Curricula()
     {
+        if (HttpContext.Session.GetInt32("AyId") == null || HttpContext.Session.GetInt32("SemId") == null)
+            return RedirectToAction("Index", "TimeMachine");
+        
         ViewBag.Curricula = curriculumApi.GetCurricula().Result;
         ViewBag.CurriculumCourses = curriculumApi.GetCurriculumCourses().Result;
         ViewBag.Courses = courseApi.GetCourses().Result;
@@ -54,6 +57,17 @@ public class AdminController(
     public IActionResult Rooms()
     {
         ViewBag.Rooms = roomApi.GetRooms().Result;
+        ViewBag.Programs = programApi.GetPrograms().Result;
         return View("~/Views/Admin/Rooms.cshtml");
+    }
+
+    public IActionResult Schedules()
+    {
+        ViewBag.Courses = courseApi.GetCourses().Result;
+        ViewBag.Schedules = scheduleApi.GetSchedules().Result;
+        ViewBag.Sessions = scheduleApi.GetSessions().Result;
+        ViewBag.Teachers = facultyApi.GetTeachers().Result;
+        ViewBag.Rooms = roomApi.GetRooms().Result;
+        return View("~/Views/Admin/Schedules.cshtml");
     }
 }

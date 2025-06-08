@@ -5,8 +5,8 @@ namespace StudentEnrolmentSystem.Models.Dto;
 public class CurriculumUpdateDto
 {
     public int CurId { get; set; }
-    
-    public required List<int> CrsIds { get; set; } = new();
+
+    public List<int> CrsIds { get; set; } = [];
 
     [Required(ErrorMessage = "GEE requirement is required")]
     [RegularExpression(@"^\d+$", ErrorMessage = "Invalid number of units.")]

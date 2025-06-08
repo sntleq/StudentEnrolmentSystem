@@ -60,6 +60,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kDfK77g47sajCGR4gIvujslmNu4F2PzAfuS59tFTA7Y="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"972"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022kDfK77g47sajCGR4gIvujslmNu4F2PzAfuS59tFTA7Y=\u0022"},{"Name":"Last-Modified","Value":"Mon, 02 Jun 2025 17:49:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/admin/room-filter.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin\room-filter.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8kQRzGkN/cvs3mfCvblhCoDYUJogzhdoA103OAHHIxo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"963"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00228kQRzGkN/cvs3mfCvblhCoDYUJogzhdoA103OAHHIxo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 10:35:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/admin/room-filter.m2fbejmh4h.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin\room-filter.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m2fbejmh4h"},{"Name":"integrity","Value":"sha256-8kQRzGkN/cvs3mfCvblhCoDYUJogzhdoA103OAHHIxo="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/admin/room-filter.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"963"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00228kQRzGkN/cvs3mfCvblhCoDYUJogzhdoA103OAHHIxo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 10:35:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/auth/admin-login.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\auth\admin-login.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -120,17 +132,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-piLgiq06dERE5bPsKEBRiqYBAnm6C3xcF/whbI19u4c="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"804"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022piLgiq06dERE5bPsKEBRiqYBAnm6C3xcF/whbI19u4c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 02 Jun 2025 20:14:04 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/course/add-course.jelr94gl9g.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\course\add-course.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jelr94gl9g"},{"Name":"integrity","Value":"sha256-5eFlJlivkl\u002B4e9XqpMuz/KbddW\u002B3FhH9DRTSLfMSB\u002BU="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/course/add-course.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4391"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225eFlJlivkl\u002B4e9XqpMuz/KbddW\u002B3FhH9DRTSLfMSB\u002BU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 15:28:22 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/course/add-course.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\course\add-course.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5eFlJlivkl\u002B4e9XqpMuz/KbddW\u002B3FhH9DRTSLfMSB\u002BU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4391"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225eFlJlivkl\u002B4e9XqpMuz/KbddW\u002B3FhH9DRTSLfMSB\u002BU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 15:28:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-L5OBvvQYJP9GxQImXhHYbjKtjaEeCzIYHYSJ5hA9yVU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4500"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022L5OBvvQYJP9GxQImXhHYbjKtjaEeCzIYHYSJ5hA9yVU=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 00:12:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/course/add-course.zfr9sdzekq.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\course\add-course.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zfr9sdzekq"},{"Name":"integrity","Value":"sha256-L5OBvvQYJP9GxQImXhHYbjKtjaEeCzIYHYSJ5hA9yVU="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/course/add-course.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4500"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022L5OBvvQYJP9GxQImXhHYbjKtjaEeCzIYHYSJ5hA9yVU=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 00:12:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/course/delete-course.cfi92tjvjj.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\course\delete-course.js'))</AssetFile>
@@ -275,6 +287,54 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bUiH3rlhxQc8yfJC5KYddn4KEWYNDoaMUmjlXirOCw0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"814"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022bUiH3rlhxQc8yfJC5KYddn4KEWYNDoaMUmjlXirOCw0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 15:28:22 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/room/add-room.2721wp77sx.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\room\add-room.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2721wp77sx"},{"Name":"integrity","Value":"sha256-XhUsVqecGhd1AC\u002B4A7WFoNQryGKSVOt2Q39bqs0hnnk="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/room/add-room.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"805"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022XhUsVqecGhd1AC\u002B4A7WFoNQryGKSVOt2Q39bqs0hnnk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 07:38:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/room/add-room.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\room\add-room.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XhUsVqecGhd1AC\u002B4A7WFoNQryGKSVOt2Q39bqs0hnnk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"805"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022XhUsVqecGhd1AC\u002B4A7WFoNQryGKSVOt2Q39bqs0hnnk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 07:38:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/room/delete-room.egfqe8ovcy.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\room\delete-room.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"egfqe8ovcy"},{"Name":"integrity","Value":"sha256-vv4ldha5UWdZH9u28hpOd0K25i43l0mIdWdH3/euMaI="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/room/delete-room.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"810"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022vv4ldha5UWdZH9u28hpOd0K25i43l0mIdWdH3/euMaI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 07:39:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/room/delete-room.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\room\delete-room.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vv4ldha5UWdZH9u28hpOd0K25i43l0mIdWdH3/euMaI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"810"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022vv4ldha5UWdZH9u28hpOd0K25i43l0mIdWdH3/euMaI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 07:39:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/room/edit-room.ihb3ws421y.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\room\edit-room.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ihb3ws421y"},{"Name":"integrity","Value":"sha256-5iyyllEV9nQmekogWDnnQha8b2raEd9v6yb/LyM9TcE="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/room/edit-room.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"808"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225iyyllEV9nQmekogWDnnQha8b2raEd9v6yb/LyM9TcE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 07:39:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/room/edit-room.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\room\edit-room.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5iyyllEV9nQmekogWDnnQha8b2raEd9v6yb/LyM9TcE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"808"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225iyyllEV9nQmekogWDnnQha8b2raEd9v6yb/LyM9TcE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 07:39:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/schedule/add-schedule.7oxyvwknly.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\schedule\add-schedule.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7oxyvwknly"},{"Name":"integrity","Value":"sha256-992ZvjwdLLAhpFu8q612RuNbrwgU4cb4XWaDr7OiF3w="},{"Name":"label","Value":"_content/StudentEnrolmentSystem/js/schedule/add-schedule.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5080"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022992ZvjwdLLAhpFu8q612RuNbrwgU4cb4XWaDr7OiF3w=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 01:16:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/schedule/add-schedule.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\schedule\add-schedule.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-992ZvjwdLLAhpFu8q612RuNbrwgU4cb4XWaDr7OiF3w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5080"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022992ZvjwdLLAhpFu8q612RuNbrwgU4cb4XWaDr7OiF3w=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 01:16:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StudentEnrolmentSystem/js/time-machine.cwczjouvd8.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\time-machine.js'))</AssetFile>

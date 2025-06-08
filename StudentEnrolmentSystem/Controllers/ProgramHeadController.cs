@@ -3,7 +3,8 @@ namespace StudentEnrolmentSystem.Controllers;
 
 public class ProgramHeadController(
     CourseApiController courseApi, ProgramApiController programApi, CurriculumApiController curriculumApi,
-    FacultyApiController facultyApi, TimeMachineController timeMachineApi, StudentApiController studentApi
+    FacultyApiController facultyApi, TimeMachineController timeMachineApi, StudentApiController studentApi,
+    RoomApiController roomApi, ScheduleApiController scheduleApi
 ) : Controller
 {
 
@@ -42,12 +43,22 @@ public class ProgramHeadController(
         ViewBag.AyId = HttpContext.Session.GetInt32("AyId");
         return View("~/Views/ProgramHead/Curricula.cshtml");
     }
+    
+    public IActionResult Schedules()
+    {
+        ViewBag.Courses = courseApi.GetCourses().Result;
+        ViewBag.Categories = courseApi.GetCategories().Result;
+        ViewBag.Schedules = scheduleApi.GetSchedules().Result;
+        ViewBag.Sessions = scheduleApi.GetSessions().Result;
+        ViewBag.Teachers = facultyApi.GetTeachers().Result;
+        ViewBag.Rooms = roomApi.GetRooms().Result;
+        return View("~/Views/ProgramHead/Schedules.cshtml");
+    }
 
     public IActionResult Students()
     {
         if (HttpContext.Session.GetInt32("HeadId") == null)
             return RedirectToAction("ProgramHead", "Auth");
-        
         return View("~/Views/ProgramHead/Students.cshtml");
     }
 }

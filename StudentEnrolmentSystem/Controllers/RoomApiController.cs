@@ -21,7 +21,8 @@ public class RoomApiController(IConfiguration config, ILogger<RoomApiController>
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = @"
             SELECT *
-            FROM room";
+            FROM room
+            ORDER BY room_id";
     
         await using var reader = await cmd.ExecuteReaderAsync();
     

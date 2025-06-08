@@ -1,0 +1,306 @@
+@model StudentEnrolmentSystem.Models.Dto.ScheduleCreateDto;
+@{
+    ViewData["Title"] = "Add Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var timeslots = ViewBag.TimeSlots as List<StudentEnrolmentSystem.Models.TimeSlot>;
+}
+
+<form id="addScheduleForm" data-action="@Url.RouteUrl("Schedules.Add")"
+      class="w-full min-h-screen px-10 grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+    <div class="h-full max-h-screen overflow-auto relative" style="scrollbar-width: none">
+        <div class="rounded-lg border border-gray-300 px-8 py-12 my-10">
+            <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Add Schedule</h2>
+
+            <div class="mt-1">
+                <p class="text-sm text-pretty text-gray-700">
+                    Enter details of the schedule to add. Click on the slots to the right to select timeslots for this schedule.
+                </p>
+            </div>
+
+            <div class="mt-6">
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Course </span>
+
+                    <input
+                        type="text" value="@ViewBag.Course.CrsTitle" disabled
+                        class="mt-1 w-full rounded border-gray-300 bg-gray-100 sm:text-sm"
+                    />
+                    
+                    <input type="hidden" asp-for="CrsId" value="@ViewBag.Course.CrsId" />
+                    <div class="mt-2 flex items-center justify-between">
+                        <span class="text-sm text-gray-500"> Total: </span>
+
+                        @{
+                            var totalHours = ViewBag.Course.CrsHrsLec + ViewBag.Course.CrsHrsLab;
+                            var hourLabel = totalHours == 1 ? "hour" : "hours";
+                        }
+                        <span class="text-sm text-gray-500"> @totalHours @hourLabel </span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="mt-4">
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Section Code </span>
+
+                    <input
+                        type="text" asp-for="SchedCode"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
+
+                    <span asp-validation-for="SchedCode" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+
+            <div class="mt-4">
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Teacher </span>
+
+                    <select
+                        asp-for="TchrId" id="teacherSelect"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    >
+                        <option value="" selected hidden>Please select</option>
+                        @foreach (var teacher in ViewBag.Teachers)
+                        {
+                            <option value="@teacher.TchrId">@teacher.TchrFirstName @teacher.TchrLastName</option>
+                        }
+                    </select>
+
+                    <span asp-validation-for="TchrId" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+
+            <div class="mt-4">
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Room </span>
+
+                    @{
+                        var rooms = ViewBag.Rooms as List<StudentEnrolmentSystem.Models.Room>;
+                        if (ViewBag.Course.ProgId != null)
+                            rooms = rooms!.Where(r => r.ProgId == ViewBag.Course.ProgId).ToList();
+                    }
+                    <select
+                        asp-for="RoomId"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    >
+                        <option value="" selected> To be assigned </option>
+                        @foreach (var room in rooms!)
+                        {
+                            <option value="@room.RoomId">@room.RoomCode</option>
+                        }
+                    </select>
+                </label>
+            </div>
+
+            <div class="mt-4">
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Capacity </span>
+
+                    <input
+                        type="text" asp-for="SchedCapacity"
+                        class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                    />
+
+                    <span asp-validation-for="SchedCapacity" class="mt-1 text-sm text-red-700"></span>
+                </label>
+            </div>
+
+            <div class="mt-4">
+                <label>
+                    <span class="text-sm font-medium text-gray-700"> Sessions </span>
+
+                    <div id="sessionsContainer" class="mt-1 flex flex-col gap-2">
+                        <!-- sessions generated by add-schedule.js -->
+                    </div>
+                </label>
+            </div>
+
+            <div class="mt-4">
+                <p id="formError" class="text-sm text-red-700 text-pretty"></p>
+            </div>
+
+            <footer class="mt-6 flex justify-between gap-2">
+                <a
+                    type="button" href="javascript:history.back()"
+                    class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+                >
+                    Cancel
+                </a>
+
+                <button
+                    type="submit"
+                    class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                >
+                    Confirm
+                </button>
+            </footer>
+        </div>
+
+        <div
+            class="pointer-events-none
+                   fixed inset-x-0 top-0
+                   h-[4.5rem] w-1/4
+                   bg-gradient-to-b
+                   from-white
+                   to-transparent
+                   z-50"
+        ></div>
+        <div
+            class="pointer-events-none
+                   fixed inset-x-0 bottom-0
+                   h-[4.5rem] w-1/4
+                   bg-gradient-to-t
+                   from-white
+                   to-transparent
+                   z-50"
+        ></div>
+    </div>
+
+    <div class="h-full lg:col-span-3 py-10">
+        <div class="h-full overflow-x-auto rounded-lg border border-gray-300 schedule-container p-8">
+            <table class="h-full min-w-full border-collapse border-spacing-0">
+                <colgroup>
+                    <col class="w-fit" />
+                    <col class="w-1/6" />
+                    <col class="w-1/6" />
+                    <col class="w-1/6" />
+                    <col class="w-1/6" />
+                    <col class="w-1/6" />
+                    <col class="w-1/6" />
+                </colgroup>
+
+                <thead class="ltr:text-left rtl:text-right">
+                <tr class="*:font-medium *:text-gray-700 *:text-xs *:text-center">
+                    <th class="px-4 pb-3 whitespace-nowrap"></th>
+                    <th class="px-4 pb-3 whitespace-nowrap">Monday</th>
+                    <th class="px-4 pb-3 whitespace-nowrap">Tuesday</th>
+                    <th class="px-4 pb-3 whitespace-nowrap">Wednesday</th>
+                    <th class="px-4 pb-3 whitespace-nowrap">Thursday</th>
+                    <th class="px-4 pb-3 whitespace-nowrap">Friday</th>
+                    <th class="px-4 pb-3 whitespace-nowrap">Saturday</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @for (int s = 1; s <= 5; s++)
+                {
+                    var slotForTime = timeslots!.FirstOrDefault(ts => ts.SlotId == s);
+                        
+                    <tr class="*:font-medium *:text-gray-700 *:text-xs">
+                        <td class="pr-4 py-2 whitespace-nowrap text-right">
+                            @(new DateTime(1, 1, 1).Add(slotForTime!.SlotTimeStart).ToString("h ").Trim())-@((new DateTime(1,1,1) + slotForTime.SlotTimeEnd).ToString("h tt"))
+                        </td>
+                            
+                        @for (int d = 1; d <= 6; d++)
+                        {
+                            var slot = timeslots!.FirstOrDefault(ts => ts.SlotId == d * 11 + s - 11);
+
+                            <td>
+                                <input
+                                    type="checkbox" name="SlotIds"
+                                    id="slot-@slot!.SlotId"
+                                    class="peer sr-only slot-checkbox"
+                                    value="@slot.SlotId"
+                                />
+
+                                <label
+                                    for="slot-@slot.SlotId"
+                                    class="block h-full rounded-lg p-3
+                                    border border-gray-300
+                                    transition-colors
+
+                                    peer-checked:bg-blue-600
+                                    peer-checked:border-transparent">
+                                </label>
+                            </td>
+                        }
+                    </tr>
+                }
+                
+                <tr class="*:font-medium *:text-gray-700 *:text-xs">
+                    <td class="pr-4 py-2 whitespace-nowrap text-right">12-1 PM</td>
+                    <td colspan="6" class="px-4 py-2 whitespace-nowrap">
+                        <div class="text-sm flex justify-center items-center">
+                            <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
+
+                            <span class="shrink-0 px-4 text-sm text-gray-900"> Lunch </span>
+
+                            <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
+                        </div>
+                    </td>
+                </tr>
+                    
+                @for (int s = 7; s <= 11; s++)
+                {
+                    var slotForTime = timeslots!.FirstOrDefault(ts => ts.SlotId == s);
+                        
+                    <tr class="*:font-medium *:text-gray-700 *:text-xs">
+                        <td class="pr-4 py-2 whitespace-nowrap text-right">
+                            @(new DateTime(1, 1, 1).Add(slotForTime!.SlotTimeStart).ToString("h ").Trim())-@((new DateTime(1,1,1) + slotForTime.SlotTimeEnd).ToString("h tt"))
+                        </td>
+                            
+                        @for (int d = 1; d <= 6; d++)
+                        {
+                            var slot = timeslots!.FirstOrDefault(ts => ts.SlotId == d * 11 + s - 11);
+
+                            <td>
+                                <input
+                                    type="checkbox" name="SlotIds"
+                                    id="slot-@slot!.SlotId"
+                                    class="peer sr-only slot-checkbox"
+                                    value="@slot.SlotId"
+                                />
+
+                                <label
+                                    for="slot-@slot.SlotId"
+                                    class="block h-full rounded-lg p-3
+                                    border border-gray-300
+                                    transition-colors
+
+                                    peer-checked:bg-blue-600
+                                    peer-checked:border-transparent">
+                                </label>
+                            </td>
+                        }
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+
+@{
+    var schedules = ViewBag.Schedules as List<StudentEnrolmentSystem.Models.CourseSchedule>;
+    var sessions  = ViewBag.Sessions as List<StudentEnrolmentSystem.Models.ScheduleSession>;
+
+    // SchedId → list of slotIds
+    var scheduleToSlots = sessions!
+        .GroupBy(sess => sess.SchedId)
+        .ToDictionary(
+            g => g.Key,
+            g => g.SelectMany(ss => Enumerable.Range(ss.StartSlotId, ss.EndSlotId - ss.StartSlotId + 1))
+                .Distinct()
+                .ToList()
+        );
+
+    // TchrId → list of slotIds
+    var teacherToSlots = schedules!
+        .GroupBy(crs => crs.TchrId)
+        .ToDictionary(
+            g => g.Key,
+            g => g.SelectMany(crs => scheduleToSlots.GetValueOrDefault(crs.SchedId, []))
+                .Distinct()
+                .ToList()
+        );
+}
+
+@section Scripts {
+    <script>
+        window.teacherToSlots = @Html.Raw(Json.Serialize(teacherToSlots));
+        window.timeslots = @Html.Raw(Json.Serialize(timeslots));
+    </script>
+    <script src="~/js/schedule/add-schedule.js"></script>
+}

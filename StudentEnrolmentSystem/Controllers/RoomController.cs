@@ -5,7 +5,7 @@ using StudentEnrolmentSystem.Models.Dto;
 namespace StudentEnrolmentSystem.Controllers;
 
 public class RoomController(
-    RoomApiController roomApi
+    RoomApiController roomApi, ProgramApiController programApi
 ) : Controller
 {
     public IActionResult Index()
@@ -15,19 +15,20 @@ public class RoomController(
 
     public IActionResult Add()
     {
-        return View("~/Views/Program/AddProgram.cshtml");
+        ViewBag.Programs = programApi.GetPrograms().Result;
+        return View("~/Views/Room/AddRoom.cshtml");
     }
-    
     
     public IActionResult Update(int roomId)
     {
         var room = roomApi.GetRooms().Result.FirstOrDefault(x => x.RoomId == roomId);
-        return View("~/Views/Program/EditProgram.cshtml");
+        ViewBag.Programs = programApi.GetPrograms().Result;
+        return View("~/Views/Room/EditRoom.cshtml", room);
     }
     
-    public IActionResult Delete(int progId)
+    public IActionResult Delete(int roomId)
     {
-        var dto = new IdDto { Id = progId };
-        return View("~/Views/Program/DeleteProgram.cshtml", dto);
+        var dto = new IdDto { Id = roomId };
+        return View("~/Views/Room/DeleteRoom.cshtml", dto);
     }
 }

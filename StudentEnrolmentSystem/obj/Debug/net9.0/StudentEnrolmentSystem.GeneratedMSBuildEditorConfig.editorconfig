@@ -116,6 +116,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUhlYWRcQ3VycmljdWxhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/ProgramHead/Schedules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUhlYWRcU2NoZWR1bGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/AddProgram.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxBZGRQcm9ncmFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -130,6 +134,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Program/EditProgram.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxFZGl0UHJvZ3JhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Room/AddRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxBZGRSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Room/DeleteRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxEZWxldGVSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Room/EditRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxFZGl0Um9vbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Schedule/AddSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVcQWRkU2NoZWR1bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Shared/_Layout.cshtml]

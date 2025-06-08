@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Manage Programs";
+    ViewData["Title"] = "Manage Rooms";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,7 +8,7 @@
             style="mask-image: linear-gradient(to bottom, black 60%, transparent);">
         <div class="flex-1 md:flex md:items-center md:gap-12">
             <h2 class="text-2xl font-semibold text-gray-900">
-                Manage Programs
+                Manage Rooms
             </h2>
         </div>
 
@@ -20,7 +20,7 @@
                     </li>
 
                     <li>
-                        <a class="text-black font-medium"> Programs </a>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Programs"> Programs </a>
                     </li>
                     
                     <li>
@@ -32,7 +32,7 @@
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Rooms </a>
+                        <a class="text-black font-medium"> Rooms </a>
                     </li>
                 </ul>
             </nav>
@@ -45,59 +45,112 @@
             </a>
         </div>
     </header>
-
     
     @{
+        var rooms = ViewBag.Rooms as List<StudentEnrolmentSystem.Models.Room>;
         var programs = ViewBag.Programs as List<StudentEnrolmentSystem.Models.Program>;
-        var heads = ViewBag.ProgramHeads as List<StudentEnrolmentSystem.Models.ProgramHead>;
     }
-    @if (programs!.Any())
+    @if (rooms!.Any())
     {
         <div class="flex-grow w-full space-y-4">
-            @foreach (var program in programs!)
-            {
-                var head = heads?.FirstOrDefault(ph => ph.ProgId == program.ProgId);
-                
-                <div
-                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900">
-                    <div class="flex flex-col">
-                        <div class="flex items-baseline gap-3">
-                            <h2 class="text-lg font-medium">@program.ProgTitle</h2>
-                    
-                            <p class="text-base text-gray-500 mt-0.5">(@program.ProgCode)</p>
-                        </div>
-                        
-                        <div class="flex items-baseline gap-3">
-                            <p class="text-sm text-gray-500 mt-0.5">Headed by: @(head != null ? head.HeadFirstName + " " + head.HeadLastName : "None")</p>
-                    
-                            <a
-                                type="button" asp-action="AssignHead" asp-controller="Program" asp-route-progId="@program.ProgId"
-                                class="text-blue-600 transition hover:text-blue-700 text-sm"
+            <div class="flex justify-between items-center gap-2">
+                <details class="group relative rounded border border-gray-300 z-0">
+                    <summary
+                        class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
+                    >
+                        <span class="text-sm font-medium"> Program </span>
+
+                        <span class="transition-transform group-open:-rotate-180">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.5"
+                                stroke="currentColor"
+                                class="size-3.5"
                             >
-                                @(head != null ? "Change" : "Add")
-                            </a>
-                        </div>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </summary>
+
+                    <div class="divide-y divide-gray-300 rounded border border-gray-300 bg-white group-open:absolute group-open:start-0 group-open:top-11">
+                        <fieldset class="p-3">
+                            <legend class="sr-only">Checkboxes</legend>
+
+                            <div class="flex flex-col items-start gap-3">
+                                <label class="inline-flex items-center gap-3">
+                                    <input
+                                        type="checkbox"
+                                        class="size-5 rounded border-gray-300 prog-filter"
+                                        value=""
+                                        checked
+                                    />
+
+                                    <span class="text-sm font-medium text-gray-700 whitespace-nowrap">
+                                        General Purpose
+                                    </span>
+                                </label>
+                                
+                                @foreach (var program in ViewBag.Programs)
+                                {
+                                    <label class="inline-flex items-center gap-3">
+                                        <input
+                                            type="checkbox"
+                                            class="size-5 rounded border-gray-300 prog-filter"
+                                            value="@program.ProgId"
+                                            checked/>
+
+                                        <span class="text-sm font-medium text-gray-700 whitespace-nowrap">
+                                            @program.ProgTitle (@program.ProgCode)
+                                        </span>
+                                    </label>
+                                }
+                            </div>
+                        </fieldset>
+                    </div>
+                </details>
+                
+                <a
+                    type="button" asp-action="Add" asp-controller="Room"
+                    class="ml-auto block rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                    &plus; Add room
+                </a>
+            </div>
+            
+            @foreach (var room in rooms!)
+            {
+                <div data-prog-id="@room.ProgId"
+                    class="flex items-center justify-between gap-3 rounded-md border border-gray-100 bg-gray-50 px-6 py-4 text-gray-900 room">
+                    <div class="flex items-baseline gap-3">
+                        <h2 class="text-lg font-medium">@room.RoomCode</h2>
+                        
+                        @if (room.ProgId != null)
+                        {
+                            var program = programs?.FirstOrDefault(p => p.ProgId == room.ProgId);
+                            <p class="text-base text-gray-500 mt-0.5">(@program!.ProgCode)</p>
+                        }
                     </div>
                     
                     <a
-                        type="button" asp-action="Update" asp-controller="Program" asp-route-progId="@program.ProgId"
+                        type="button" asp-action="Update" asp-controller="Room" asp-route-roomId="@room.RoomId"
                         class="ml-auto block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
                         Edit
                     </a>
                     
                     <a
-                        type="button" asp-action="Delete" asp-controller="Program" asp-route-progId="@program.ProgId"
+                        type="button" asp-action="Delete" asp-controller="Room" asp-route-roomId="@room.RoomId"
                         class="block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
                         Delete
                     </a>
                 </div>
             }
 
-            <a
-                type="button" asp-action="Add" asp-controller="Program"
-                class="block w-full rounded text-center bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                &plus; Add program
-            </a>
+            <div class="p-6 flex flex-col justify-center items-center no-results-msg">
+                <p class="text-sm text-pretty text-gray-700">
+                    No rooms found for the selected program.
+                </p>
+            </div>
         </div>
     }
 
@@ -105,15 +158,19 @@
     {
         <div class="flex-grow rounded-lg p-6 flex flex-col justify-center items-center">
             <p class="text-sm text-pretty text-gray-700">
-                No programs found in the database.
+                No rooms found in the database.
             </p>
 
             <a
-                type="button" asp-action="Add" asp-controller="Program"
+                type="button" asp-action="Add" asp-controller="Room"
                 class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
-                Add program
+                &plus; Add room
             </a>
         </div>
     }
 </div>
+
+@section Scripts {
+    <script src="~/js/admin/room-filter.js"></script>
+}

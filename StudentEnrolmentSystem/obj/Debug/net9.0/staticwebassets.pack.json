@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\js\\admin\\faculty-filter.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\room-filter.js",
+      "PackagePath": "staticwebassets\\js\\admin\\room-filter.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\auth\\admin-login.js",
       "PackagePath": "staticwebassets\\js\\auth\\admin-login.js"
     },
@@ -91,6 +95,22 @@
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\program\\edit-program.js",
       "PackagePath": "staticwebassets\\js\\program\\edit-program.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\room\\add-room.js",
+      "PackagePath": "staticwebassets\\js\\room\\add-room.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\room\\delete-room.js",
+      "PackagePath": "staticwebassets\\js\\room\\delete-room.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\room\\edit-room.js",
+      "PackagePath": "staticwebassets\\js\\room\\edit-room.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\schedule\\add-schedule.js",
+      "PackagePath": "staticwebassets\\js\\schedule\\add-schedule.js"
     },
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\time-machine.js",

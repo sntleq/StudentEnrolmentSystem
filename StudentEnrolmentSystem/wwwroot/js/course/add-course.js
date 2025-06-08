@@ -1,4 +1,7 @@
 $().ready(function () {
+    
+    // prerequisite counting
+    
     const $checkboxes = $('input[name="CrsPreqIds"]');
     const $countSpan = $('#prereqCount');
     
@@ -11,6 +14,8 @@ $().ready(function () {
     $checkboxes.on('change', updatePrereqCount);
     updatePrereqCount();
 
+    // prerequisite filtering
+    
     const $categorySelect = $('#categorySelect');
     const $prereqItems = $('.prereq-item');
 
@@ -101,6 +106,8 @@ $().ready(function () {
     $categorySelect.on('change', toggleProgramSelect);
     filterPrereqsByCategory();
     toggleProgramSelect();
+    
+    // form submission
     
     const $form = $('#addCourseForm');
     const action = $form.data('action');

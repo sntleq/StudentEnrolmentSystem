@@ -59,7 +59,7 @@
                     <summary
                         class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden"
                     >
-                        <span id="prereqCount" class="text-sm font-medium"> Category </span>
+                        <span class="text-sm font-medium"> Category </span>
 
                         <span class="transition-transform group-open:-rotate-180">
                             <svg
@@ -123,7 +123,7 @@
                     </thead>
 
                     <tbody class="divide-y divide-gray-200">
-                    @foreach (var course in courses!)
+                    @foreach (var course in courses)
                     {
                         var category = categories!.FirstOrDefault(c => c.CatgId == course.CatgId);
                         var dependencies = ViewBag.Dependencies as List<StudentEnrolmentSystem.Models.CourseDependency>;

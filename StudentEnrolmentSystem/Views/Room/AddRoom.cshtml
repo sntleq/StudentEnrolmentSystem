@@ -1,0 +1,71 @@
+@model StudentEnrolmentSystem.Models.Room
+@{
+    ViewData["Title"] = "Add Room";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+    class="fixed inset-0 z-50 grid place-content-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+>
+    <form id="addRoomForm" data-action="@Url.RouteUrl("Rooms.Add")"
+          class="m-auto w-fit min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12 my-10">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Add Room</h2>
+
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Room Code </span>
+
+                <input
+                    type="text" asp-for="RoomCode"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                />
+                
+                <span asp-validation-for="RoomCode" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Program </span>
+
+                <select
+                    asp-for="ProgId"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                >
+                    <option value="" selected> General Purpose </option>
+                    @foreach (var program in ViewBag.Programs)
+                    {
+                        <option value="@program.ProgId">@program.ProgTitle (@program.ProgCode)</option>
+                    }
+                </select>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                type="button" href="javascript:history.back()"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/room/add-room.js"></script>
+}

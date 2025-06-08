@@ -27,7 +27,7 @@ public class CourseCreateDto
     [Required(ErrorMessage = "Course category is required.")]
     public int CatgId { get; set; }
 
-    public required List<int> CrsPreqIds { get; set; } = new();
+    public List<int> CrsPreqIds { get; set; } = [];
     public int? LvlId { get; set; }
     
     public int? ProgId { get; set; }
