@@ -20,15 +20,23 @@
                     </li>
 
                     <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Programs"> Programs </a>
+                    </li>
+                    
+                    <li>
                         <a class="text-gray-500 transition hover:text-blue-500" asp-action="Curricula"> Curricula </a>
                     </li>
                     
                     <li>
-                        <a class="text-black font-medium"> Schedules </a>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Faculty"> Faculty </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-500 transition hover:text-blue-500" asp-action="Rooms"> Rooms </a>
                     </li>
                     
                     <li>
-                        <a class="text-gray-500 transition hover:text-blue-500" href="#"> Students </a>
+                        <a class="text-black font-medium"> Schedules </a>
                     </li>
                 </ul>
             </nav>
@@ -45,7 +53,6 @@
     @{
         var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
         var categories = ViewBag.Categories as List<StudentEnrolmentSystem.Models.CourseCategory>;
-        var programCategories = categories!.Where(c => !new[] { 1, 2, 7, 8 }.Contains(c.CatgId)).ToList();
     }
     @if (courses!.Any())
     {
@@ -76,7 +83,7 @@
                             <legend class="sr-only">Checkboxes</legend>
 
                             <div class="flex flex-col items-start gap-3">
-                                @foreach (var category in programCategories)
+                                @foreach (var category in categories)
                                 {
                                     <label class="inline-flex items-center gap-3">
                                         <input
@@ -132,7 +139,10 @@
                                     <th class="px-4 py-3 whitespace-nowrap">Room</th>
                                     <th class="px-4 py-3 whitespace-nowrap">Capacity</th>
                                     <th class="px-4 py-3 whitespace-nowrap">Description</th>
-                                    <th class="px-4 py-3 whitespace-nowrap"></th>
+                                    @if (new[] { 1, 2, 7, 8 }.Contains(course.CatgId))
+                                    {
+                                        <th class="px-4 py-3 whitespace-nowrap"></th>
+                                    }
                                 </tr>
                                 </thead>
 
@@ -153,34 +163,41 @@
                                         <td class="px-4 py-2 whitespace-nowrap">@(room != null ? room.RoomCode : "To Be Assigned")</td>
                                         <td class="px-4 py-2 whitespace-nowrap">@sched.SchedCapacity</td>
                                         <td class="px-4 py-2 whitespace-nowrap">@sched.SchedDescription</td>
-                                        <td class="px-4 py-2 whitespace-nowrap">
-                                            <div class="flex gap-3 w-fit ml-auto">
-                                                <a
-                                                    type="button" asp-action="Update" asp-controller="Schedule" asp-route-schedId="@sched.SchedId"
-                                                    class="ml-auto w-fit block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                                                    Edit
-                                                </a>
+                                        
+                                        @if (new[] { 1, 2, 7, 8 }.Contains(course.CatgId))
+                                        {
+                                            <td class="px-4 py-2 whitespace-nowrap">
+                                                <div class="flex gap-3 w-fit ml-auto">
+                                                    <a
+                                                        type="button" asp-action="Update" asp-controller="Schedule" asp-route-schedId="@sched.SchedId"
+                                                        class="ml-auto w-fit block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                                                        Edit
+                                                    </a>
 
-                                                <a
-                                                    type="button" asp-action="Delete" asp-controller="Schedule" asp-route-schedId="@sched.SchedId"
-                                                    class="ml-auto w-fit block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </td>
+                                                    <a
+                                                        type="button" asp-action="Delete" asp-controller="Schedule" asp-route-schedId="@sched.SchedId"
+                                                        class="ml-auto w-fit block rounded bg-red-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        }
                                     </tr>
                                 }
                                 </tbody>
                             </table>
                         </div>
-
-                        <div class="mt-3 w-full grid">
-                            <a
-                                type="button" asp-action="Add" asp-controller="Schedule" asp-route-crsId="@course.CrsId"
-                                class="text-center block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                                &plus; Add schedule
-                            </a>
-                        </div>
+                        
+                        @if (new[] { 1, 2, 7, 8 }.Contains(course.CatgId))
+                        {
+                            <div class="mt-3 w-full grid">
+                                <a
+                                    type="button" asp-action="Add" asp-controller="Schedule" asp-route-crsId="@course.CrsId"
+                                    class="text-center block rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                                    &plus; Add schedule
+                                </a>
+                            </div>
+                        }
                     }
 
                     else
@@ -189,12 +206,15 @@
                             <p class="text-sm text-pretty text-gray-700">
                                 No schedules found.
                             </p>
-
-                            <a
-                                type="button" asp-action="Add" asp-controller="Schedule" asp-route-crsId="@course.CrsId"
-                                class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
-                                &plus; Add schedule
-                            </a>
+                            
+                            @if (new[] { 1, 2, 7, 8 }.Contains(course.CatgId))
+                            {
+                                <a
+                                    type="button" asp-action="Add" asp-controller="Schedule" asp-route-crsId="@course.CrsId"
+                                    class="mt-4 rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                                    &plus; Add schedule
+                                </a>
+                            }
                         </div>
                     }
                 </details>

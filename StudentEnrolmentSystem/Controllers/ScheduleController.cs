@@ -32,6 +32,8 @@ public class ScheduleController(
         ViewBag.Teachers = facultyApi.GetTeachers().Result;
         ViewBag.Rooms = roomApi.GetRooms().Result;
         ViewBag.TimeSlots = scheduleApi.GetTimeSlots().Result;
+        ViewBag.Schedules = scheduleApi.GetSchedules().Result;
+        ViewBag.Sessions = scheduleApi.GetSessions().Result;
 
         var dto = new ScheduleCreateDto
         {
@@ -41,7 +43,7 @@ public class ScheduleController(
             TchrId = schedule.TchrId,
             RoomId = schedule.RoomId,
             SchedCapacity = schedule.SchedCapacity,
-            SlotIds = [],
+            SlotIds = scheduleApi.SessionsToSlotIds(scheduleApi.GetSessions().Result.Where(s => s.SchedId == schedule.SchedId).ToList()),
         };
         return View("~/Views/Schedule/EditSchedule.cshtml", dto);
     }

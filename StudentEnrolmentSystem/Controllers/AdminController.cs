@@ -64,6 +64,7 @@ public class AdminController(
     public IActionResult Schedules()
     {
         ViewBag.Courses = courseApi.GetCourses().Result;
+        ViewBag.Categories = courseApi.GetCategories().Result;
         ViewBag.Schedules = scheduleApi.GetSchedules().Result;
         ViewBag.Sessions = scheduleApi.GetSessions().Result;
         ViewBag.Teachers = facultyApi.GetTeachers().Result;

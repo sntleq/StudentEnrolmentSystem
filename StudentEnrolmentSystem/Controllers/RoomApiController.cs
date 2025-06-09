@@ -32,7 +32,8 @@ public class RoomApiController(IConfiguration config, ILogger<RoomApiController>
             {
                 RoomId = reader.GetInt32(reader.GetOrdinal("room_id")),
                 RoomCode = reader.GetString(reader.GetOrdinal("room_code")),
-                ProgId = reader["prog_id"] as int?
+                ProgId = reader["prog_id"] as int?,
+                RoomIsActive = reader.GetBoolean(reader.GetOrdinal("room_is_active")),
             };
         
             list.Add(room);
@@ -147,18 +148,46 @@ public class RoomApiController(IConfiguration config, ILogger<RoomApiController>
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
-            await using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                DELETE FROM room
-                WHERE room_id = @roomId";
-
-            cmd.Parameters.AddWithValue("roomId", form.Id);
-
-            var rowsAffected = await cmd.ExecuteNonQueryAsync();
-            if (rowsAffected == 0)
+            await using var tx = await conn.BeginTransactionAsync();
+            
+            await using (var checkCmd = conn.CreateCommand())
             {
-                return NotFound(new { success = false, message = "Room not found" });
+                checkCmd.Transaction = tx;
+                checkCmd.CommandText = @"
+                    SELECT 1 FROM course_schedule
+                    WHERE room_id = @roomId";
+                
+                checkCmd.Parameters.AddWithValue("roomId", form.Id);
+
+                var exists = await checkCmd.ExecuteScalarAsync();
+                
+                await using var cmd = conn.CreateCommand();
+                cmd.Transaction = tx;
+                
+                if (exists is not null)
+                {
+                    cmd.CommandText = @"
+                        UPDATE room
+                        SET 
+                            room_is_active = false
+                        WHERE room_id = @roomId";
+                }
+                else
+                {
+                    cmd.CommandText = @"
+                        DELETE FROM room
+                        WHERE room_id = @roomId";
+                }
+                cmd.Parameters.AddWithValue("roomId", form.Id);
+
+                var rowsAffected = await cmd.ExecuteNonQueryAsync();
+                if (rowsAffected == 0)
+                {
+                    return NotFound(new { success = false, message = "Room not found" });
+                }
             }
+            
+            await tx.CommitAsync();
             
             return Ok(new
             {

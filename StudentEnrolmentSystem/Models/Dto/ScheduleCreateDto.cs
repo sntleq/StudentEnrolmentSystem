@@ -4,7 +4,7 @@ namespace StudentEnrolmentSystem.Models.Dto;
 
 public class ScheduleCreateDto
 {
-    public int SchedId { get; set; }
+    public int? SchedId { get; set; }
     public int CrsId { get; set; }
     
     [Required(ErrorMessage = "Section code is required")]

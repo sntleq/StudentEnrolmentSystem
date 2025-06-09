@@ -40,6 +40,7 @@ public class ScheduleApiController(
                 RoomId = reader["room_id"] as int?,
                 SchedCapacity = reader.GetInt32(reader.GetOrdinal("sched_capacity")),
                 SchedDescription = reader.GetString(reader.GetOrdinal("sched_description")),
+                SchedIsActive = reader.GetBoolean(reader.GetOrdinal("sched_is_active")),
             };
         
             list.Add(sched);
@@ -127,7 +128,7 @@ public class ScheduleApiController(
         if (form.SlotIds.Count != hours)
             return BadRequest(new { success = false, message = "Total slots doesn't match course hours." });
         
-        var sessions = SlotIdsToSessions(form.SlotIds, form.SchedId);
+        var sessions = SlotIdsToSessions(form.SlotIds, (int)form.SchedId!);
         if (sessions == null)
             return BadRequest(new { success = false, message = "A section must not have more than one session in the same day." });
 
@@ -206,42 +207,97 @@ public class ScheduleApiController(
         }
     }
     
-    [HttpPost("Rooms/Update", Name = "Rooms.Update")]
-    public async Task<IActionResult> UpdateRoom([FromForm] Room form)
+    [HttpPost("Schedules/Update", Name = "Schedules.Update")]
+    public async Task<IActionResult> UpdateSchedule([FromForm] ScheduleCreateDto form)
     {
+        var course = courseApi.GetCourses().Result.FirstOrDefault(c => c.CrsId == form.CrsId);
+        var hours = course!.CrsHrsLec + course.CrsHrsLab;
+        
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
+
+        if (form.SlotIds.Count != hours)
+            return BadRequest(new { success = false, message = "Total slots doesn't match course hours." });
+        
+        var sessions = SlotIdsToSessions(form.SlotIds, (int)form.SchedId!);
+        if (sessions == null)
+            return BadRequest(new { success = false, message = "A section must not have more than one session in the same day." });
+
+        var description = GetScheduleDescription(sessions);
 
         try
         {
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
+            await using var tx = await conn.BeginTransactionAsync();
+            
             await using var cmd = conn.CreateCommand();
+            cmd.Transaction = tx;
             cmd.CommandText = @"
-                UPDATE room
+                UPDATE course_schedule
                 SET 
-                    room_code = @roomCode,
-                    prog_id = @progId
-                WHERE room_id = @roomId";
+                    sched_code = @schedCode,
+                    tchr_id = @tchrId,
+                    room_id = @roomId,
+                    sched_capacity = @schedCapacity,
+                    sched_description = @schedDescription
+                WHERE sched_id = @schedId";
 
-            cmd.Parameters.AddWithValue("roomCode", form.RoomCode);
-            if (form.ProgId.HasValue)
-                cmd.Parameters.AddWithValue("progId", form.ProgId);
+            cmd.Parameters.AddWithValue("schedCode", form.SchedCode);
+            cmd.Parameters.AddWithValue("tchrId", form.TchrId);
+            if (form.RoomId.HasValue)
+                cmd.Parameters.AddWithValue("roomId", form.RoomId);
             else
-                cmd.Parameters.AddWithValue("progId", DBNull.Value);
-            cmd.Parameters.AddWithValue("roomId", form.RoomId);
+                cmd.Parameters.AddWithValue("roomId", DBNull.Value);
+            cmd.Parameters.AddWithValue("schedCapacity", form.SchedCapacity);
+            cmd.Parameters.AddWithValue("schedDescription", description);
+            cmd.Parameters.AddWithValue("schedId", form.SchedId);
             
             var rowsAffected = await cmd.ExecuteNonQueryAsync();
             if (rowsAffected == 0)
             {
-                return NotFound(new { success = false, message = "Room not found" });
+                return NotFound(new { success = false, message = "Schedule not found" });
             }
+            
+            await using var cleanCmd = conn.CreateCommand();
+            cleanCmd.Transaction = tx;
+            cleanCmd.CommandText = @"
+                    DELETE FROM schedule_session
+                    WHERE sched_id = @schedId";
+
+            cleanCmd.Parameters.AddWithValue("schedId", form.SchedId);
+            await cleanCmd.ExecuteNonQueryAsync();
+            
+            if (sessions.Count > 0)
+            {
+                await using var newCmd = conn.CreateCommand();
+                newCmd.Transaction = tx;
+                newCmd.CommandText = @"
+                    INSERT INTO schedule_session (
+                        start_slot_id, end_slot_id, sched_id
+                    ) VALUES (
+                        @startSlotId, @endSlotId, @schedId
+                    )";
+
+                newCmd.Parameters.AddWithValue("schedId", form.SchedId);
+                newCmd.Parameters.Add("startSlotId", NpgsqlTypes.NpgsqlDbType.Integer);
+                newCmd.Parameters.Add("endSlotId", NpgsqlTypes.NpgsqlDbType.Integer);
+
+                foreach (var session in sessions)
+                {
+                    newCmd.Parameters["startSlotId"].Value = session.StartSlotId;
+                    newCmd.Parameters["endSlotId"].Value = session.EndSlotId;
+                    await newCmd.ExecuteNonQueryAsync();
+                }
+            }
+            
+            await tx.CommitAsync();
             
             return Ok(new
             {
                 success = true,
-                data = new { Id = form.RoomId }
+                data = new { Id = form.SchedId }
             });
         }
         catch (NpgsqlException ex)
@@ -256,8 +312,8 @@ public class ScheduleApiController(
         }
     }
     
-    [HttpPost("Rooms/Delete", Name = "Rooms.Delete")]
-    public async Task<IActionResult> DeleteProgram([FromForm] IdDto form)
+    [HttpPost("Schedules/Delete", Name = "Schedules.Delete")]
+    public async Task<IActionResult> DeleteSchedule([FromForm] IdDto form)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -267,18 +323,46 @@ public class ScheduleApiController(
             await using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
             
-            await using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                DELETE FROM room
-                WHERE room_id = @roomId";
-
-            cmd.Parameters.AddWithValue("roomId", form.Id);
-
-            var rowsAffected = await cmd.ExecuteNonQueryAsync();
-            if (rowsAffected == 0)
+            await using var tx = await conn.BeginTransactionAsync();
+            
+            await using (var checkCmd = conn.CreateCommand())
             {
-                return NotFound(new { success = false, message = "Room not found" });
+                checkCmd.Transaction = tx;
+                checkCmd.CommandText = @"
+                    SELECT 1 FROM enrolment
+                    WHERE sched_id = @schedId";
+                
+                checkCmd.Parameters.AddWithValue("schedId", form.Id);
+
+                var exists = await checkCmd.ExecuteScalarAsync();
+                
+                await using var cmd = conn.CreateCommand();
+                cmd.Transaction = tx;
+                
+                if (exists is not null)
+                {
+                    cmd.CommandText = @"
+                        UPDATE course_schedule
+                        SET 
+                            sched_is_active = false
+                        WHERE sched_id = @schedId";
+                }
+                else
+                {
+                    cmd.CommandText = @"
+                        DELETE FROM course_schedule
+                        WHERE sched_id = @schedId";
+                }
+                cmd.Parameters.AddWithValue("schedId", form.Id);
+
+                var rowsAffected = await cmd.ExecuteNonQueryAsync();
+                if (rowsAffected == 0)
+                {
+                    return NotFound(new { success = false, message = "Schedule not found" });
+                }
             }
+            
+            await tx.CommitAsync();
             
             return Ok(new
             {
@@ -395,11 +479,15 @@ public class ScheduleApiController(
 
         // group sessions by start/end
         var summaryParts = sessions
-            .GroupBy(sess => (sess.StartSlotId, sess.EndSlotId))
+            .GroupBy(sess => (
+                StartIndex : sess.StartSlotId % 11,
+                EndIndex   : sess.EndSlotId   % 11
+            ))
             .Select(group =>
             {
-                var startTs = slotLookup[group.Key.StartSlotId].SlotTimeStart;
-                var endTs   = slotLookup[group.Key.EndSlotId].SlotTimeEnd;
+                var example = group.First();
+                var startTs  = slotLookup[example.StartSlotId].SlotTimeStart;
+                var endTs    = slotLookup[example.EndSlotId]  .SlotTimeEnd;
 
                 var fmtStart = (new DateTime(1,1,1) + startTs).ToString("h ").Trim();
                 var fmtEnd = (new DateTime(1,1,1) + endTs).ToString("h tt");

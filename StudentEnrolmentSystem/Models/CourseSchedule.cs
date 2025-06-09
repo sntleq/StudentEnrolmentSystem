@@ -9,4 +9,6 @@ public class CourseSchedule
     public int SchedCapacity { get; set; }
     public int TchrId { get; set; }
     public required string SchedDescription { get; set; }
+    
+    public bool SchedIsActive { get; set; }
 }

@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\js\\faculty\\edit-faculty.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\program-head\\schedule-filter.js",
+      "PackagePath": "staticwebassets\\js\\program-head\\schedule-filter.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\program\\add-program.js",
       "PackagePath": "staticwebassets\\js\\program\\add-program.js"
     },
@@ -111,6 +115,14 @@
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\schedule\\add-schedule.js",
       "PackagePath": "staticwebassets\\js\\schedule\\add-schedule.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\schedule\\delete-schedule.js",
+      "PackagePath": "staticwebassets\\js\\schedule\\delete-schedule.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\schedule\\edit-schedule.js",
+      "PackagePath": "staticwebassets\\js\\schedule\\edit-schedule.js"
     },
     {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\time-machine.js",

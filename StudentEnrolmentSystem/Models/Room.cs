@@ -10,4 +10,6 @@ public class Room
     public required string RoomCode { get; set; }
     
     public int? ProgId { get; set; }
+    
+    public bool RoomIsActive { get; set; }
 }

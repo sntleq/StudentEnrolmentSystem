@@ -5747,6 +5747,304 @@
       ]
     },
     {
+      "Route": "js/program-head/schedule-filter.js",
+      "AssetFile": "js/program-head/schedule-filter.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002583979328"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KzLEPqvroqK7v+BFTZ4iwqUhlXkefJb0d9LALaFoAJI=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:45:01 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/program-head/schedule-filter.js",
+      "AssetFile": "js/program-head/schedule-filter.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:45:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/program-head/schedule-filter.js.gz",
+      "AssetFile": "js/program-head/schedule-filter.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KzLEPqvroqK7v+BFTZ4iwqUhlXkefJb0d9LALaFoAJI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:45:01 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KzLEPqvroqK7v+BFTZ4iwqUhlXkefJb0d9LALaFoAJI="
+        }
+      ]
+    },
+    {
+      "Route": "js/program-head/schedule-filter.lef9iu3o95.js",
+      "AssetFile": "js/program-head/schedule-filter.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002583979328"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KzLEPqvroqK7v+BFTZ4iwqUhlXkefJb0d9LALaFoAJI=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:45:01 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lef9iu3o95"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ="
+        },
+        {
+          "Name": "label",
+          "Value": "js/program-head/schedule-filter.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/program-head/schedule-filter.lef9iu3o95.js",
+      "AssetFile": "js/program-head/schedule-filter.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:45:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lef9iu3o95"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w49MLF7v1lTHuTOSuDqfthmEoSlu1BmJjEkeBYShIoQ="
+        },
+        {
+          "Name": "label",
+          "Value": "js/program-head/schedule-filter.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/program-head/schedule-filter.lef9iu3o95.js.gz",
+      "AssetFile": "js/program-head/schedule-filter.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KzLEPqvroqK7v+BFTZ4iwqUhlXkefJb0d9LALaFoAJI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:45:01 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lef9iu3o95"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KzLEPqvroqK7v+BFTZ4iwqUhlXkefJb0d9LALaFoAJI="
+        },
+        {
+          "Name": "label",
+          "Value": "js/program-head/schedule-filter.js.gz"
+        }
+      ]
+    },
+    {
       "Route": "js/program/add-program.bl0c8xmaon.js",
       "AssetFile": "js/program/add-program.js.gz",
       "Selectors": [
@@ -8127,6 +8425,602 @@
         {
           "Name": "integrity",
           "Value": "sha256-MVUTYGooynQO188LOSz0wJP1eTjDhZKCui/Qf+AT+AM="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/delete-schedule.7xz1u8ug4v.js",
+      "AssetFile": "js/schedule/delete-schedule.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002785515320"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HlfV4+UhDF+VziwmArO8ejtRWmgotbYX7DvyQLkvMaM=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 06:26:38 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7xz1u8ug4v"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o="
+        },
+        {
+          "Name": "label",
+          "Value": "js/schedule/delete-schedule.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/delete-schedule.7xz1u8ug4v.js",
+      "AssetFile": "js/schedule/delete-schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 06:26:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7xz1u8ug4v"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o="
+        },
+        {
+          "Name": "label",
+          "Value": "js/schedule/delete-schedule.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/delete-schedule.7xz1u8ug4v.js.gz",
+      "AssetFile": "js/schedule/delete-schedule.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HlfV4+UhDF+VziwmArO8ejtRWmgotbYX7DvyQLkvMaM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 06:26:38 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7xz1u8ug4v"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HlfV4+UhDF+VziwmArO8ejtRWmgotbYX7DvyQLkvMaM="
+        },
+        {
+          "Name": "label",
+          "Value": "js/schedule/delete-schedule.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/delete-schedule.js",
+      "AssetFile": "js/schedule/delete-schedule.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002785515320"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HlfV4+UhDF+VziwmArO8ejtRWmgotbYX7DvyQLkvMaM=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 06:26:38 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/delete-schedule.js",
+      "AssetFile": "js/schedule/delete-schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 06:26:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-G0o/1OH/DwMJjBF3JjnYa/UuPavVcmd/+uUCDbGB13o="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/delete-schedule.js.gz",
+      "AssetFile": "js/schedule/delete-schedule.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HlfV4+UhDF+VziwmArO8ejtRWmgotbYX7DvyQLkvMaM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 06:26:38 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HlfV4+UhDF+VziwmArO8ejtRWmgotbYX7DvyQLkvMaM="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/edit-schedule.js",
+      "AssetFile": "js/schedule/edit-schedule.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000632511069"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1VbWuNmw5t0Qv3xDC93BawsNwSmjpibpbU5ecj4pJyI=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:56:54 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/edit-schedule.js",
+      "AssetFile": "js/schedule/edit-schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5083"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:56:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/edit-schedule.js.gz",
+      "AssetFile": "js/schedule/edit-schedule.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1VbWuNmw5t0Qv3xDC93BawsNwSmjpibpbU5ecj4pJyI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:56:54 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1VbWuNmw5t0Qv3xDC93BawsNwSmjpibpbU5ecj4pJyI="
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/edit-schedule.m0pmtkkd81.js",
+      "AssetFile": "js/schedule/edit-schedule.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000632511069"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1VbWuNmw5t0Qv3xDC93BawsNwSmjpibpbU5ecj4pJyI=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:56:54 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m0pmtkkd81"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8="
+        },
+        {
+          "Name": "label",
+          "Value": "js/schedule/edit-schedule.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/edit-schedule.m0pmtkkd81.js",
+      "AssetFile": "js/schedule/edit-schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5083"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:56:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m0pmtkkd81"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JrVO62EuJdZ6KCeGclQaNg7srnonMyZR+IdblxU75E8="
+        },
+        {
+          "Name": "label",
+          "Value": "js/schedule/edit-schedule.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/schedule/edit-schedule.m0pmtkkd81.js.gz",
+      "AssetFile": "js/schedule/edit-schedule.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1VbWuNmw5t0Qv3xDC93BawsNwSmjpibpbU5ecj4pJyI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 04:56:54 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m0pmtkkd81"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1VbWuNmw5t0Qv3xDC93BawsNwSmjpibpbU5ecj4pJyI="
+        },
+        {
+          "Name": "label",
+          "Value": "js/schedule/edit-schedule.js.gz"
         }
       ]
     },
