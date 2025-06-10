@@ -72,3 +72,7 @@ C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\
 C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\9dk228oxni-lef9iu3o95.gz
 C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\ndyxhzmps2-m0pmtkkd81.gz
 C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\x8lupqpeme-7xz1u8ug4v.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\44mailteef-zjaddr4iau.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\fz6ms2gepy-erraan6fym.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\6y8dkdiz2o-fj4n2j8iv9.gz
+C:\Users\Jodeci\RiderProjects\StudentEnrolmentSystem\StudentEnrolmentSystem\obj\Debug\net9.0\compressed\purb0lgquc-rknke1nvk7.gz

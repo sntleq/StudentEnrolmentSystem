@@ -1,0 +1,95 @@
+@model StudentEnrolmentSystem.Models.Dto.EnrollDto
+@{
+    ViewData["Title"] = "Enrolment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+        class="fixed inset-0 z-50 grid place-content-center p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+>
+    <form asp-action="Enroll" asp-controller="EnrolmentApi"
+        class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Enrolment</h2>
+
+        <div class="mt-1">
+            <p class="text-sm text-pretty text-gray-700">
+                Enter details to enroll for this semester.
+            </p>
+        </div>
+        
+        <input type="hidden" asp-for="StudId" value="@ViewBag.StudId"/>
+        <input type="hidden" asp-for="AyId" value="@ViewBag.Year.AyId"></input>
+        <input type="hidden" asp-for="SemId" value="@ViewBag.Semester.SemId"></input>
+
+        <div class="mt-6">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Semester </span>
+
+                <input
+                        type="text" maxlength="7" disabled value="@ViewBag.Year.AyStartYr-@ViewBag.Year.AyEndYr @ViewBag.Semester.SemName"
+                        class="mt-1 w-full rounded border-gray-300 bg-gray-100 sm:text-sm"
+                />
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Program </span>
+
+                <select
+                    asp-for="ProgId"
+                    class="mt-1 w-full rounded border-gray-300 sm:text-sm"
+                >
+                    <option value="" selected hidden>Please select</option>
+                    @foreach (var program in ViewBag.Programs)
+                    {
+                        <option value="@program.ProgId">@program.ProgTitle (@program.ProgCode)</option>
+                    }
+                </select>
+                
+                <span asp-validation-for="ProgId" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+
+        <div class="mt-4">
+            <label>
+                <span class="text-sm font-medium text-gray-700"> Status </span>
+
+                <select
+                    asp-for="StudStatus"
+                    class="mt-0.5 w-full rounded border-gray-300 shadow-sm sm:text-sm">
+                    
+                    <option value="" selected hidden>Please select</option>
+                    <option value="Continuing">Continuing</option>
+                    <option value="Returnee">Returnee</option>
+                    <option value="Shiftee">Shiftee</option>
+                </select>
+                
+                <span asp-validation-for="StudStatus" class="mt-1 text-sm text-red-700"></span>
+            </label>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                type="button" href="javascript:history.back()"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                    type="submit"
+                    class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>

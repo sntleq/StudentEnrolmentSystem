@@ -1,0 +1,53 @@
+@model StudentEnrolmentSystem.Models.Dto.ChooseSchedulesDto
+@{
+    ViewData["Title"] = "Confirm Enrolment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div
+    class="fixed inset-0 z-50 grid place-content-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+>
+    <div class="w-full min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Confirm Enrolment</h2>
+
+        <div class="mt-4">
+            <p class="text-sm text-pretty text-gray-700">
+                Please double-check the enrolment details you just entered. If everything looks right, hit Confirm to lock in your semester’s courses and schedule.
+            </p>
+        </div>
+
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+        
+        <form id="confirmEnrolmentForm" data-action="@Url.RouteUrl("Enrolment.Confirm")"
+              class="mt-6 flex justify-between gap-2">
+            
+            <input type="hidden" asp-for="CurId" value="@ViewBag.CurId"/>
+            <input type="hidden" asp-for="StudId" value="@ViewBag.StudId"/>
+            <input type="hidden" asp-for="SemId" value="@ViewBag.SemId"/>
+            @foreach (var schedId in ViewBag.SchedIds)
+            {
+                <input type="hidden" asp-for="SchedIds" value="@schedId"/>
+            }
+            <a
+                type="button" href="javascript:history.back()"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700">
+                Confirm
+            </button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/enrolment/confirm-enrolment.js"></script>
+}

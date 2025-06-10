@@ -1,0 +1,124 @@
+@model StudentEnrolmentSystem.Models.Dto.ChooseCoursesDto
+@{
+    ViewData["Title"] = "Choose Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var courses = ViewBag.Courses as List<StudentEnrolmentSystem.Models.Course>;
+}
+
+<div class="min-h-screen rounded flex flex-col xl:col-span-2 p-10">
+    <form id="chooseCoursesForm" data-action="@Url.RouteUrl("Enrolment.Courses")"
+        class="m-auto w-fit min-w-[28rem] max-w-md rounded-lg border border-gray-300 px-8 py-12">
+        <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 sm:text-2xl">Choose Courses</h2>
+
+        <div class="mt-1">
+            <p class="text-sm text-pretty text-gray-700">
+                At least one GEC, PE and NSTP is mandatory. Prioritizing CC, PC and AP courses are recommended to graduate on time.
+            </p>
+        </div>
+
+        <input type="hidden" asp-for="StudId" value="@ViewBag.StudId"/>
+        <input type="hidden" asp-for="CurId" value="@ViewBag.CurId"/>
+        
+        <div class="mt-6 flex items-center justify-between">
+            <span class="text-sm text-gray-500"> Min: 15 units </span>
+
+            <span class="text-sm text-gray-500"> Max: 36 hours </span>
+        </div>
+        
+        <div class="mt-2 flex flex-col gap-3">
+            @foreach (var category in ViewBag.Categories)
+            {
+                var categoryCourses = courses!.Where(c => c.CatgId == category.CatgId).ToList();
+
+                <details class="group relative overflow-hidden rounded border border-gray-300 ">
+                    <summary
+                            class="flex items-center justify-between gap-2 p-3 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden">
+                        <span class="text-sm font-medium"> @category.CatgName (@category.CatgCode) </span>
+
+                        <span class="transition-transform group-open:-rotate-180">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="2.5"
+                                                stroke="currentColor"
+                                                class="size-3.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                    </span>
+                    </summary>
+
+                    @if (categoryCourses.Any())
+                    {
+                        <div class="divide-y divide-gray-300 border-t border-gray-300 bg-white">
+                            <fieldset class="p-3">
+                                <legend class="sr-only">Checkboxes</legend>
+
+                                <div class="flex flex-col items-start gap-3">
+                                    @foreach (var course in categoryCourses)
+                                    {
+                                        <label class="inline-flex items-center gap-3 prereq-item" data-catg-id="@course.CatgId">
+                                            <input
+                                                type="checkbox" name="CrsIds"
+                                                data-units="@course.CrsUnits" data-hours="@(course.CrsHrsLec + course.CrsHrsLab)"
+                                                class="size-5 rounded border-gray-300"
+                                                value="@course.CrsId" 
+                                                @(category.CatgId == 7 || category.CatgId == 8 ? "checked disabled" : "")
+                                            />
+
+                                            <span class="text-sm font-medium text-gray-700">
+                                                @course.CrsTitle
+                                            </span>
+                                        </label>
+                                    }
+                                </div>
+                            </fieldset>
+                        </div>
+                    }
+
+                    else
+                    {
+                        <div class="divide-y divide-gray-300 border-t border-gray-300 bg-white">
+                            <span class="p-3 block text-sm text-gray-700">No eligible courses for now. </span>
+                        </div>
+                    }
+                </details>
+            }
+        </div>
+
+        <div class="mt-2 flex items-center justify-between">
+            <span class="text-sm text-gray-500"> Total: </span>
+
+            <span class="text-sm text-gray-500">
+                <span id="selCount">0</span> courses &middot;
+                <span id="selUnits">0</span> units &middot;
+                <span id="selHours">0</span> hours
+            </span>
+        </div>
+        
+        <div class="mt-4">
+            <span id="formError" class="mt-1 text-sm text-red-700"></span>
+        </div>
+
+        <footer class="mt-6 flex justify-between gap-2">
+            <a
+                type="button" href="javascript:history.back()"
+                class="rounded bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="rounded bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            >
+                Continue
+            </button>
+        </footer>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/enrolment/choose-courses.js"></script>
+}

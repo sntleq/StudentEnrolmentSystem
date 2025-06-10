@@ -4853,6 +4853,1198 @@
       ]
     },
     {
+      "Route": "js/enrolment/choose-courses.js",
+      "AssetFile": "js/enrolment/choose-courses.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001980198020"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.js",
+      "AssetFile": "js/enrolment/choose-courses.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.js.gz",
+      "AssetFile": "js/enrolment/choose-courses.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.zjaddr4iau.js",
+      "AssetFile": "js/enrolment/choose-courses.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001980198020"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjaddr4iau"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-courses.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.zjaddr4iau.js",
+      "AssetFile": "js/enrolment/choose-courses.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjaddr4iau"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-courses.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.zjaddr4iau.js.gz",
+      "AssetFile": "js/enrolment/choose-courses.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjaddr4iau"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-courses.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.erraan6fym.js",
+      "AssetFile": "js/enrolment/choose-schedules.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000752445448"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "erraan6fym"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-schedules.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.erraan6fym.js",
+      "AssetFile": "js/enrolment/choose-schedules.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3943"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "erraan6fym"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-schedules.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.erraan6fym.js.gz",
+      "AssetFile": "js/enrolment/choose-schedules.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "erraan6fym"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-schedules.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.js",
+      "AssetFile": "js/enrolment/choose-schedules.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000752445448"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.js",
+      "AssetFile": "js/enrolment/choose-schedules.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3943"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.js.gz",
+      "AssetFile": "js/enrolment/choose-schedules.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.fj4n2j8iv9.js",
+      "AssetFile": "js/enrolment/confirm-enrolment.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001745200698"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fj4n2j8iv9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/confirm-enrolment.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.fj4n2j8iv9.js",
+      "AssetFile": "js/enrolment/confirm-enrolment.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fj4n2j8iv9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/confirm-enrolment.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.fj4n2j8iv9.js.gz",
+      "AssetFile": "js/enrolment/confirm-enrolment.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fj4n2j8iv9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/confirm-enrolment.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.js",
+      "AssetFile": "js/enrolment/confirm-enrolment.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001745200698"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.js",
+      "AssetFile": "js/enrolment/confirm-enrolment.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.js.gz",
+      "AssetFile": "js/enrolment/confirm-enrolment.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.js",
+      "AssetFile": "js/enrolment/schedule.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000755287009"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.js",
+      "AssetFile": "js/enrolment/schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3935"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.js.gz",
+      "AssetFile": "js/enrolment/schedule.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.rknke1nvk7.js",
+      "AssetFile": "js/enrolment/schedule.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000755287009"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rknke1nvk7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/schedule.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.rknke1nvk7.js",
+      "AssetFile": "js/enrolment/schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3935"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rknke1nvk7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/schedule.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.rknke1nvk7.js.gz",
+      "AssetFile": "js/enrolment/schedule.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rknke1nvk7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw="
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/schedule.js.gz"
+        }
+      ]
+    },
+    {
       "Route": "js/faculty/add-faculty.js",
       "AssetFile": "js/faculty/add-faculty.js.gz",
       "Selectors": [

@@ -69,6 +69,22 @@
       "PackagePath": "staticwebassets\\js\\curriculum\\reject-curriculum.js"
     },
     {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-courses.js",
+      "PackagePath": "staticwebassets\\js\\enrolment\\choose-courses.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-schedules.js",
+      "PackagePath": "staticwebassets\\js\\enrolment\\choose-schedules.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\confirm-enrolment.js",
+      "PackagePath": "staticwebassets\\js\\enrolment\\confirm-enrolment.js"
+    },
+    {
+      "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\schedule.js",
+      "PackagePath": "staticwebassets\\js\\enrolment\\schedule.js"
+    },
+    {
       "Id": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\faculty\\add-faculty.js",
       "PackagePath": "staticwebassets\\js\\faculty\\add-faculty.js"
     },

@@ -128,7 +128,7 @@ public class ScheduleApiController(
         if (form.SlotIds.Count != hours)
             return BadRequest(new { success = false, message = "Total slots doesn't match course hours." });
         
-        var sessions = SlotIdsToSessions(form.SlotIds, (int)form.SchedId!);
+        var sessions = SlotIdsToSessions(form.SlotIds, form.SchedId);
         if (sessions == null)
             return BadRequest(new { success = false, message = "A section must not have more than one session in the same day." });
 
@@ -164,7 +164,8 @@ public class ScheduleApiController(
             
             var newId = (int)(await insertCmd.ExecuteScalarAsync())!;
             
-            if (sessions.Count > 0)
+            sessions = SlotIdsToSessions(form.SlotIds, newId);
+            if (sessions!.Count > 0)
             {
                 await using var cmd = conn.CreateCommand();
                 cmd.Transaction = tx;
@@ -219,7 +220,7 @@ public class ScheduleApiController(
         if (form.SlotIds.Count != hours)
             return BadRequest(new { success = false, message = "Total slots doesn't match course hours." });
         
-        var sessions = SlotIdsToSessions(form.SlotIds, (int)form.SchedId!);
+        var sessions = SlotIdsToSessions(form.SlotIds, form.SchedId);
         if (sessions == null)
             return BadRequest(new { success = false, message = "A section must not have more than one session in the same day." });
 
@@ -252,7 +253,7 @@ public class ScheduleApiController(
                 cmd.Parameters.AddWithValue("roomId", DBNull.Value);
             cmd.Parameters.AddWithValue("schedCapacity", form.SchedCapacity);
             cmd.Parameters.AddWithValue("schedDescription", description);
-            cmd.Parameters.AddWithValue("schedId", form.SchedId);
+            cmd.Parameters.AddWithValue("schedId", form.SchedId!);
             
             var rowsAffected = await cmd.ExecuteNonQueryAsync();
             if (rowsAffected == 0)
@@ -266,7 +267,7 @@ public class ScheduleApiController(
                     DELETE FROM schedule_session
                     WHERE sched_id = @schedId";
 
-            cleanCmd.Parameters.AddWithValue("schedId", form.SchedId);
+            cleanCmd.Parameters.AddWithValue("schedId", form.SchedId!);
             await cleanCmd.ExecuteNonQueryAsync();
             
             if (sessions.Count > 0)
@@ -383,7 +384,7 @@ public class ScheduleApiController(
     }
     
     [NonAction]
-    private List<ScheduleSession>? SlotIdsToSessions(List<int> slotIds, int schedId)
+    private List<ScheduleSession>? SlotIdsToSessions(List<int> slotIds, int? schedId)
     {
         var slots = GetTimeSlots().Result
             .Where(ts => slotIds.Contains(ts.SlotId))
@@ -421,7 +422,7 @@ public class ScheduleApiController(
                     {
                         StartSlotId = currentGroup.First().SlotId,
                         EndSlotId = currentGroup.Last().SlotId,
-                        SchedId = schedId,
+                        SchedId = schedId ?? 0,
                     });
                 }
                 currentGroup = new List<TimeSlot> { slot };
@@ -443,7 +444,7 @@ public class ScheduleApiController(
             {
                 StartSlotId = currentGroup.First().SlotId,
                 EndSlotId = currentGroup.Last().SlotId,
-                SchedId = schedId,
+                SchedId = schedId ?? 0,
             });
         }
         

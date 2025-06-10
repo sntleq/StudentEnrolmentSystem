@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OSfAFi4OZgDiizTxS5AeY4GOSxr7/+PRwTTqi+NBjYM=",
+  "Hash": "myeaURQDq7udJG0MoYFwQAvPLz1jo80sKBMvrR93Xj8=",
   "Source": "StudentEnrolmentSystem",
   "BasePath": "_content/StudentEnrolmentSystem",
   "Mode": "Default",
@@ -78,6 +78,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\room\\delete-room.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\44mailteef-zjaddr4iau.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/choose-courses#[.{fingerprint=zjaddr4iau}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-courses.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "s9qzzwjsty",
+      "Integrity": "wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-courses.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\6y8dkdiz2o-fj4n2j8iv9.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/confirm-enrolment#[.{fingerprint=fj4n2j8iv9}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\confirm-enrolment.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "a76dueh9xr",
+      "Integrity": "WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\confirm-enrolment.js"
     },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\803wgckq5h-mqr0eztt0t.gz",
@@ -246,6 +288,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\program\\add-program.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fz6ms2gepy-erraan6fym.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/choose-schedules#[.{fingerprint=erraan6fym}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-schedules.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "wo1qjvmjv1",
+      "Integrity": "EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-schedules.js"
     },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\go35c0hm9e-srj7fw4925.gz",
@@ -456,6 +519,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\admin\\faculty-filter.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\purb0lgquc-rknke1nvk7.gz",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/schedule#[.{fingerprint=rknke1nvk7}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\schedule.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "p3ti9gyk4a",
+      "Integrity": "1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\schedule.js"
     },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\sbphgzrb98-hb4ixrl127.gz",
@@ -1191,6 +1275,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\curriculum\\reject-curriculum.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-courses.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/choose-courses#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zjaddr4iau",
+      "Integrity": "r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\enrolment\\choose-courses.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-schedules.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/choose-schedules#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "erraan6fym",
+      "Integrity": "9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\enrolment\\choose-schedules.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\confirm-enrolment.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/confirm-enrolment#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fj4n2j8iv9",
+      "Integrity": "u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\enrolment\\confirm-enrolment.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\schedule.js",
+      "SourceId": "StudentEnrolmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\",
+      "BasePath": "_content/StudentEnrolmentSystem",
+      "RelativePath": "js/enrolment/schedule#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rknke1nvk7",
+      "Integrity": "W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\enrolment\\schedule.js"
     },
     {
       "Identity": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\faculty\\add-faculty.js",
@@ -6524,6 +6692,1198 @@
         {
           "Name": "integrity",
           "Value": "sha256-9X1KpjKLe6xA7Hfamdaqg4A3aUWbxXLxtBBAYO0qH+8="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\44mailteef-zjaddr4iau.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001980198020"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-courses.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\44mailteef-zjaddr4iau.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.zjaddr4iau.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\44mailteef-zjaddr4iau.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001980198020"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjaddr4iau"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-courses.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.zjaddr4iau.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-courses.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjaddr4iau"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-courses.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r69kWI6Y1cdOB/R/Jigqft061YWSBHF3r7JCQUzJ7WM="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-courses.zjaddr4iau.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\44mailteef-zjaddr4iau.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 22:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjaddr4iau"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-courses.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCLBRzVCKyFvYiFBcs6fkiau9Mjc5TX7wnwZSKYumoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.erraan6fym.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fz6ms2gepy-erraan6fym.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000752445448"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "erraan6fym"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-schedules.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.erraan6fym.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-schedules.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3943"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "erraan6fym"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-schedules.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.erraan6fym.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fz6ms2gepy-erraan6fym.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "erraan6fym"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/choose-schedules.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fz6ms2gepy-erraan6fym.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000752445448"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\choose-schedules.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3943"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9i55kPRkt1vwXP8lb/D1VSHJ2HBCpBHreKo+yt+px9o="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/choose-schedules.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\fz6ms2gepy-erraan6fym.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1328"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 00:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EHrAhyUExwc9nmrPCzYbbMoG3XuJwkcUXV2W7NTcogw="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.fj4n2j8iv9.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\6y8dkdiz2o-fj4n2j8iv9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001745200698"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fj4n2j8iv9"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/confirm-enrolment.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.fj4n2j8iv9.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\confirm-enrolment.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fj4n2j8iv9"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/confirm-enrolment.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.fj4n2j8iv9.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\6y8dkdiz2o-fj4n2j8iv9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fj4n2j8iv9"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/confirm-enrolment.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\6y8dkdiz2o-fj4n2j8iv9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001745200698"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\confirm-enrolment.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+T5Yx+8Mao7Rrd4Lny3E8LHdjv/GdtzZYyaj6qlcWk="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/confirm-enrolment.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\6y8dkdiz2o-fj4n2j8iv9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:10:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WnnzpRhfQxn04GV5oIGNpqiwUxD2PH5kUSAfADiuh+g="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\purb0lgquc-rknke1nvk7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000755287009"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3935"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\purb0lgquc-rknke1nvk7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.rknke1nvk7.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\purb0lgquc-rknke1nvk7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000755287009"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rknke1nvk7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/schedule.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.rknke1nvk7.js",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\wwwroot\\js\\enrolment\\schedule.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3935"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rknke1nvk7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/schedule.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W1ZkTMFruikmvCbsT7aGWtyhneDvoDeQmTteB8B754c="
+        }
+      ]
+    },
+    {
+      "Route": "js/enrolment/schedule.rknke1nvk7.js.gz",
+      "AssetFile": "C:\\Users\\Jodeci\\RiderProjects\\StudentEnrolmentSystem\\StudentEnrolmentSystem\\obj\\Debug\\net9.0\\compressed\\purb0lgquc-rknke1nvk7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 01:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rknke1nvk7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/enrolment/schedule.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1WxHzzO8iaMVOu5XizZUDEA6zQLlE3cytU67XKai0Qw="
         }
       ]
     },

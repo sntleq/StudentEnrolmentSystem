@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace StudentEnrolmentSystem.Controllers;
 
 public class StudentController(
-    StudentApiController studentApi, ProgramApiController programApi
+    StudentApiController studentApi, ProgramApiController programApi,
+    CourseApiController courseApi,ScheduleApiController scheduleApi
     ) : Controller
 {
     public IActionResult Index()
@@ -21,6 +22,10 @@ public class StudentController(
             HttpContext.Session.GetInt32("SemId") ?? 1
         ).Result;
         
+        ViewBag.Courses = courseApi.GetCourses().Result;
+        ViewBag.Schedules = scheduleApi.GetSchedules().Result;
+        ViewBag.Sessions = scheduleApi.GetSessions().Result;
+        ViewBag.TimeSlots = scheduleApi.GetTimeSlots().Result;
         return View("~/Views/Student/Schedule.cshtml");
     }
     

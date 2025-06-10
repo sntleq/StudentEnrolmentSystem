@@ -100,6 +100,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxSZWplY3RDdXJyaWN1bHVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Enrolment/ChooseCourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xtZW50XENob29zZUNvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Enrolment/ChooseSchedules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xtZW50XENob29zZVNjaGVkdWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Enrolment/ConfirmEnrolment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xtZW50XENvbmZpcm1FbnJvbG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Enrolment/Enroll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xtZW50XEVucm9sbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jodeci/RiderProjects/StudentEnrolmentSystem/StudentEnrolmentSystem/Views/Faculty/AddFaculty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxBZGRGYWN1bHR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

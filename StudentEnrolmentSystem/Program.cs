@@ -14,6 +14,7 @@ builder.Services.AddScoped<CurriculumApiController>();
 builder.Services.AddScoped<FacultyApiController>();
 builder.Services.AddScoped<RoomApiController>();
 builder.Services.AddScoped<ScheduleApiController>();
+builder.Services.AddScoped<EnrolmentApiController>();
 
 var app = builder.Build();
 
